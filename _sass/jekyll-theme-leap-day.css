@@ -3,7 +3,7 @@ Leap Day for GitHub Pages
 by Matt Graham
 */
 
-@import "normalize";
+/* @import "normalize";
 @import "fonts";
 @import "rouge-base16-dark";
 
@@ -15,7 +15,9 @@ body {
   padding:0px 0 20px 0px;
   background: url(../images/body-background.png) #eae6d1;
   background-color: #0f0;
+  font-family: roboto;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   color:#333;
@@ -69,18 +71,88 @@ strong {
   font-weight: bold;
   color: #333;
 }
-
+body {
+   position: relative;
+ }
+ ul.nav-pills {
+   top: 20px;
+   position: fixed;
+ }
+ div.col-8 div {
+   height: 500px;
+ }
+.child{
+  text-decoration:none;
+  font-size:16px;
+  margin-left:20px;
+  color: #666666;
+}
+.child:hover{
+  text-decoration: none;
+}
 .wrapper {
   width:650px;
   margin:0 auto;
   position:relative;
 }
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+}
 
-section img {
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 500px;
+}
+
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+
+}
+
+/* .sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+} */
+/* .sidenav  .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+} */
+/* section img { */
   max-width: 100%;
 }
 
-blockquote {
+/* blockquote {
   border-left:1px solid #ffcc00;
   margin:0;
   padding:0 0 0 20px;
@@ -119,14 +191,14 @@ table {
 
 th {
   text-align:left;
-  padding:5px 10px;
+
   border-bottom:1px solid #e5e5e5;
   color: #444;
 }
 
 td {
   text-align:left;
-  padding:5px 10px;
+
   border-bottom:1px solid #e5e5e5;
   border-right: 1px solid #ffcc00;
 
@@ -273,8 +345,9 @@ header {
 
 section {
   width:590px;
+  height:500px;
   padding: 30px 30px 50px 30px;
-  margin: 20px 0;
+  margin-left: 120px;
   margin-top: 190px;
   position:relative;
   background: #fbfbfb;
@@ -286,27 +359,31 @@ section {
 small {
   font-size:12px;
 }
-
+content{
+  height: 500px;
+}
 nav {
-  width: 230px;
-  position: fixed;
-  top: 220px;
-  left:50%;
-  margin-left:-580px;
-  text-align: right;
+  margin-top: 0%;
+  position: absolute;
+  /* top: 220px; */
+  /* left:50%;
+  margin-left:-620px;
+  /* text-align: right; */
 
-  ul {
+  /* ul {
     list-style: none;
     list-style-image:none;
     font-size: 14px;
     line-height:24px;
+    float:left;
 
     li {
-      padding: 5px 0px;
+
       line-height: 16px;
       // padding-right:17px;
       // position:relative;
       // right:-12px;
+      float:left;
 
       &.tag-h1 {
         font-size: 1.2em;
@@ -340,9 +417,9 @@ nav {
     //   padding-right:13px;
     // }
   }
-}
+} */
 
-footer {
+/* footer {
   width:180px;
   position: fixed;
   left:50%;
@@ -393,6 +470,7 @@ footer {
   section {
     border:1px solid #e5e5e5;
     border-width:1px 0;
+    height: 500px;
     padding:20px auto;
     margin: 190px auto 20px;
     max-width: 600px;
@@ -443,6 +521,7 @@ footer {
   }
 
   section {
+    height: 500px;
     margin-top: 130px;
     margin-bottom: 0px;
     width: auto;
@@ -452,8 +531,15 @@ footer {
     position:static;
   }
 }
-
-@media print, screen and (max-width: 480px) {
+.heading{
+  text-decoration:none;
+  font-size:18px;
+  color: #333333;
+}
+.heading:hover{
+    text-decoration:none;
+} */
+/* @media print, screen and (max-width: 480px) {
   body {
   }
 
@@ -472,6 +558,7 @@ footer {
     }
   }
   section {
+    height: 500px;
     margin-top: 5px;
   }
 
@@ -514,4 +601,79 @@ footer {
     bottom:auto;
     width:auto;
   }
+}  */
+body {
+  position: relative;
+}
+ul.nav-pills {
+  /* top: 20px; */
+  position: fixed;
+  margin-top: 3%;
+}
+div.col-8 div {
+  height: 500px;
+}
+header {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left:0;
+  right:0;
+  width: 100%;
+  text-align: center;
+  background: url(../images/background.png) #4276b6;
+  box-shadow: 1px 0px 2px rgba(0,0,0,.75);
+  z-index:99;
+  -webkit-font-smoothing:antialiased;
+
+}
+.nav-item{
+  margin-top: 10%;
+}
+.heading{
+  text-decoration:none;
+  font-size:16px;
+  color: #333333;
+  background-color:#fff;
+}
+.heading:hover{
+    text-decoration:none;
+}
+.child{
+  text-decoration:none;
+  font-size:14px;
+  margin-left:20px;
+  color: #666666;
+}
+.child:hover{
+  text-decoration: none;
+}
+.content{
+  background-color:#fff;
+  margin-left:30%;
+  max-width: 65%;
+}
+.Designer{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: left;
+  background: #02ce9d;
+  font-weight: 600;
+  color:white;
+}
+.bot{
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+  font-weight: 200;
+}
+h5{
+  margin-left: 30px;
+  font-size: 10px;
+  margin-top: 10px;
+}
+div.col-8 div{
+  height: auto;
 }
