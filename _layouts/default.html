@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
-  <head>
+
+<head>
     <!-- <meta charset="utf-8"> -->
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <link rel="stylesheet" href="jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../_sass/bootstrap-select.min.css">
 
-    <link rel="stylesheet" href='../_sass/jekyll-theme-leap-day.css' >
-      <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
     <script src="../assets/js/main.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
@@ -16,272 +18,479 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">*/ -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href='jekyll-theme-leap-day.css'>
+    <link rel="stylesheet" href="../_sass/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="5">
+    <div class="wrapper">
+        <!--Header Start-->
+        <header class="blue-header">
+            <div class="container">
+                <div class="row no-flex">
+                    <div class="col-sm-5 cols">
+                        <a href="index.html" class="logo"><img src="../assets/images/techforce-logo.png" alt="Techforcer"></a>
+                    </div>
+                    <div class="col-sm-7 text-right cols">
+                        <ul class="list-unstyled">
+                            <li><a href="javascript:void(0);" class="btn blue-btn">Get Started</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Header End-->
+        <!--Banner-->
+        <div class="blue-banner">
+            <div id="particles-js">
+                <div class="blueBanner-parent">
+                    <div class="blue-banner-content text-center">
+                        <h1>Hey there <img src="../assets/images/hand.png" alt="Hi">, how can we help?</h1>
+                    </div>
+                    <div class="breadcrumbBox">
+                        <div class="container">
+                            <ul class="breadcrumb">
+                                <li><a href="index.html">Help Center</a></li>
+                                <li class="active">Documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Banner End-->
+        <div class="content ">
+            <div class="container">
+                <div class="allTopic">
+                    <form>
+                        <div class="searchBox">
+                            <input type="text" placeholder="Search" class="form-control">
+                            <button type="button" class="btn green-btn">Search</button>
+                        </div>
+                    </form>
+                    <div class="documentation row">
+                        <div class="documentTabCLick col-md-4 col-sm-4">
+                          <div id="sidebar">
+                            <div class="colsIn customSelect">
+                                <select class="selectpicker">
+                                    <option>Version -  1.2</option>
+                                    <option>Version - 1.3</option>
+                                </select>
+                            </div>
+                            <ul class="nav nav-pills flex-column side customScroll"  >
+                              <li class="subMenu">
+                                  <a href="#home-Submenu" data-toggle="collapse" class="heading"> Getting Started </a>
+                                  <ul class="collapse list-unstyled" id="home-Submenu">
+                                      <li><a class="child" href="#compatiblity">  OS Compatibility</a></li>
+                                      <li><a class="child" href="#Minimum">Minimum Hardware Requirements</a></li>
+                                      <li><a class="child" href="#Installing RPA Studio">Installing RPA Studio</a></li>
+                                      <li >
+                                        <a href="#home" data-toggle="collapse" class="child">Architecture Overview & Deployment Models	</a>
+                                        <ul  class="collapse list-unstyled" id="home">
+                                          <li style="margin-left:20px;"><a class="child" href="#Enterprise Model">Enterprise Model</a></li>
+                                          <li style="margin-left:20px;"><a class="child" href="#Hybrid Model">Hybrid Model</a></li>
+                                        </ul>
+                                      </li>
+                                        <li><a class="child" href="#Building">Building a Basic Bot</a></li>
+                                  </ul>
+                              </li>
+                                <li class="subMenu">
+                                  <a href="#homeSubmenu" data-toggle="collapse"  class="heading">Release Notes	</a>
+                                  <ul  class="collapse list-unstyled" id="homeSubmenu">
+                                    <li><a class="child" href="#section4">Feature Comparison</a></li>
+                                    <li><a class="child" href="#section42">Version:</a></li>
+                                  </ul>
+                                </li>
+                               <li class="subMenu">
+                                 <a href="#homeSub" data-toggle="collapse" class="heading">Installation Instructions	</a>
+                                 <ul  class="collapse list-unstyled" id="homeSub">
+                                   <li><a class="child" href="#RPA Studio & Worker/Runtime">RPA Studio & Worker/Runtime</a></li>
+                                   <li><a class="child" href="#Installing Techforce OCR">Installing Techforce OCR</a></li>
+                                   <li><a class="child" href="#Enterprise Manager Console">Enterprise Manager Console</a></li>
+                                   <li><a class="child" href="#Installing Orchestrator (Windows Os)">Installing Orchestrator (Windows Os)</a></li>
+                                   <li><a class="child" href="#Installing Orchestrator in Producer Machine">Installing Orchestrator in Producer Machine</a></li>
+                                   <li><a class="child" href="#Start the servers">Start the servers</a></li>
+                                   <li><a class="child" href="#Configure Database ">Configure Database</a></li>
+                                   <li><a class="child" href="#Receiver Installation">Receiver Installation</a></li>
+                                   <li><a class="child" href="#Load Balancer Requirements">Load Balancer Requirements</a></li>
+                                   <li><a class="child" href="#Deployment Options">Deployment Options<br/>(Single Thread or Multithread)</a></li>
+                                 </ul>
+                                </li>
+                                <li>
+                                  <a href="#Submenu" data-toggle="collapse" class="heading">Enterprise Manager Console & Management Guide	</a>
+                                  <ul  class="collapse list-unstyled" id="Submenu">
+                                    <li><a class="child" href="#Process Management">Process Management</a>
+                                    <li><a class="child" href="#Adding the Business Process">Adding the Business Process</a></li>
+                                    <li><a class="child" href="#Executing a Business Process">Executing a Business Process</a></li>
+                                    <li><a class="child" href="#Worker Management">Worker Management</a></li>
+                                    <li><a class="child" href="#Worker List">Worker List</a></li>
+                                    <li><a class="child" href="#Schedules ">Schedules</a></li>
+                                    <li><a class="child" href="#Trigger">Trigger</a></li>
+                                    <li><a class="child" href="#Execution Target">Execution Target</a></li>
+                                    <li><a class="child" href="#Actions">Actions</a></li>
+                                    <li><a class="child" href="#Account Management">Account Management</a></li>
+                                    <li><a class="child" href="#Organization">Organization</a></li>
+                                    <li><a class="child" href="#User Management">User Management</a></li>
+                                    <li><a class="child" href="#Secret Vault">Secret Vault</a></li>
+                                    <li><a class="child" href="#Credentials">Credentials</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#RPAstudio" data-toggle="collapse" class="heading">RPA studio User  Guide	</a>
+                                  <ul  class="collapse list-unstyled" id="RPAstudio">
+                                    <li><a class="child" href="#Studio Guide">Studio Guide</a>
+                                    <li><a class="child" href="#Menu Bars">Menu Bars</a></li>
+                                    <li><a class="child" href="#Play">Play</a></li>
+                                    <li><a class="child" href="#Action Library Panel">Action Library Panel</a></li>
+                                    <li><a class="child" href="#Stage Category">Stage Category</a></li>
+                                    <li><a class="child" href="#Desktop Automation">Desktop Automation</a></li>
+                                    <li><a class="child" href="#Web Automation">	Web Automation</a></li>
+                                    <li><a class="child" href="#General">General</a></li>
+                                    <li><a class="child" href="#Programming">Programming</a></li>
+                                    <li><a class="child" href="#Mail Integration">Mail Integration</a></li>
+                                    <li><a class="child" href="#Cognitive">Cognitive</a></li>
+                                    <li><a class="child" href="#Developer Panel">Developer Panel</a></li>
+                                    <li><a class="child" href="#Properties Panel">Properties Panel</a></li>
+                                    <li><a class="child" href="#Variable Panel">Variable Panel</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#Actions" data-toggle="collapse" class="heading">RPA Studio Actions Guide	</a>
+                                  <ul  class="collapse list-unstyled" id="Actions">
+                                    <li><a class="child" href="#Stage">Stage</a>
+                                    <li><a class="child" href="#Desktop Automation">	Desktop Automation</a></li>
+                                    <li><a class="child" href="#Web Automation">Web Automation</a></li>
+                                    <li><a class="child" href="#General">General</a></li>
+                                    <li><a class="child" href="#Programming">Programming</a></li>
+                                    <li><a class="child" href="#Mail Integration">Mail Integration</a></li>
+                                  </ul>
+                                </li>
+                                <li><a class="heading" href="#Design a Bot">Design a Bot for Best Practices & Guidelines</a></li>
+                                <li><a class="heading" href="#Cognitive">Cognitive</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="doc-data col-md-8 col-sm-8">
+                          <div id="compatiblity"  class="page-section">
+                                <h3>Getting Started </h3>
+                                <h4> OS Compatibility</h4>
+                                <div class="table-responsive">
+                                  <table class="table">
+                                      <tr>
+                                          <th class="Designer" width="25%">On-Premise</th>
+                                          <td class="Designer">GCP</td>
+                                          <td class="Designer">MS Azure</td>
+                                          <td class="Designer">AWS</td>
+                                      </tr>
+                                      <tr>
+                                          <th class="bot" width="25%">Windows 10 /<br /> Windows Server <br /> 2012 R2 / Windows<br/> Server 2016</th>
+                                          <td class="bot">Windows Server 2012 R2 Data Center Core / Windows Server 2012 R2 Datacenter / Windows Server 2016 Data Center / Windows Server 2016 Datacenter Core</td>
+                                          <td class="bot">Windows Server 2012 R2 Data Center / Windows 10 Pro Ver 1809, 1803 / Windows Server 2016 Data Center</td>
+                                          <td class="bot">Microsoft Windows Server 2016 Base/ Microsoft Windows Server 2012 R2 Base</td>
+                                      </tr>
+                                  </table>
+                                 </div>
+
+                            </div>
+                            <div id="compatiblity" class="page-section">
+                                <h3>2. Installation Instructions</h3>
+                                <h4>2.1</h4>
+                                <h5>Bot Designer: </h5>
+
+                                <h5>Enterprise Manager Console:</h5>
+                                <div class="table-responsive">
+                                  <table class="table">
+                                      <tr>
+                                          <th class="Designer" width="25%">On-Premise</th>
+                                          <td class="Designer">GCP</td>
+                                          <td class="Designer">MS Azure</td>
+                                          <td class="Designer">AWS</td>
+                                      </tr>
+                                      <tr>
+                                          <th class="bot" width="25%">Windows 10 /<br /> Windows Server <br /> 2012 R2 / Windows<br/> Server 2016 / Ubuntu 16.04 LTS / Red Hat Linux 7</th>
+                                          <td class="bot">Windows Server 2012 R2 Data Center Core / Windows Server 2012 R2 Datacenter / Windows Server 2016 Data Center / Windows Server 2016 Datacenter Core / Ubuntu 16.04 LTS / Red Hat Linux 7</td>
+                                          <td class="bot">Windows Server 2012 R2 Data Center / Windows 10 Pro Ver 1809, 1803 / Windows Server 2016 Data Center // Ubuntu 16.04 LTS / Red Hat Linux 7.6</td>
+                                          <td class="bot">Microsoft Windows Server 2016 Base/ Microsoft Windows Server 2012 R2 Base / Red Hat Enterprise Linux 8</td>
+                                      </tr>
+                                  </table>
+                                </div>
+                                <h5>Worker:</h5>
+                                <div class="table-responsive">
+                                  <table class="table">
+                                      <tr>
+                                          <th class="Designer" width="25%">On-Premise</th>
+                                          <td class="Designer">GCP</td>
+                                          <td class="Designer">MS Azure</td>
+                                          <td class="Designer">AWS</td>
+                                      </tr>
+                                      <tr>
+                                          <th class="bot" width="25%">Windows 10 / Windows Server 2012 R2 / Windows Server 2016</th>
+                                          <td class="bot">Windows Server 2012 R2 Data Center Core / Windows Server 2012 R2 Data Center / Windows Server 2016 Data Center / Windows Server 2016 Data Center Core</td>
+                                          <td class="bot">Windows Server 2012 R2 Data Center / Windows 10 Pro Ver 1809, 1803 / Windows Server 2016 Data Center</td>
+                                          <td class="bot">Microsoft Windows Server 2016 Base/ Microsoft Windows Server 2012 R2 Base</td>
+                                      </tr>
+                                  </table>
+                                </div>
+                            </div>
+                            <div id="Minimum"  class="page-section">
+                                <h4 class="blue"> 2.2 Minimum Hardware Requirements:</h4>
+                                <div class="table-responsive">
+                                  <table class="table">
+                                      <tr>
+                                          <th class="Designer"> Hardware</th>
+                                          <td class="Designer">Bot Designer</td>
+                                          <td class="Designer">Worker</td>
+                                          <td class="Designer">Enterprise Manager Console</td>
+                                          <td class="Designer">Microsoft SQL Server</td>
+                                          <td class="Designer">PostgreSQL Server</td>
+                                      </tr>
+                                      <tr>
+                                          <th class="bot"><b>Processor</b></th>
+                                          <td class="bot">Intel Core i5 2.6 GHz</td>
+                                          <td class="bot">Intel Core i5 2.6 GHz</td>
+                                          <td class="bot">8 core - 3.0 GHz Intel Xeon Platinum processor (Turbo Boost to 3.5 GHz)</td>
+                                          <td class="bot">4 core Intel Xeon Processor</td>
+                                          <td class="bot">2 core Intel Xeon Processor</td>
+                                      </tr>
+                                      <tr>
+                                          <th class="bot"><b>RAM</b></th>
+                                          <td class="bot">8 GB</td>
+                                          <td class="bot">8 GB</td>
+                                          <td class="bot">16 GB</td>
+                                          <td class="bot">8 GB</td>
+                                          <td class="bot">4 GB</td>
+                                      </tr>
+                                      <tr>
+                                          <th class="bot"><b>Storage</b></th>
+                                          <td class="bot">10 GB</td>
+                                          <td class="bot">10 GB</td>
+                                          <td class="bot">50 GB</td>
+                                          <td class="bot">50 GB</td>
+                                          <td class="bot">10 GB</td>
+                                      </tr>
+                                      <tr>
+                                          <th class="bot"><b>Network</b></th>
+                                          <td class="bot">1 GbE</td>
+                                          <td class="bot">1 GbE</td>
+                                          <td class="bot">10 GbE</td>
+                                          <td class="bot">1 GbE</td>
+                                          <td class="bot">1 GbE</td>
+                                      </tr>
+                                      <tr>
+                                          <th class="bot"><b>Other</b></th>
+                                          <td class="bot">Microsoft .NET Framework 4.6 (Windows 8.1 and Windows Server 2012 R2: 4.6.1)</td>
+                                          <td class="bot">Microsoft .NET Framework 4.6 (Windows 8.1 and Windows Server 2012 R2: 4.6.1)</td>
+                                          <td class="bot">Microsoft .NET Framework 4.6 (Windows 8.1 and Windows Server 2012 R2: 4.6.1)</td>
+                                          <td class="bot">Microsoft SQL Server 2012 or later</td>
+                                          <td class="bot">PostgreSQL Server</td>
+                                      </tr>
+                                  </table>
+                                </div>
+                            </div>
+                           <div id="download3"  class="page-section">
+                                <h3>3. RPA Studio & Worker/Runtime</h3>
+                                <h4>3.1. How to download Techforce.ai RPA studio</h4>
+                                <p>To download Techforce.ai RPA studio,  click on the below URL. <br> The file size would be around 330 MB.</p>
+                                <a class="blueLink" href="https://github.com/digitamizers/techforce-ide/releases/download/v1.0.0-alpha.39 /techforceide-install-v1.0.0-alpha.39.exe">https://github.com/digitamizers/techforce-ide/releases/download/v1.0.0-alpha.39 /techforceide-install-v1.0.0-alpha.39.exe</a>
+                            </div>
+                             <div id="install3"  class="page-section">
+                                 <h4 class="green">3.2. Installing RPA Studio</h4>
+                                 <p>RPA studio requires <strong>945 MB</strong> hard disk space to install.</p>
+                                 <ol>
+                                   <li>1. After downloading the RPA studio, move the downloaded studio.exe file to the desired folder where it needs to be installed.</li>
+                                   <li>2. Right-click on the installer and select <strong>“Run as administrator”</strong> so that RPA studio will have “Admin” privileges.<br>
+                                    The following image is an example of how to run as administrator.
+                                     <img src="../assets/images/doc-img1.png" alt="image">
+                                   </li>
+                                   <li>
+                                    3. Windows will ask for permission stating “<strong>Do you want to allow the unknown publisher to install the application”</strong>. Click <strong>YES</strong>,  and the installation process will start. </li>
+                                    <li>4. Accept the license agreement of Techforce.ai to proceed for the further installation process.
+                                    <img src="../assets/images/doc-img2.png" alt="image">
+                                    The installation process will show the folder selection screen.
+                                    </li>
+                                    <li>5. Click on <strong>BROWSE</strong> and select a folder which does not contain a space in its name like shown in the image.
+                                      <img src="../assets/images/doc-img3.png" alt="image">
+                                    </li>
+                                    <li>6. After selecting the folder, click on <strong>“INSTALL”</strong> which will start installing RPA studio.
+                                      <img src="../assets/images/doc-img4.png" alt="image">
+                                      <blockquote>
+                                        <div>
+                                          <img src="../assets/images/idea.svg" alt="image">
+                                          TIP
+                                        </div>
+                                        <p>On the folder selection screen, make sure to select a folder, which does not contain any space in the folder name. If the selected folder contains any space in its name, then the RPA scripts built using the studio cannot be executed.</p>
+                                      </blockquote>
+                                    </li>
+                                    <li>7. The installation will take a bit time, and after installing the Studio, click on <strong>CLOSE</strong> button to proceed for further process.
+                                      <img src="../assets/images/doc-img5.png" alt="image">
+                                      RPA studio installer will prompt to download a dependency file. Install the dependency file.
+                                    </li>
+                                    <li>8. Click on the <strong>“OK”</strong> button as shown in the above image, to install Techforce OCR, which is a dependency to RPA studio.
+                                    <img src="../assets/images/doc-img6.png" alt="image"></li>
+                                 </ol>
+                            </div>
+                            <div id="ocr3"  class="page-section">
+                              <h4 class="purple">3.3. Installing Techforce OCR</h4>
+                              <p>Techforce OCR needs <strong>164MB</strong> of hard disk space for installation.</p>
+                              <ol>
+                                <li>1. In the first screen of Techforce OCR installation, select preferred language, <br>and click <strong>“OK”</strong> which will start the installation of Techforce OCR.
+                                <img src="../assets/images/doc-img7.png" alt="image">
+                                </li>
+                                <li>
+                                  2. In the next screen of OCR installation, click <strong>NEXT</strong> to continue the installation process.
+
+                                </li>
+                                <li>
+                                  3. Accept the license agreement of Techforce OCR to <strong>continue</strong> the installation process.
+                                  <img src="../assets/images/doc-img8.png" alt="image">
+                                </li>
+                                <li>
+                                 4. After accepting the agreement, specify/select who should have the user level <br>access to OCR Select appropriately from. <strong>“Install for anyone using this computer or Install just for me”</strong>.
+                                  <img src="../assets/images/doc-img9.png" alt="image">
+                                </li>
+                                <li>
+                                5. Select any one of the options and click on <strong>NEXT</strong> button. In the next screen choose the components that are to be installed or else just click on <strong>NEXT</strong> to continue the installation process.
+                                  <img src="../assets/images/doc-img10.png" alt="image">
+                                </li>
+                                <li>
+                                6. After selecting the components, the installation process will show the folder path selection. Keep the default storage space or else specify the installation folder.
+                                  <img src="../assets/images/doc-img11.png" alt="image">
+                                </li>
+                                <li>7. Select the options for start menu action and then click on <strong>Install</strong> to.</li>
+                                <li>8. After installation, click on <strong>NEXT</strong> button and then click on <strong>FINISH</strong> button to complete the RPA Studio installation
+                                <img src="../assets/images/doc-img12.png" alt="image">
+                                </li>
+                              </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div id="bottomBar"></div>
+         <!--Rate Us-->
+        <div class="rateUs text-center greyBg" >
+            <div class="container">
+                <div class="ratingBoxMain">
+                    <h2 class="main-heading">Please rate us to make more useful</h2>
+                    <p>Please rate your experience.This would help us <br>continuely improve our service </p>
+                    <ul class="list-unstyled list-inline giveRate">
+                        <li class="given"><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
+                        <li class="given"><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
+                        <li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
+                        <li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
+                    <li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <!--Foorter Start-->
+        <footer class="blueFooter greyBg">
+            <div class="container">
+                <p>Privacy Policy I Terms & Condition I © 2016-2019 Website Design All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    ​<header>
-             <h1 style="color:#fff"> Techforce Platform Documentation</h1>
-           </header>
-  </head>
-  <body data-spy="scroll" data-target="#myScrollspy" data-offset="5">
-  <div class="container-fluid" style="display:block">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/js/particles.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', '{{ site.google_analytics }}', 'auto');
+    ga('send', 'pageview');
 
-  <div class="row">
-    <nav class="col-sm-3 col-4" id="myScrollspy">
-      <ul class="nav nav-pills flex-column side">
-        <li>
-          <a href="#home-Submenu" data-toggle="collapse"  class="heading">Getting Started 	</a>
-          <ul  class="collapse list-unstyled" id="home-Submenu">
-            <li><a class="child" href="#compatiblity">OS Compatibility</a></li>
-            <li><a class="child" href="#Minimum">Minimum Hardware Requirements</a></li>
-            <li><a class="child" href="#Installing RPA Studio">Installing RPA Studio</a></li>
-            <li >
-              <a href="#home" data-toggle="collapse" class="child" style="margin-left:20px;">Architecture Overview & Deployment Models	</a>
-              <ul  class="collapse list-unstyled" id="home">
-                <li><a class="child" style="margin-left:20px;" href="#section41">Enterprise Model</a></li>
-                <li><a class="child" style="margin-left:20px;" href="#section42">Hybrid Model</a></li>
-              </ul>
-            </li>
-            <li><a class="child" href="#section42">Building a Basic Bot</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#homeSubmenu" data-toggle="collapse"  class="heading">Release Notes	</a>
-          <ul  class="collapse list-unstyled" id="homeSubmenu">
-            <li><a class="child" href="#section4">Feature Comparison</a></li>
-            <li><a class="child" href="#section42">Version:</a></li>
-          </ul>
-        </li>
-        <li >
-          <a href="#homeSub" data-toggle="collapse" class="heading">Installation Instructions	</a>
-          <ul  class="collapse list-unstyled" id="homeSub">
-            <li><a class="child" href="#RPA Studio & Worker/Runtime">RPA Studio & Worker/Runtime</a></li>
-            <li><a class="child" href="#section">Installing Techforce OCR</a></li>
-            <li><a class="child" href="#section">Enterprise Manager Console</a></li>
-            <li><a class="child" href="#section">Installing Orchestrator (Windows Os)</a></li>
-            <li><a class="child" href="#section">Installing Orchestrator in Producer Machine</a></li>
-            <li><a class="child" href="#section">Start the servers</a></li>
-            <li><a class="child" href="#section">Configure Database</a></li>
-            <li><a class="child" href="#section">Receiver Installation</a></li>
-            <li><a class="child" href="#section">Load Balancer Requirements</a></li>
-            <li><a class="child" href="#section">Deployment Options<br/>(Single Thread or Multithread)</a></li>
-          </ul>
-        </li>
+    $(document).ready(function() {
 
-        <li >
-          <a href="#Submenu" data-toggle="collapse" class="heading">Enterprise Manager Console & Management Guide	</a>
-          <ul  class="collapse list-unstyled" id="Submenu">
-            <li><a class="child" href="#compatiblity">Process Management</a>
-            <li><a class="child" href="#section">Adding the Business Process</a></li>
-            <li><a class="child" href="#section">Executing a Business Process</a></li>
-            <li><a class="child" href="#section">Worker Management</a></li>
-            <li><a class="child" href="#section">Worker List</a></li>
-            <li><a class="child" href="#section">Schedules</a></li>
-            <li><a class="child" href="#section">Trigger</a></li>
-            <li><a class="child" href="#section">Execution Target</a></li>
-            <li><a class="child" href="#section">Actions</a></li>
-            <li><a class="child" href="#section">Account Management</a></li>
-            <li><a class="child" href="#section">Organization</a></li>
-            <li><a class="child" href="#section">User Management</a></li>
-            <li><a class="child" href="#section">Secret Vault</a></li>
-            <li><a class="child" href="#section">Credentials</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#RPAstudio" data-toggle="collapse" class="heading">RPA studio User  Guide	</a>
-          <ul  class="collapse list-unstyled" id="RPAstudio">
-            <li><a class="child" href="#compatiblity">Studio Guide</a>
-            <li><a class="child" href="#section">Menu Bars</a></li>
-            <li><a class="child" href="#section">Play</a></li>
-            <li><a class="child" href="#section">Action Library Panel</a></li>
-            <li><a class="child" href="#section">Stage Category</a></li>
-            <li><a class="child" href="#section">Desktop Automation</a></li>
-            <li><a class="child" href="#section">	Web Automation</a></li>
-            <li><a class="child" href="#section">General</a></li>
-            <li><a class="child" href="#section">Programming</a></li>
-            <li><a class="child" href="#section">Mail Integration</a></li>
-            <li><a class="child" href="#section">Cognitive</a></li>
-            <li><a class="child" href="#section">Developer Panel</a></li>
-            <li><a class="child" href="#section">Properties Panel</a></li>
-            <li><a class="child" href="#section">Variable Panel</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#Actions" data-toggle="collapse" class="heading">RPA Studio Actions Guide	</a>
-          <ul  class="collapse list-unstyled" id="Actions">
-            <li><a class="child" href="#compatiblity">Stage</a>
-            <li><a class="child" href="#section">	Desktop Automation</a></li>
-            <li><a class="child" href="#section">Web Automation</a></li>
-            <li><a class="child" href="#section">General</a></li>
-            <li><a class="child" href="#section">Programming</a></li>
-            <li><a class="child" href="#section">Mail Integration</a></li>
-          </ul>
-        </li>
-            <li><a class="heading" href="#compatiblity">Design a Bot for Best Practices & Guidelines</a></li>
-            <li><a class="heading" href="#compatiblity">Cognitive</a></li>
-        </li>
-      </ul>
-    </nav>
-    <div class="col-sm-9 col-8" style="background-color:#fff;margin-left:30%;max-width: 65%;background-color:#fff;box-shadow: 0 0 49px 0 rgba(0, 0, 0, 0.06);">
-      <div id="" style="background-color:#fff;height:40px">
-        <!-- <h1>Section 2</h1>
-        <p>Try to scroll this section and look at the navigation list while scrolling!</p> -->
-      </div>
-      <div id="compatiblity" style="">
-        <h3><b> OS COMPATIBILTY</b></h3>
+        $('#sidebarCollapse').on('click', function() {
+            $('#sidebar').toggleClass('active');
+        });
 
-        <h5 style="margin-top: 20px;margin-bottom:20px;"><b>Bot Designer: </h5>
-         <table style="border: 1px solid black;border-collapse: collapse; width:65%;height:100%;margin-left:20%;">
-            <tr>
-              <th class="Designer">On-Premise</th>
-              <td class="Designer" >GCP</td>
-              <td class="Designer" >MS Azure</td>
-              <td class="Designer" >AWS</td>
-            </tr>
-            <tr>
-              <th class="bot">Windows 10 /<br /> Windows Server <br /> 2012 R2 / Windows<br/ > Server  2016</th>
-              <td class="bot">Windows Server 2012 R2 Data Center Core / Windows Server 2012 R2 Datacenter / Windows Server 2016 Data Center / Windows Server 2016 Datacenter Core</td>
-              <td class="bot">Windows Server 2012 R2 Data Center / Windows 10 Pro Ver 1809, 1803 / Windows Server 2016 Data Center</td>
-              <td class="bot">Microsoft Windows Server 2016 Base/ Microsoft Windows Server 2012 R2 Base</td>
-            </tr>
-        </table>
-
-       <h5 style="margin-top: 20px;margin-bottom:20px;"><b>Enterprise Manager Console:</b></h5>
-       <table style="border: 1px solid black;border-collapse: collapse; width:65%;height:100%;margin-left:20%;">
-          <tr>
-            <th class="Designer">On-Premise</th>
-            <td class="Designer" >GCP</td>
-            <td class="Designer" >MS Azure</td>
-            <td class="Designer" >AWS</td>
-          </tr>
-          <tr>
-            <th class="bot">Windows 10 /<br /> Windows Server <br /> 2012 R2 / Windows<br/ > Server  2016 / Ubuntu 16.04 LTS / Red Hat Linux 7</th>
-            <td class="bot">Windows Server 2012 R2 Data Center Core / Windows Server 2012 R2 Datacenter / Windows Server 2016 Data Center / Windows Server 2016 Datacenter Core / Ubuntu 16.04 LTS / Red Hat Linux 7</td>
-            <td class="bot">Windows Server 2012 R2 Data Center / Windows 10 Pro Ver 1809, 1803 / Windows Server 2016 Data Center // Ubuntu 16.04 LTS / Red Hat Linux 7.6</td>
-            <td class="bot">Microsoft Windows Server 2016 Base/ Microsoft Windows Server 2012 R2 Base / Red Hat Enterprise Linux 8</td>
-          </tr>
-      </table>
-
-
-      <h5 style="margin-top: 20px;margin-bottom:20px;"><b>Worker: </b></h5>
-      <table style="border: 1px solid black;border-collapse: collapse; width:60%;height:100%;margin-left:25%;">
-         <tr>
-           <th class="Designer">On-Premise</th>
-           <td class="Designer" >GCP</td>
-           <td class="Designer" >MS Azure</td>
-           <td class="Designer" >AWS</td>
-         </tr>
-         <tr>
-           <th class="bot">Windows 10 / Windows Server 2012 R2 / Windows Server  2016</th>
-           <td class="bot">Windows Server 2012 R2 Data Center Core / Windows Server 2012 R2 Data Center / Windows Server 2016 Data Center / Windows Server 2016 Data Center Core</td>
-           <td class="bot">Windows Server 2012 R2 Data Center / Windows 10 Pro Ver 1809, 1803 / Windows Server 2016 Data Center</td>
-           <td class="bot">Microsoft Windows Server 2016 Base/ Microsoft Windows Server 2012 R2 Base</td>
-         </tr>
-     </table>
-      </div>
-
-      <div id="Minimum" style="background-color:#fff;">
-        <h3 style="text-align:left;margin-top: 30px;margin-bottom:30px;"><b> Minimum Hardware Requirements: </b></h3>
-        <table style="border: 1px solid black;border-collapse: collapse; width:60%;height:100%;margin-left:5%;">
-           <tr>
-             <th class="Designer"> Hardware</th>
-             <td class="Designer" >Bot Designer</td>
-             <td class="Designer" >Worker</td>
-             <td class="Designer" >Enterprise Manager Console</td>
-             <td class="Designer" >Microsoft SQL Server</td>
-             <td class="Designer" >PostgreSQL Server</td>
-           </tr>
-           <tr>
-             <th class="bot"><b>Processor</b></th>
-             <td class="bot">Intel Core i5 2.6 GHz</td>
-             <td class="bot">Intel Core i5 2.6 GHz</td>
-             <td class="bot">8 core - 3.0 GHz Intel Xeon Platinum processor (Turbo Boost to 3.5 GHz)</td>
-              <td class="bot">4 core Intel Xeon Processor</td>
-               <td class="bot">2 core Intel Xeon Processor</td>
-           </tr>
-           <tr>
-             <th class="bot"><b>RAM</b></th>
-             <td class="bot">8 GB</td>
-             <td class="bot">8 GB</td>
-             <td class="bot">16 GB</td>
-              <td class="bot">8 GB</td>
-               <td class="bot">4 GB</td>
-           </tr>
-           <tr>
-             <th class="bot"><b>Storage</b></th>
-             <td class="bot">10 GB</td>
-             <td class="bot">10 GB</td>
-             <td class="bot">50 GB</td>
-              <td class="bot">50 GB</td>
-               <td class="bot">10 GB</td>
-           </tr>
-           <tr>
-             <th class="bot"><b>Network</b></th>
-             <td class="bot">1 GbE</td>
-             <td class="bot">1 GbE</td>
-             <td class="bot">10 GbE</td>
-              <td class="bot">1 GbE</td>
-               <td class="bot">1 GbE</td>
-           </tr>
-           <tr>
-             <th class="bot"><b>Other</b></th>
-             <td class="bot">Microsoft .NET Framework 4.6 (Windows 8.1 and Windows Server 2012 R2: 4.6.1)</td>
-             <td class="bot">Microsoft .NET Framework 4.6 (Windows 8.1 and Windows Server 2012 R2: 4.6.1)</td>
-             <td class="bot">Microsoft .NET Framework 4.6 (Windows 8.1 and Windows Server 2012 R2: 4.6.1)</td>
-              <td class="bot">Microsoft SQL Server 2012 or later</td>
-               <td class="bot">PostgreSQL Server</td>
-           </tr>
-       </table>
-      </div>
-
-      <div id="Installing RPA Studio" >
-       <h3 style="text-align:left;margin-top: 30px;margin-bottom:30px;">Installing RPA Studio</h3>
-       <div style="padding-left:20%;">
-        <div style="margin-top: 20px;margin-bottom:20px;">RPA studio requires 945 MB hard disk space to install.</div>
-        <div style="margin-top: 20px;margin-bottom:20px;">After downloading the RPA studio, move the downloaded studio.exe file to the desired folder where it needs to be installed.</div>
-        <div style="margin-top: 20px;margin-bottom:20px;">Right-click on the installer and select “Run as administrator” so that RPA studio will have “Admin” privileges.</div>
-        <div style="margin-top: 20px;margin-bottom:20px;">The following image is an example of how to run as administrator.</div></div>
-
-      <img src="../assets/images/L1Q5vt.png" style="width:90%;padding-left: 20%;"/>
-      <div style="margin-top: 20px;margin-bottom:20px;padding-left: 20%;">Windows will ask for permission stating “Do you want to allow the unknown publisher to install the application”. Click on YES,  and the installation process will start.</div>
-        <div style="margin-top: 20px;margin-bottom:20px;padding-left: 20%;"> Accept the license agreement of Techforce.ai to proceed for the further installation process.</div>
-        <img src="../assets/images/3O0zsC.png" style="width:90%;padding-left: 20%;"/>
-      <div style="margin-top: 20px;margin-bottom:20px;padding-left: 20%;">The installation process will show the folder selection screen.</div>
-    </div>
-
-
-
-
-      <div id="RPA Studio & Worker/Runtime" >
-        <h3 style="text-align:left;margin-top: 30px;margin-bottom:30px;"><b>RPA Studio & Worker/Runtime</b></h3>
-
-         <h5 style="margin-top: 20px;margin-bottom:20px;padding-left:10%;">How to download Techforce.ai RPA studio</h5>
-         <p style="padding-left:20%;margin-bottom:20px;">To download Techforce.ai RPA studio, <br/> click on the below URL. The file size would be around 330 MB.</p>
-         <a href="https://github.com/digitamizers/techforce-ide/releases/download/v1.0.0-alpha.39/techforceide-install-v1.0.0-alpha.39.exe" style="padding-left:20%;width:300px;">https://github.com/digitamizers/techforce-ide/releases<br/><span style="padding-left:20%;">/download/v1.0.0-alpha.39/techforceide-install-v1.0.0</span><br/><span style="padding-left:20%;">-alpha.39.exe</span></a>
-      </div>
-      <div id="section42" >
-
-      </div>
-    </div>
-  </div>
-  </div>
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', '{{ site.google_analytics }}', 'auto');
-        ga('send', 'pageview');
-
-        $(document).ready(function () {
-
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
     });
 
-});
-      </script>
 
-  </body>
+    // Sidebar Fixed
+    $(function() {
+    var top = $('.documentTabCLick .nav-pills').offset().top - parseFloat($('.documentTabCLick .nav-pills').css('marginTop').replace(/auto/, 0));
+    var footTop = $('#bottomBar').offset().top - parseFloat($('#bottomBar').css('marginTop').replace(/auto/, 0));
+
+    var maxY = footTop - $('.documentTabCLick .nav-pills').outerHeight();
+
+    $(window).scroll(function(evt) {
+        var y = $(this).scrollTop();
+        if (y > top) {
+
+//Quand scroll, ajoute une classe ".fixed" et supprime le Css existant
+            if (y < maxY) {
+                $('.documentTabCLick .nav-pills').addClass('fixed').removeAttr('style');
+            } else {
+
+//Quand la sidebar arrive au footer, supprime la classe "fixed" précèdement ajouté
+                $('.documentTabCLick .nav-pills').removeClass('fixed').css({
+                    position: 'absolute',
+                    top: (maxY - top) + 'px'
+                });
+            }
+        } else {
+            $('.documentTabCLick .nav-pills').removeClass('fixed');
+        }
+    });
+});
+
+$('.documentTabCLick li a').click(function(e){
+  e.preventDefault();
+  removeActiveMenuClass()
+  $(this).addClass('active');
+  var target = $($(this).attr('href'));
+  if(target.length){
+    var scrollTo = target.offset().top;
+    $('body, html').animate({scrollTop: scrollTo+'px'}, 800);
+  }
+});
+function removeActiveMenuClass(){
+    $('.documentTabCLick li a').removeClass('active');
+}
+
+$(document).ready(function(){
+/*$("#sidebar").css({'height':($(".doc-data").height()+'px')});*/
+var divHeight = $('.doc-data').height();
+$('#sidebar').css('height', divHeight+'px');
+
+})
+$(window).scroll(function() {
+    var scrollDistance = $(window).scrollTop();
+  $('.page-section').each(function(i) {
+        if ($(this).position().top <= scrollDistance) {
+            $('.documentTabCLick li a.active').removeClass('active');
+            $('.documentTabCLick li a').eq(i).addClass('active');
+        }
+    });
+}).scroll();
+
+
+var nav = $('.documentTabCLick .subMenu > a');
+nav.find('li').hide();
+nav.click(function () {
+    nav.not(this).find('li').hide();
+    $(this).find('li').slideToggle();
+    $(this).parents().find('.heading').attr("aria-expanded","false");
+    $(this).parents().find('.collapse').removeClass("in");
+});
+    </script>
+</body>
+
 </html>
