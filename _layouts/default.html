@@ -4,9 +4,9 @@
 <head>
     <!-- <meta charset="utf-8"> -->
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <link rel="stylesheet" href="../_sass/bootstrap-select.min.css">
+    <!-- <link rel="stylesheet" href="../bootstrap-select.min.css"> -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="../_sass/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../jquery.mCustomScrollbar.css">
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
@@ -20,7 +20,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../_sass/font-awesome.css">
+    <link rel="stylesheet" href="../font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <style>
     body {
@@ -30,11 +30,11 @@
     div.col-8 div {
       height: 500px;
     }
-.wrapper{
-  width: 0px;
-  margin:0px;
-  position: relative;
-}
+    .wrapper{
+      width: 0px;
+      margin:0px;
+      position: relative;
+    }
     .nav-item{
       margin-top: 10%;
     }
@@ -118,7 +118,14 @@
     .blue-header .cols{float:none;display:inline-block;vertical-align:middle;margin:0 -2px}
     .blue-header .logo img{width:198px}
     canvas{display:block;vertical-align:bottom}
-    .blue-banner{background-image:linear-gradient(283deg,#3a40c7,#0f75f0);height:290px;position:relative;overflow:hidden;background-position:center}
+    .blue-banner
+    {
+      /* background-image:linear-gradient(283deg,#3a40c7,#0f75f0); */
+      height:290px;
+      position:relative;
+      overflow:hidden;
+      background-position:center
+    }
     body.innerPages{padding:0}
     header.blue-header{position:absolute;left:0;top:0;width:100%;z-index:1;padding:30px 0 10px 0}
     .blue-header .cols{float:none;display:inline-block;vertical-align:middle;margin:0 -2px; width: 50%;}
@@ -413,7 +420,7 @@
             <div class="container">
                 <div class="row no-flex">
                     <div class="col-sm-5 cols">
-                        <a href="index.html" class="logo"><img src="images/techforce-logo.png" alt="Techforcer"></a>
+                        <a href="index.html" class="logo"><img src="https://techforce.ai/images/tech-logo.png" alt="Techforcer"></a>
                     </div>
                     <div class="col-sm-7 text-right cols">
                         <ul class="list-unstyled">
@@ -425,7 +432,7 @@
         </header>
         <!--Header End-->
         <!--Banner-->
-        <div class="blue-banner">
+        <div class="blue-banner" >
             <div id="particles-js">
                 <div class="blueBanner-parent">
                     <div class="blue-banner-content text-center">
