@@ -46,7 +46,7 @@
             <div id="particles-js">
                 <div class="blueBanner-parent">
                     <div class="blue-banner-content text-center">
-                        <h1>Hey there <img src="../assets/images/hand.png" alt="Hi">, how can we help?</h1>
+                        <h1>Hey there <img src="{{ '/assets/images/hand.png' | relative_url }}"  alt="Hi">, how can we help?</h1>
                     </div>
                     <div class="breadcrumbBox">
                         <div class="container">
@@ -80,10 +80,10 @@
                             </div>
                             <ul class="nav nav-pills flex-column side customScroll"  >
                                 <li>
-                                    <a href="" class="heading"><span class="numbers">1.</span> Release Notes </a>
+                                    <a href="#notes" class="heading"><span class="numbers">1.</span> Release Notes </a>
                                 </li>
                                 <li class="subMenu">
-                                    <a href="" class="heading"><span class="numbers">2.</span> Installation Instructions</a>
+                                    <a href=""  class="heading"><span class="numbers">2.</span> Installation Instructions</a>
                                     <ul class="collapse list-unstyled" id="second">
                                         <li><a class="child" href="#compatiblity"><span class="numbers">2.1.</span>  OS Compatibility</a></li>
                                         <li><a class="child" href="#Minimum"><span class="numbers">2.2.</span> Minimum Hardware Requirements</a></li>
@@ -275,7 +275,7 @@
                                    <li><span class="numbers">1.</span> After downloading the RPA studio, move the downloaded studio.exe file to the desired folder where it needs to be installed.</li>
                                    <li><span class="numbers">2.</span> Right-click on the installer and select <strong>“Run as administrator”</strong> so that RPA studio will have “Admin” privileges.<br>
                                     The following image is an example of how to run as administrator.
-                                     <img src="../assets/images/doc-img1.png" alt="image">
+                                     <img src="{{ '/assets/images/doc-img1.png' | relative_url }}" alt="image">
                                    </li>
                                    <li>
                                     <span class="numbers">3.</span> Windows will ask for permission stating “<strong>Do you want to allow the unknown publisher to install the application”</strong>. Click <strong>YES</strong>,  and the installation process will start. </li>
