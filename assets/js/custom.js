@@ -49,7 +49,7 @@ particlesJS("particles-js", {
       "anim": {
         "enable": false,
         "speed": 30,
-
+         
         "size_min": 0.1,
         "sync": false
       }
@@ -138,3 +138,5 @@ update = function() {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
+
+
