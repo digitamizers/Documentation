@@ -602,6 +602,20 @@ nav {
     width:auto;
   }
 }  */
+<<<<<<< HEAD
+=======
+/* body {
+  position: relative;
+}
+
+div.col-8 div {
+  height: 500px;
+}
+
+.nav-item{
+  margin-top: 10%;
+} */
+>>>>>>> 750e642f17b21e92927c28671096a0769580f3de
 .heading{
   text-decoration:none;
   font-size:16px;
