@@ -602,7 +602,7 @@ nav {
     width:auto;
   }
 }  */
-body {
+/* body {
   position: relative;
 }
 
@@ -612,7 +612,7 @@ div.col-8 div {
 
 .nav-item{
   margin-top: 10%;
-}
+} */
 .heading{
   text-decoration:none;
   font-size:16px;
@@ -644,14 +644,14 @@ div.col-8 div {
   border-collapse: collapse;
   font-weight: normal;
 }
-h5{
+/* h5{
   margin-left: 30px;
   font-size: 10px;
   margin-top: 10px;
 }
 div.col-8 div{
   height: auto;
-}
+} */
 
 .wrapper{
   width: 0px;
