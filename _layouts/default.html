@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="{{ '/assets/css/font-awesome.css' | relative_url }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-
     <style>
     body{
       padding: 0px;
@@ -383,7 +382,7 @@
           <div class="container">
               <div class="row no-flex">
                   <div class="col-sm-5 cols">
-                      <a href="index.html" class="logo"><img src="../assets/images/techforce-logo.png" alt="Techforcer"></a>
+                      <a href="index.html" class="logo"><img src="{{ '/assets/images/techforce-logo.png' | relative_url }}"  alt="Techforcer" ></a>
                   </div>
                   <div class="col-sm-7 text-right cols">
                       <ul class="list-unstyled">
@@ -399,7 +398,7 @@
           <div id="particles-js">
               <div class="blueBanner-parent">
                   <div class="blue-banner-content text-center">
-                      <h1>Hey there <img src="../assets/images/hand.png" alt="Hi">, how can we help?</h1>
+                      <h1>Hey there<img src="{{ '/assets/images/hand.png' | relative_url }}"  alt="Hi">, how can we help?</h1>
                   </div>
                   <div class="breadcrumbBox">
                       <div class="container">
@@ -638,33 +637,33 @@
                                  <li><span class="numbers">1.</span> After downloading the RPA studio, move the downloaded studio.exe file to the desired folder where it needs to be installed.</li>
                                  <li><span class="numbers">2.</span> Right-click on the installer and select <strong>“Run as administrator”</strong> so that RPA studio will have “Admin” privileges.<br>
                                   The following image is an example of how to run as administrator.
-                                   <img src="../assets/images/doc-img1.png" alt="image" class="lessSpace">
+                                   <img src="{{ '/assets/images/doc-img1.png' | relative_url }}" alt="image">
                                  </li>
                                  <li>
                                   <span class="numbers">3.</span> Windows will ask for permission stating “<strong>Do you want to allow the unknown publisher to install the application”</strong>. Click <strong>YES</strong>,  and the installation process will start. </li>
                                   <li><span class="numbers">4.</span> Accept the license agreement of Techforce.ai to proceed for the further installation process.
-                                  <img src="../assets/images/doc-img2.png" alt="image">
+                                    <img src="{{ '/assets/images/doc-img2.png' | relative_url }}" alt="image">
                                   The installation process will show the folder selection screen.
                                   </li>
                                   <li><span class="numbers">5.</span> Click on <strong>BROWSE</strong> and select a folder which does not contain a space in its name like shown in the image.
-                                    <img src="../assets/images/doc-img3.png" alt="image">
+                                <img src="{{ '/assets/images/doc-img3.png' | relative_url }}" alt="image">
                                   </li>
                                   <li><span class="numbers">6.</span> After selecting the folder, click on <strong>“INSTALL”</strong> which will start installing RPA studio.
-                                    <img src="../assets/images/doc-img4.png" alt="image">
+                                    <img src="{{ '/assets/images/doc-img4.png' | relative_url }}" alt="image">
                                     <blockquote>
                                       <div>
-                                        <img src="../assets/images/idea.svg" alt="image">
+                                        <img src="{{ '/assets/images/idea.svg' | relative_url }}" alt="image">
                                         TIP
                                       </div>
                                       <p>On the folder selection screen, make sure to select a folder, which does not contain any space in the folder name. If the selected folder contains any space in its name, then the RPA scripts built using the studio cannot be executed.</p>
                                     </blockquote>
                                   </li>
                                   <li><span class="numbers">7.</span> The installation will take a bit time, and after installing the Studio, click on <strong>CLOSE</strong> button to proceed for further process.
-                                    <img src="../assets/images/doc-img5.png" alt="image">
+                                    <img src="{{ '/assets/images/doc-img5.png' | relative_url }}" alt="image">
                                     RPA studio installer will prompt to download a dependency file. Install the dependency file.
                                   </li>
                                   <li class="mb-0"><span class="numbers">8.</span> Click on the <strong>“OK”</strong> button as shown in the above image, to install Techforce OCR, which is a dependency to RPA studio.
-                                  <img src="../assets/images/doc-img6.png" alt="image"></li>
+                                  <img src="{{ '/assets/images/doc-img6.png' | relative_url }}" alt="image"></li>
                                </ol>
                           </div>
                           <div id="ocr3"  class="page-section">
@@ -672,7 +671,7 @@
                             <p>Techforce OCR needs <strong>164MB</strong> of hard disk space for installation.</p>
                             <ol>
                               <li><span class="numbers">1.</span> In the first screen of Techforce OCR installation, select preferred language, <br>and click <strong>“OK”</strong> which will start the installation of Techforce OCR.
-                              <img src="../assets/images/doc-img7.png" alt="image">
+                              <img src="{{ '/assets/images/doc-img7.png' | relative_url }}" alt="image">
                               </li>
                               <li>
                                 <span class="numbers">2.</span> In the next screen of OCR installation, click <strong>NEXT</strong> to continue the installation process.
@@ -680,23 +679,23 @@
                               </li>
                               <li>
                                 <span class="numbers">3.</span> Accept the license agreement of Techforce OCR to <strong>continue</strong> the installation process.
-                                <img src="../assets/images/doc-img8.png" alt="image">
+                                <img src="{{ '/assets/images/doc-img8.png' | relative_url }}" alt="image">
                               </li>
                               <li>
                                <span class="numbers">4.</span> After accepting the agreement, specify/select who should have the user level <br>access to OCR Select appropriately from. <strong>“Install for anyone using this computer or Install just for me”</strong>.
-                                <img src="../assets/images/doc-img9.png" alt="image">
+                                <img src="{{ '/assets/images/doc-img9.png' | relative_url }}" alt="image">
                               </li>
                               <li>
                               <span class="numbers">5.</span> Select any one of the options and click on <strong>NEXT</strong> button. In the next screen choose the components that are to be installed or else just click on <strong>NEXT</strong> to continue the installation process.
-                                <img src="../assets/images/doc-img10.png" alt="image">
+                                <img src="{{ '/assets/images/doc-img10.png' | relative_url }}" alt="image">
                               </li>
                               <li>
                               <span class="numbers">6.</span> After selecting the components, the installation process will show the folder path selection. Keep the default storage space or else specify the installation folder.
-                                <img src="../assets/images/doc-img11.png" alt="image">
+                              <img src="{{ '/assets/images/doc-img11.png' | relative_url }}" alt="image">
                               </li>
                               <li><span class="numbers">7.</span> Select the options for start menu action and then click on <strong>Install</strong> to.</li>
                               <li>8. After installation, click on <strong>NEXT</strong> button and then click on <strong>FINISH</strong> button to complete the RPA Studio installation
-                              <img src="../assets/images/doc-img12.png" alt="image">
+                                <img src="{{ '/assets/images/doc-img12.png' | relative_url }}" alt="image">
                               </li>
                             </ol>
                           </div>
@@ -724,19 +723,19 @@
                               <ol>
                                 <li><span class="numbers">1.</span> To install Erlang go to the URL <a href="https://www.erlang.org/downloads">https://www.erlang.org/downloads</a> (or the same file is unzipped from ‘producer’ file provided by TechForce)</li>
                                 <li><span class="numbers">2.</span> Click on <strong>“OTP 21.2 Windows 64-bit Binary File” </strong>which will download the installer. Navigate to the downloaded path and install Erlang in the machine.
-                                  <img src="../assets/images/doc-img13.png" alt="image">
+                                  <img src="{{ '/assets/images/doc-img13.png' | relative_url }}" alt="image">
                                 </li>
                               </ol>
                               <h5>4.1.1.2.  Rabbit MQ</h5>
                               <ol>
                                 <li><span class="numbers">1.</span> To install Rabbit MQ go to the URL <a href="https://www.rabbitmq.com/download.html">https://www.rabbitmq.com/download.html</a> (or the same file is unzipped from ‘producer’ file provided by TechForce) </li>
                                 <li><span class="numbers">2.</span> After opening the URL click on “Windows Installer”, which will start downloading Rabbit MQ.
-                                  <img src="../assets/images/doc-img14.png" alt="image">
+                                  <img src="{{ '/assets/images/doc-img14.png' | relative_url }}" alt="image">
                                 </li>
                                 <li><span class="numbers">3.</span> Now open the downloaded folder and double click on Rabbit MQ installer. In the pop-up a screen that shows <strong>“Do u want to allow this app from an unknown publisher”</strong> click <strong>“YES”</strong>.
                                 </li>
                                 <li><span class="numbers">4.</span> Click <strong>“NEXT”</strong> at “choose components” step.
-                                <img src="../assets/images/dummy-img.png" alt="image">
+                                <img src="{{ '/assets/images/dummy-img.png' | relative_url }}" alt="image">
                                 </li>
                                 <li><span class="numbers">5.</span> At “Choose Installation Location” browse a specified location to install Rabbit MQ or Click   <strong>“INSTALL”</strong>.</li>
                                 <li><span class="numbers">6.</span> Open an elevated command line <strong>(Run as Administrator)</strong></li>
@@ -776,7 +775,7 @@
                               <ol>
                                 <li><span class="numbers">1.</span> To download HashiCorp Vault, go to the URL  <a href="https://www.vaultproject.io/downloads.html">https://www.vaultproject.io/downloads.html</a> (or the same file is unzipped from <strong>‘producer’</strong> file provided by TechForce) </li>
                                 <li><span class="numbers">2.</span> Above URL will download a .zip file. Extract and navigate to the extracted folder and copy the folder path and set that at <strong>“PATH”</strong> in <strong>“ENVIRONMENT VARIABLES”</strong>. Below is the folder path.
-                                  <img src="../assets/images/doc-img15.png" alt="image">
+                                  <img src="{{ '/assets/images/doc-img15.png' | relative_url }}" alt="image">
                                   To Navigate to environment variables, try the below option.
                                 </li>
                                 <li><span class="numbers">3.</span> Right-click on “<strong>My computer/This PC</strong>”, click “<strong>Properties</strong>”, Click “Advanced system settings”, Click “<strong>Environment Variables</strong>”.</li>
@@ -809,20 +808,20 @@
                               </ol>
                               <h5>4.1.1.5.   Starting the vault server</h5>
                               <p>With the configuration in place, starting the server is simple, as shown below. Modify the -config flag to point to the proper path where the configuration was saved above.</p>
-                              <img src="../assets/images/doc-img16.png" alt="image">
+                              <img src="{{ '/assets/images/doc-img16.png' | relative_url }}" alt="image">
                               <h6>4.1.1.6. Initializing the vault</h6>
                               <p>Initialization is the process configuring the Vault.<br> During initialization, the encryption keys are generated, unseal keys are created, and the initial root token is setup. To initialize Vault, use vault operator init in a new command prompt </p>
-                              <img src="../assets/images/doc-img17.png" alt="image">
+                              <img src="{{ '/assets/images/doc-img17.png' | relative_url }}" alt="image">
                               <p>Initialization outputs two incredibly important pieces of information - the <strong>unseal keys</strong> and the <strong>initial root token</strong>. This is the only time ever that all of this data is known by Vault, and also the only time that the unseal keys should ever be so close together. Save the above 5 unseal keys and initial root token in a file for future use. Unseal Vault: Every initialized Vault server starts in the sealed state. From the configuration, Vault <br>can access the physical storage, but it can’t read any of it because it doesn’t know how to decrypt it. The process of teaching Vault how to decrypt the data is known as unsealing the Vault. Unsealing has to happen every time the Vault starts. It can be done via the API and via the command line. To unseal the Vault, it is a must to have the threshold number of unseal keys. In the output above, notice that the “key threshold” is 3. This means that to unseal the Vault, 3 keys are required out of the 5 keys that were generated.<br> Begin unsealing the Vault: </p>
-                              <img src="../assets/images/doc-img18.png" alt="image">
+                              <img src="{{ '/assets/images/doc-img18.png' | relative_url }}" alt="image">
                               <p>After pasting a valid key and confirming, the Vault is still sealed, but progress is made. Vault knows it has 1 key out of 3. Due to the nature of the algorithm, Vault doesn’t know if it has the correct key until the threshold is reached.</p>
                               <p>Also, notice that the unseal process is stateful. One can go to another computer, use vault operator unseal, and as long as it is pointing to the same server, that other computer can continue the unsealing process. This is extremely important to the design of the unseal process: multiple people with multiple keys are required to unseal the Vault. The Vault can be unsealed from multiple computers and the keys should never be together. A single malicious operator does not have enough keys to be malicious.</p>
                               <p>Continue with vault operator unseal to complete unsealing the Vault. To unseal the vault, use three different keys. Repeating the same key will not work. If the keys are used correctly, the following output will display:</p>
-                              <img src="../assets/images/doc-img19.png" alt="image">
+                              <img src="{{ '/assets/images/doc-img19.png' | relative_url }}" alt="image">
                               <p>When the value for Sealed changes to false, the Vault is unsealed:</p>
-                              <img src="../assets/images/doc-img20.png" alt="image">
+                              <img src="{{ '/assets/images/doc-img20.png' | relative_url }}" alt="image">
                               <p>Finally, authenticate as the initial root token (it was included in the output with the unseal keys):</p>
-                              <img src="../assets/images/doc-img21.png" alt="image">
+                              <img src="{{ '/assets/images/doc-img21.png' | relative_url }}" alt="image">
                               <p>Navigate to <strong>ENVIRONMENT VARIABLES</strong>. Following are the steps to navigate to environment variables:</p>
                               <ol>
                                 <li><span class="numbers">1.</span> Right-click on “<strong>My computer/This PC</strong>” </li>
@@ -908,15 +907,15 @@
                           <div id="enterpriseModel"  class="page-section">
                             <h3><span class="numbers">6.</span> Architecture Overview <br>& Deployment Models</h3>
                             <h4 class="skyBlue">6.1.  Enterprise Model</h4>
-                            <img src="../assets/images/doc-img22.png" alt="image">
+                            <img src="{{ '/assets/images/doc-img22.png' | relative_url }}" alt="image">
                           </div>
                           <div id="hybrid"  class="page-section">
                             <h4 class="green">6.2. Hybrid Model</h4>
-                            <img src="../assets/images/doc-img23.png" alt="image">
+                            <img src="{{ '/assets/images/doc-img23.png' | relative_url }}"alt="image">
                           </div>
                           <div id="sass"  class="page-section">
                             <h4 class="green">6.3. SaaS/PaaS Model</h4>
-                            <img src="../assets/images/doc-img24.png" alt="image">
+                            <img src="{{ '/assets/images/doc-img24.png' | relative_url }}" alt="image">
                           </div>
                           <div id="designBot" class="page-section">
                             <h3><span class="numbers">7.</span> Design a Bot – Best Practices & Guidelines</h3>
@@ -926,10 +925,10 @@
                             <h4 class="green">8.1. Process Management</h4>
                             <h6>8.1.1.  Adding the Business Process </h6>
                             <p>After successful login get redirected to the Business Process screen. Here upload the RPA script files as a Business Process. After uploading, execute the flow.</p>
-                            <img src="../assets/images/doc-img25.png" alt="image" class="lessSpace">
+                            <img src="{{ '/assets/images/doc-img25.png' | relative_url }}" alt="image" class="lessSpace">
                             <h6>8.1.2. Executing a Business Process:</h6>
                             <p>In the business process page, upload the RPA flow and execute the flow by clicking on the <strong>PLAY button</strong> from the UI. After clicking on the play button, the below image will appear.</p>
-                            <img src="../assets/images/doc-img26.png" alt="image" class="lessSpace">
+                            <img src="{{ '/assets/images/doc-img26.png' | relative_url }}" alt="image" class="lessSpace">
                             <p>Select the Execution target Type like Reserved. If the execution type is selected as reserved, then specify the Worker.</p>
                             <ul class="diamondList">
                               <li>Upload file should be a .Zip file </li>
@@ -939,14 +938,14 @@
                           <div id="workerManagement"  class="page-section">
                             <h4 class="blue">8.2. Worker Management</h4>
                             <p>The main functionality of a worker is to execute the flows/business processes that are uploaded under business process page.  So, after adding the worker while executing the business process, select the worker that was created in worker screen. Below is the image for creating a worker.</p>
-                             <img src="../assets/images/doc-img27.png" alt="image" class="lessSpace">
+                             <img src="{{ '/assets/images/doc-img27.png' | relative_url }}" alt="image" class="lessSpace">
                              <ol>
                               <li><span class="numbers">1. </span>Click the <strong>“Add “</strong>option, which will redirect to the Worker environment creation page. Here select the <strong>“Create worker”</strong>, which will create a new worker.
-                              <img src="../assets/images/doc-img28.png" alt="image" class="lessSpace">
+                              <img src="{{ '/assets/images/doc-img28.png' | relative_url }}" alt="image" class="lessSpace">
                             </li>
                             <li><span class="numbers">2. </span>
                             After creating a worker the details of the worker like name, host and so on, can be seen and the worker RDP details will be sent via email.
-                          <img src="../assets/images/doc-img29.png" alt="image" class="lessSpace"></li>
+                          <img src="{{ '/assets/images/doc-img29.png' | relative_url }}" alt="image" class="lessSpace"></li>
                              </ol>
 
 
@@ -958,10 +957,10 @@
                           <div id="workerList"  class="page-section">
                             <h4 class="pink">8.3.  Worker List </h4>
                             <p>Worker list/Queues is the functionality where the status of currently executing bots/workers status and scheduled workers execution status can be seen.     </p>
-                            <img src="../assets/images/doc-img30.png" alt="image" class="lessSpace">
+                            <img src="{{ '/assets/images/doc-img30.png' | relative_url }}" alt="image" class="lessSpace">
                             <blockquote class="big">
                               <div>
-                                <img src="../assets/images/idea.svg" alt="image">
+                                <img src="{{ '/assets/images/idea.svg' | relative_url }}" alt="image">
                                 NOTE
                               </div>
                               <p>On-premise the Worker<br>List is called as “Queues”</p>
@@ -973,42 +972,42 @@
                             <ol>
                               <li><span class="numbers">1.</span> To create a <strong>“Schedule”</strong>, navigate to “Schedules” page, and click on <strong>“ADD”</strong> button to start adding a new schedule. </li>
                               <li><span class="numbers">2.</span> 2. Give a name to the schedule.  Choose the  <strong>“Business Process”</strong> that needs to be scheduled, and select the time zone in which it needs to be run.</li>
-                              <img src="../assets/images/doc-img31.png" alt="image" class="lessSpace">
+                              <img src="{{ '/assets/images/doc-img31.png' | relative_url }}" alt="image" class="lessSpace">
                             </ol>
                             <h6>8.4.1. Trigger</h6>
                             <p>Here specify the time intervals to execute the flows/business processes.</p>
                             <h5>8.4.1.1. Minutes</h5>
                             <p>If the trigger type is selected as minutes, then the business process will execute at specified intervals measured in minutes. For example, if a business process is scheduled to execute for every 5 minutes then the flow will continuously execute after every 5 minutes until that scheduled flow is stopped/destroyed</p>
-                            <img src="../assets/images/doc-img32.png" alt="image" class="lessSpace">
+                            <img src="{{ '/assets/images/doc-img32.png' | relative_url }}" alt="image" class="lessSpace">
                             <h5>8.4.1.2. Hourly</h5>
                             <p>If the trigger type is selected as Hours, then the business process will run at specified intervals measured in minutes., For example, if a business process is scheduled to execute for every 3 hours and 30 minutes, then the flow will continuously execute after every 3 hours and 30 minutes until that scheduled flow is stopped/destroyed.</p>
-                            <img src="../assets/images/doc-img33.png" alt="image" class="lessSpace">
+                            <img src="{{ '/assets/images/doc-img33.png' | relative_url }}" alt="image" class="lessSpace">
                             <h5>8.4.1.3. Daily</h5>
                             <p>If the trigger type is selected as Daily, then the business process will execute every day at the specified time For example, if a business process is scheduled to execute every day at 05:30 a.m. then the flow will continuously execute every day at 05:30 a.m. until that scheduled flow is stopped/destroyed.</p>
-                            <img src="../assets/images/doc-img34.png" alt="image" class="lessSpace">
+                            <img src="{{ '/assets/images/doc-img34.png' | relative_url }}" alt="image" class="lessSpace">
                             <h5>8.4.1.4. Weekly</h5>
                             <p>If the trigger type is selected as Weekly, then select the weekday i.e. Mon, Tue, and so on. Then the business process will execute every Week at the time specified. For example, if a business process is scheduled to execute on every Monday at morning 05:30 a.m. then the flow will continuously execute every Monday at 05:30 a.m. until the scheduled flow is stopped/destroyed. </p>
-                            <img src="../assets/images/doc-img35.png" alt="image" class="lessSpace">
+                            <img src="{{ '/assets/images/doc-img35.png' | relative_url }}" alt="image" class="lessSpace">
                             <h5>8.4.1.5.  Monthly</h5>
                             <p>If the trigger type is selected as monthly, then select the month i.e. Jan, Feb, and so on. Then the business process will execute every Month at the time specified. For example, if the business process is scheduled to execute on every Month at morning 05:30 a.m., then the flow will continuously execute every Month at 05:30 a.m. until the scheduled flow is stopped/destroyed.</p>
-                            <img src="../assets/images/doc-img36.png" alt="image" class="lessSpace">
+                            <img src="{{ '/assets/images/doc-img36.png' | relative_url }}" alt="image" class="lessSpace">
                             <h6>8.4.1.6.  Advanced:</h6>
                             <p>   In Advanced option, one can write a cron expression</p>
-                            <img src="../assets/images/doc-img37.png" alt="image" class="lessSpace">
+                            <img src="{{ '/assets/images/doc-img37.png' | relative_url }}" alt="image" class="lessSpace">
                             <h6>8.4.2.  Execution Target</h6>
                             <p>In execution target, one can select the Worker.</p>
                             <h5>8.4.2.1.  Reserved Worker</h5>
                             <p>Reserved worker means if a business process is scheduled on a specific machine, then it will be executed only on that machine. </p>
-                            <img src="../assets/images/doc-img38.png" alt="image" class="lessSpace">
+                            <img src="{{ '/assets/images/doc-img38.png' | relative_url }}" alt="image" class="lessSpace">
                             <h6>8.4.3.  Actions</h6>
                             <p>In actions, specify when to stop a scheduled bot.</p>
-                            <img src="../assets/images/doc-img39.png" alt="image" class="lessSpace">
+                            <img src="{{ '/assets/images/doc-img39.png' | relative_url }}" alt="image" class="lessSpace">
 
                           </div>
                           <div id="accountManagement"  class="page-section">
                             <h4 class="green">8.5. Account Management</h4>
                             <p>In Account Management, the profile details created when the user logged in for the first time can be updated. </p>
-                            <img src="../assets/images/doc-img40.png" alt="image" class="lessSpace">
+                            <img src="{{ '/assets/images/doc-img40.png' | relative_url }}" alt="image" class="lessSpace">
                             <h6>8.5.1.  Organization:</h6>
                             <p>Only admin will have access to create an organization. To create an Organization, navigate to Account Management and from the Account Management drop-down, select the Organization tab. In the Organization screen, click on the <strong>“ADD”</strong> button to create a new organization. </p>
                             <img src="../assets/images/doc-img41.png" alt="image" class="lessSpace">
