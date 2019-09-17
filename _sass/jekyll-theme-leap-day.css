@@ -90,7 +90,11 @@ body {
 .child:hover{
   text-decoration: none;
 }
-
+.wrapper {
+  width:650px;
+  margin:0 auto;
+  position:relative;
+}
 #sidebar {
     min-width: 250px;
     max-width: 250px;
@@ -145,6 +149,7 @@ body {
   padding-left: 8px;
 } */
 /* section img { */
+
 
 /* blockquote {
   border-left:1px solid #ffcc00;
@@ -425,7 +430,10 @@ nav {
 
 @media print, screen and (max-width: 1060px) {
 
-
+  div.wrapper {
+    width:auto;
+    margin:0;
+  }
 
   nav{
     display: none;
@@ -593,6 +601,7 @@ nav {
     width:auto;
   }
 }  */
+
 .heading{
   text-decoration:none;
   font-size:16px;
@@ -624,14 +633,7 @@ nav {
   border-collapse: collapse;
   font-weight: normal;
 }
-/* h5{
-  margin-left: 30px;
-  font-size: 10px;
-  margin-top: 10px;
-}
-div.col-8 div{
-  height: auto;
-} */
+
 
 
 
