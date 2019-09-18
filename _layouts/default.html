@@ -153,7 +153,7 @@
    .rateUs .main-heading{margin-bottom:15px;font-weight:500}
    .rateUs{padding:80px 0 80px}
    .rateUs p{font-size:16px;font-weight:500;line-height:1.88;color:#999}
-   .blueFooter p{font-size:9px;letter-spacing:.2px;color:#666}
+   .blueFooter p{ position:fixed;font-size:9px;letter-spacing:.2px;color:#666}
    .blueFooter{
      position:fixed;
      border-top:1px solid #e4e4e4;
@@ -2122,7 +2122,8 @@
               </ul>
               </div>
           </div>
-      </div>        <!--Foorter Start-->
+      </div>
+      <!--Foorter Start-->
         <footer class="blueFooter greyBg">
             <div class="container">
                 <p>Privacy Policy I Terms & Condition I © 2016-2019 Website Design All rights reserved.</p>
@@ -2187,6 +2188,8 @@
     });
 });
 
+
+var open_menu_item = undefined
 $('.documentTabCLick li a').click(function(e){
   e.preventDefault();
   removeActiveMenuClass()
@@ -2208,54 +2211,47 @@ $('#sidebar').css('height', divHeight+'px');
 
 
 })
-$(window).scroll(function() {
+/*$(window).scroll(function() {
     var scrollDistance = $(window).scrollTop();
   $('.page-section').each(function(i) {
         if ($(this).position().top <= scrollDistance) {
-            $('.documentTabCLick li a.active').removeClass('active');
-            $('.documentTabCLick li a').eq(i).addClass('active');
+          console.log($(this).position().top, scrollDistance, i);
+            $('.documentTabCLick li a.heading.active').removeClass('active');
+            $('.documentTabCLick li a.heading').eq(i).addClass('active');
         }
     });
 }).scroll();
-
-/*var nav = $('.documentTabCLick .subMenu > a');
-nav.find('li').hide();
-nav.click(function () {
-    nav.not(this).find('li').hide();
-    $(this).find('li').slideToggle();
-    $(this).parents().find('.heading').attr("aria-expanded","false");
-    $(this).parents().find('.collapse').removeClass("in");
-});*/
+*/
 
 var dropdown = document.getElementsByClassName("heading");
-var i;
 
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  this.classList.addClass("active");
-  } else {
-  dropdownContent.style.display = "block";
-  this.classList.addClass("active");
-  }
-  });
-}
 $(".child").click(function(){
-
+ var index = Number($(this).attr("class").split(/\s+/)[1]);
   $(this).parents().find('.heading').not(this).removeClass('active');
-    $(this).parents().find('.heading').toggleClass('active');
+  $(".heading").removeClass('active');
+  $(".collapse").css("display", "none");
+    var x = $(this).parents().find('.heading')
+    $(x[index]).toggleClass('active');
+    $(".collapse-"+ index).css("display", "block");
 
-     $(this).parents().find('.heading').toggleClass('active').parents().removeClass('active');
 });
 $(".heading").click(function(){
-
    $(this).toggleClass('active').siblings().removeClass('active');
+   var n = $(this).parent().children()[1]
+   if($(n).css("display") == "none"){
+    $(open_menu_item).slideToggle()
+        open_menu_item = n
+        $(n).slideToggle()
+
+   }else {
+        $(n).slideToggle()
+        open_menu_item = undefined
+   }
 });
 
-
+$(".giveRate li").click(function(){
+  $(this).toggleClass('given');
+})
     </script>
 </body>
 
