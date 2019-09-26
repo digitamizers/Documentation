@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71" height="44" viewBox="0 0 71 44">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 71 34">
+      <image width="71" height="34" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAAiCAYAAAANicT2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALWSURBVGhD7ZbdSzJBFIffvza1Aim9CCNFzC+6CARNAoOgC69VIvwDCr8uIkkQFdEuQqUyC7/QE79x9n1102lbl7cu5gHRPTu7Oz4755z5Q5KVSDkCpBwBUo4AKUeAlCNAyhEg5QiQcgRIOQJ+VM54PKZisUiPj4888rtYW85wOKRMJkPn5+d0dnZG8XicarUaTadTPuIfyWSSgsEg9ft9dvzw8EA2m41isRg7/i6FQoH29vbo+fmZR4xlLTl44y6Xi7a3tykUCjE5Ho+HLBYLnZyc0Pv7Ox85Qy0HYAxWkB5+rRz8qUAgwD7qyZXLZdrZ2aGLi4uFFaSWg3Ovr68LshQmkwmTn8vlqNlsLhWoloNrut3up5eiF91yrq+vWUo0Gg0eWeTm5oatovl6opaDbxwjPk+r1SKfz0dms5nsdjv7djgcVK1W+YgZ83IgJpFIsHFIVyPQLQd14vj4mEajEY98jRY5vV6PDg8P6ejoiN7e3lgMdQ3P29/fp06nw2JAkfP09ESpVIp2d3epUqnws+ujS85gMGCTPz095RFtaJFzd3fHVot6RbbbbfJ6vUyIgiLn6uqKpXE2m+VnjEGXHNSKaDTKPsu60iq0yMFvp9PJatFXQI7JZKKtrS2WxkajO63wJw4ODujl5YVHFsFSz+fzf1MDaJFzeXnJ6saq+84DOVarlY1Hp9Tb9VahWw46CJY/cl29etAtkHbzIoAWOeh0uG+pVOKRGUgzNIBlaYVr8KKWzWUddMvBJNLpNNvj4K1h8ugat7e3rKCiBqiLoxY5ePtIV6yG+/t7VvDr9Tq53W7y+/2sYCsocvBcPAsF2UhBuuUATALbf2wEkfsbGxu0ublJkUhkoasoaJEDEMceCffCPdHKw+Hwp/3UvByAgow0Q/0xQtBacv4H6IxGpsp3+PVyfhIpR4CUI0DKESDlCJByBEg5AqQcAVKOAClHgJSzEqIP++LIoQaBsFMAAAAASUVORK5CYII="/>
+    </pattern>
+    <filter id="_10.7-Step_5" x="0" y="0" width="71" height="44" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#_10.7-Step_5)">
+    <rect id="_10.7-Step_5-2" data-name="10.7-Step 5" width="53" height="26" transform="translate(9 6)" fill="url(#pattern)"/>
+  </g>
+</svg>
