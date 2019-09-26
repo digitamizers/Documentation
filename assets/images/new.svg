@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="45" viewBox="0 0 41 45">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 71 89">
+      <image width="71" height="89" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABZCAYAAABsbDn0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAP6SURBVHhe7ZlLSBtRFIZDd6VQunUhdONCXLgVRDAoGlAQwSf4AEEX7ly6ELoWdKmCFrQqWlwpplRE7MIiVjEGg4gU6qI+mqiIeZQk6in/dSZOYjxYMkkmcD44ZObcO1fu5zl3ItpIeBaRwyByGEQOg8hhEDkMIodB5DCIHAaRw2C6nMnLI7IfOVMOK2C6nA+nu/Rq92PKYQXSKidZRbw0rEBa5eQ6IochI3L+55B2/PxKvyNB7cnskhE5xtxL4r3nsyUEWUqO/egLvXZNqmsrCLKUHMz75j+lN3vWEGQ5OeB74I8lBFlSDoCgt3ufVD5bgiwrB/wI+rIqyNJyAAS9cz8K8kb/aiPpx/JygCt0GROEAztTWErOS0LkMCFymBA5TIgcJkQOEzkt51fYrzZg3ITIYRA5DCKHQeQwiBwGkcMgchjM+hcxAn+hZ4qMyMlVRA6DyGEQOQwih0HkMIgcBpHDIHIYRA6DyGEQOQwih0HkMIgcBpHDIHIYRA6DyGEQOQwih0HkMIgcBpHDkJIcv99Po6OjtLOzo2UeOTs7U2P4zFVSknNxcUHV1dVUV1dH5+fnWvaBw8NDqqqqUp+5iily8vLyaHBwkG5vb7URXk4oFCKXy6UC10bu7+/p+vpaVaURzLu6uqK7uzstQ+oauXA4rGXMxRQ54+PjVF5eThsbG9pIcjnYzMLCAhUVFVFZWRnZ7XbKz8+nkZERikaj2iyi4eFh6uvri20awoaGhtQvwdjCx8fH5HA4yOPxaBlzMUUOpMzOzlJDQwN5vV41lkzOysoKlZSU0P7+vpZ52GBtbS3Nzc1pGVLr1dTUkM/nU/eojra2NjUP4nQwr6Ojg25ubrSMuZgmJxAIUG9vb6y9EuWgClANY2Nj6t7IzMwMtbe3xzZ5cnKi1tWrZGtri7q6umh1dZVaW1tV2wGIMsoyG9PkgIODA9Ve29vbT+Toc9FC6+vrcYEcxjAHQG5/fz9NTU3FWmpiYkJVUHNzs5IWDAapp6cn9rPTgalysJHp6WlqbGykzc3NODnYGFpleXlZPZcYiYft4uKiqjS0aWdnpzpXdFGoFrRjS0uLqrJ0YaocgPbq7u5WZ0RlZWVMDqphYGBAbQ6b1ME1Wg2VYnxz4bmmpiZyOp1qPawL0GJorfn5+bhDOx2YLgegvYqLi1XocoDb7abS0lJaWlpSbycErgsKCtRhbQTnD86ZiooK1VI6OG8gB3lUVzpJixy9vRLlAHy3qa+vJ5vNpgKv9LW1tbhq0kH7FBYWPnlVI59sbbNJSU4qoGoikYh2Z02yJicXEDkMIodB5DCIHAaRwyByGEQOg8hhEDkMIodB5DCIHAaRwyBynoXoH2ghnTmDJRBXAAAAAElFTkSuQmCC"/>
+    </pattern>
+    <filter id="_10.7-Step_1" x="0" y="0" width="41" height="45" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.114"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#_10.7-Step_1)">
+    <rect id="_10.7-Step_1-2" data-name="10.7-Step 1" width="23" height="27" transform="translate(9 6)" fill="url(#pattern)"/>
+  </g>
+</svg>
