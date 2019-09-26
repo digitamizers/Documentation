@@ -19,6 +19,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/font-awesome.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/font/fontawesome-webfont.eot' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/font/fontawesome-webfont.woff' | relative_url }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
@@ -507,12 +509,14 @@
                               </select>
                           </div>
                           <ul class="nav nav-pills flex-column side customScroll"  >
-                              <li class="subMenu">
-                                  <a href="" class="heading"><span class="numbers">1.</span> Get Started </a>
-                                  <ul class="collapse list-unstyled collapse-0">
-                                    <li><a class="child 0" href="#notes"><span class="numbers">1.1.</span>Release Notes</a></li>
-                                  </ul>
-                              </li>
+                            <li class="subMenu">
+                                <a href="" class="heading"><span class="numbers">1.</span> Release Notes</a>
+                                <ul class="collapse list-unstyled collapse-0">
+                                  <li><a class="child 0" href="#notes"><span class="numbers">1.1.</span>Overview</a></li>
+                                  <li><a class="child 0" href="#whatsNew"><span class="numbers">1.2.</span>What is new in this release</a></li>
+
+                                </ul>
+                            </li>
                               <li class="subMenu">
                                   <a href="" class="heading"><span class="numbers">2.</span> Installation Instructions</a>
                                   <ul class="collapse list-unstyled collapse-1">
@@ -593,11 +597,21 @@
                       <div class="doc-data col-md-8 col-sm-8">
                         <div id="notes"  class="page-section">
                               <h3><span class="numbers">1.</span> Release Notes</h3>
-                              <h4>Overview</h4>
-                              <h5>1.1. Document Purpose</h5>
-                              <p>This document provides the “what’s new” information for the version  1.5.3 release Techforce RPA studio & EM console </p>
-                              <h5>1.2. Documentation</h5>
-                              <p>Product documentation is available at   <a target="_blank" href="http://docs.techforce.ai/">www.docs.techforce.ai</a></p>
+                              <blockquote class="big">
+                                  <div>
+                                    <img src="../assets/images/idea.svg" alt="image">
+                                    NOTE
+                                  </div>
+                                  <p><strong>Techforce.ai RPA Studio& EM Console</strong><br>Release Notes  Of Version 1.5.3   <span class="small">Release Date : Sep  19, 201</span></p>
+
+                                </blockquote>
+                              <h4 class="skyBlue">1.1 Overview</h4>
+                              <h6>1.1.1 Document Purpose</h6>
+                              <p>This document provides the “what’s new” information for the version <br> 1.5.3 release Techforce RPA studio & EM console </p>
+                              <h6>1.1.2. Documentation</h6>
+                              <p>Product documentation is available at   <a href="http://docs.techforce.ai/">www.docs.techforce.ai</a></p>
+                          </div>
+                          <div id="whatsNew" class="page-section">
                               <h4 class="blue">What’s New in this Release</h4>
                               <h6>1.3. Techforce RPA Studio </h6>
                               <h5>1.3.1. New Features/Functionality Added  </h5>
@@ -642,6 +656,7 @@
                               </ul>
 
                           </div>
+
                           <div id="compatiblity" class="page-section">
                               <h3><span class="numbers">2.</span> Installation Instructions</h3>
                               <h4>2.1 OS Compatibility</h4>
