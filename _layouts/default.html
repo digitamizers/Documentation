@@ -585,14 +585,14 @@
                                           <li style="margin-left:20px;"><a class="child 2" href="#Play"><span class="numbers">3.3.9</span> <span style="margin-left:5px;">Play</span></a></li>
                                         </ul>
                                     </li>
-                                      <li><a class="child 2" href="#action"><span class="numbers">3.4.</span> Action Library</a>
+                                      <li><a class="child 2" href="#Action"><span class="numbers">3.4.</span> Action Library</a>
                                         <ul>
                                           <li style="margin-left:20px;"><a class="child 2" href="#Stage"><span class="numbers">3.4.1</span> <span style="margin-left:5px;">Stage</span></a></li>
                                           <li style="margin-left:20px;"><a class="child 2" href="#Desktop"><span class="numbers">3.4.2</span> <span style="margin-left:5px;">Desktop Automation</span></a>
                                           <ul>
                                           <li style="margin-left:20px;"><a class="child 2" href="#Keyboard"><span class="numbers">3.4.2.1</span> <span style="margin-left:15px;">Keyboard Shortcuts</span></a></li>
                                           <li style="margin-left:20px;"><a class="child 2" href="#Drag"><span class="numbers">3.4.2.2</span> <span style="margin-left:15px;">Drag and Drop</span></a></li>
-                                          <li style="margin-left:20px;"><a class="child 2" href="#Open"><span class="numbers">3.4.2.3</span> <span style="margin-left:15px;">Open App</span></a></li>
+                                          <li style="margin-left:20px;"><a class="child 2" href="#OpenApp"><span class="numbers">3.4.2.3</span> <span style="margin-left:15px;">Open App</span></a></li>
                                           <li style="margin-left:20px;"><a class="child 2" href="#CloseApp"><span class="numbers">3.4.2.4</span> <span style="margin-left:15px;">Close App</span></a></li>
                                           <li style="margin-left:20px;"><a class="child 2" href="#Close"><span class="numbers">3.4.2.5</span> <span style="margin-left:15px;">Close</span></a></li>
                                           <li style="margin-left:20px;"><a class="child 2" href="#Switch"><span class="numbers">3.4.2.6</span> <span style="margin-left:15px;">Switch App</span></a></li>
@@ -1014,7 +1014,7 @@
                             <li><span class="numbers">Figure 16: </span> Techforce RPA Studio Play Now</li>
                           </div>
 
-                          <div id="Play"  class="page-section">
+                          <div id="Action"  class="page-section">
                             <h4 class="purple">3.4 Action Library Panel</h4>
 
                             <p>All the actions in the Action library panel are categorized based on the functionality.</p>
@@ -1078,30 +1078,206 @@
                             <p>The list of actions that come under desktop automation are Keyboard shortcuts · Drag and Drop, Open App, Close App, and Switch App.</p>
                           </div>
 
+                          <div id="Keyboard"  class="page-section">
+                            <h5 class="purple">3.4.2.1  Keyboard Shortcuts</h5>
+                            <p>This action is used to send keyboard shortcuts to active application in which functions like CTRL, WIN, ALT, and SHIFT have been assorted in the IDE.</p>
+                            <li><strong>Properties</strong></li>
+                            <p><strong>Custom keys:</strong> Provides a text box in which the user needs to type the function keys to be passed to the active application</p>
+                            <p><strong>Keys:</strong> Gives out a list of function keys and all the functions available on the keyboard. Click on keys and select the required function to be used on the active application.</p>
+                            <li>Example</li>
+                            <p><strong>Requirement:</strong> Need to send (Control +Copy) and enter key using custom keys and keys.</p>
+                            <p><strong>Control+ Copy:</strong> Check in the Ctrl box and click on Custom keys and type “c” in the text box Enter key: check in the keys and click on drop-down box to find drop-down list of the entire keyboard functions; choose ENTER and click on it.</p>
+                          </div>
 
+                          <div id="Drag"  class="page-section">
+                            <h5 class="purple">3.4.2.2  Drag and Drop</h5>
+                            <p>This action is used to drag/change the location of the file/folder from one location to another by using the image selector or location selector.</p>
+                            <h6>Properties From Input starting point</h6>
+                            <ol>
+                            <li><span class="numbers">1.</span><strong>Image Selector:</strong> Where bot enables image capturing mode to select the image of the required file/folder to change.</li>
+                            <li><span class="numbers">2.</span><strong>Location selector:</strong> Where bot enables location capturing mode to select the X and Y coordinates of the required file/folder.</li>
+                            <h5>To Output destination</h5>
+                            <li><span class="numbers">1.</span><strong>Image Selector:</strong> bot allows the user to select the required location in the image from where bot recognizes the file/folder or place in the image format.</li>
+                            <li><span class="numbers">2.</span><strong>Location selector:</strong> similarly bot allows the user to select the destination of the selected file/folder by using the X and Y coordinates.</li>
 
+                            <h6>Example</h6>
+                            <li><span class="numbers">1.</span><strong>Requirement:</strong> Need to change the location .docx file present on the desktop from one location to another by using the image selector in “FROM” and by using location selector in “TO”.</li>
+                            <li><span class="numbers">2.</span><strong>From:</strong> Check in the image selector and click on the insert screenshot where the user will give access to select the image of the required .docx file.</li>
+                            <li><span class="numbers">3.</span><strong>To:</strong> Check in the location selector and click on the find location where bot allows the users to select the required location of destination by using X and Y coordinates.</li>
 
+                            </ol>
+                          </div>
 
+                          <div id="OpenApp"  class="page-section">
+                            <h5 class="purple">3.4.2.3  Open App</h5>
+                            <p>Opens Windows applications.</p>
+                            <ol>
+                              <h5>Properties</h5>
+                             <p>App Shortcut or File Path: It is used to open Windows applications by giving the file path of the application with an extension like notepad.exe. Copy the path and paste it in the Open App properties window.</p>
+                             <h6>Example</h6>
+                             <li><span class="numbers">1.</span><strong>Requirement:</strong> Need to open Google by using Open App.</li>
+                             <li><span class="numbers">2.</span>Copy the full path of Google and paste it in the properties window.</li>
+                            </ol>
+                          </div>
 
+                          <div id="CloseApp"  class="page-section">
+                            <h5 class="purple">3.4.2.4  Close App</h5>
+                            <p>Closes the active application(s).</p>
+                            <ol>
+                              <h5>Properties</h5>
+                             <p>App Window Title: Similar to the Open App, Close App also works on the same formulae but in order to the file path, just give the header of the existing app.</p>
+                             <h6>Example</h6>
+                             <li><span class="numbers">1.</span><strong>Requirement:</strong> Need to close the Amazon website using Close App. Copy the header of Amazon.in and paste it in the properties window.</li>
+                            </ol>
+                          </div>
 
+                          <div id="Close"  class="page-section">
+                            <h5 class="purple">3.4.2.5  Close File</h5>
+                            <p>Closes the indicated active file.</p>
+                            <ol>
+                              <h5>Properties</h5>
+                             <p><strong>File Path:</strong> Similar to the Close App, Close File also works on the same formulae but, closes the existing file.</p>
+                             <h6>Example</h6>
+                             <li><span class="numbers">1.</span><strong>Requirement:</strong> Need to close the Excel file using Close File. Copy the header of Excel file  and paste it in the properties window.</li>
+                            </ol>
+                          </div>
 
+                          <div id="Switch"  class="page-section">
+                            <h5 class="purple">3.4.2.6 Switch App</h5>
+                            <p>Closes the indicated active file.</p>
+                            <ol>
+                              <h5>Properties</h5>
+                             <p><strong>App Window Title:</strong> Switch app is used to switch to a particular window or app when multiple windows are open. Just write down the header of the required app/window or variable and paste it in the properties window.</p>
+                             <h6>Example</h6>
+                             <li><span class="numbers">1.</span><strong>Requirement:</strong> Need to switch app when two apps/windows are active.</li>
+                             <li><span class="numbers">2.</span><strong>Input:</strong>Just write down the heading of the required app/window or variable and paste it in the properties window.</li>
+                            </ol>
+                          </div>
 
+                          <div id="Switch"  class="page-section">
+                            <h5 class="purple">3.4.2.7 Screenshot</h5>
+                            <p>Closes the indicated active file.</p>
+                            <ol>
+                              <h5>Properties</h5>
+                             <p><strong>App Window Title:</strong> Switch app is used to switch to a particular window or app when multiple windows are open. Just write down the header of the required app/window or variable and paste it in the properties window.</p>
+                             <h6>Example</h6>
+                             <li><span class="numbers">1.</span><strong>Requirement:</strong> Need to switch app when two apps/windows are active.</li>
+                             <li><span class="numbers">2.</span><strong>Input:</strong>Just write down the heading of the required app/window or variable and paste it in the properties window.</li>
+                            </ol>
+                          </div>
 
+                          <div id="WebAutomation"  class="page-section">
+                            <h5 class="purple">3.4.3 Web Automation</h5>
+                            <p>Web automation is used to automate browser-based applications. Web actions enable the bot to open a web page, read data from the elements, scroll the webpage, deal with the popup windows, take a screenshot of the page, etc.</p>
+                          </div>
 
+                          <div id="OpenWebpage"  class="page-section">
+                            <h5 class="purple">3.4.3.1 Open Webpage</h5>
+                            <p>Open a website by passing the URL in the properties window as input or else by creating the variable for URL in the variables section and pass the variable name in the properties.</p>
+                            <ol>
+                              <h5>Properties</h5>
+                             <p><strong>Browser:</strong> Used to select the mode of execution. To execute in Google chrome, Mozilla Firefox, Headless or Microsoft Edge.</p>
+                              <p><strong>Page address:</strong> Pass the URL example: (www.Techforce.ai) in the page address properties window or else directly pass the variable.</p>
+                               <p><strong>Folder Path or Download Files:</strong> To download any files in the execution process, just pass the path to save the download the files in the specified path.</p>
+                               <h5>Headless</h5>
+                               <p><strong>Page address:</strong> Used to run a program in the background without any extension. Pass the URL
+                               <strong>example:</strong> (www.flipkart.com) in the page address properties window or else directly pass the variable.</p>
+                             <h6>Example</h6>
+                             <li><span class="numbers">1.</span><strong>Requirement:</strong>Need to open webpage www.irctc.co.in by creating a variable.</li>
+                             <li><span class="numbers">2.</span><strong>Input:</strong>create a variable in the variables and select the string for variable type and place the www.irctc.co.in in value. Pass that variable into the page address property window.</li>
+                            </ol>
+                          </div>
 
+                          <div id="Read"  class="page-section">
+                            <h5 class="purple">3.4.3.2 Read Table</h5>
+                            <p>We can read the data from tables in web pages.</p>
+                            <ol>
+                              <h5>Properties</h5>
+                             <p><strong>Table xpath:</strong> Copy the x-path from the corresponding web element.</p>
+                             <p><strong>IFrame name:</strong> Enter the iframe name if the table is in the IFrame.</p>
+                             <p><strong>Column Name:</strong> Here pass the table column name.</p>
+                             <p><strong>Select variable:</strong> Create the variable as list. Only list variables are supported.</p>
+                            </ol>
+                          </div>
 
+                          <div id="Frame"  class="page-section">
+                            <h5 class="purple">3.4.3.3 Frame</h5>
+                            <p>To automate web page html elements that are in Iframe, the iframe html element is often used to insert content from another source.</p>
+                            <ol>
+                              <h5>Properties:</h5><p>Enter the name of the Iframe</p>
+                            </ol>
+                          </div>
 
+                          <div id="Popup"  class="page-section">
+                            <h5 class="purple">3.4.3.4 Popup</h5>
+                            <p>To enter data from popup windows for using this popup action.</p>
+                            <ol>
+                              <h5>Properties:</h5>
+                              <p><strong>Popup Address:</strong> Just pass the popup page URL.</p>
+                            </ol>
+                          </div>
 
+                          <div id="Show"  class="page-section">
+                            <h5 class="purple">3.4.3.5 Show</h5>
+                            <p>Show action is used to display the text value in the logs.</p>
+                            <ol>
+                              <h5>Properties:</h5>
+                              <p><strong>Element:</strong> Pass the string or else create a variable in the variables and pass the variable name in back quote symbol (``). Results will be displayed by the bot in the system logs.</p>
+                              <h6>Example</h6>
+                              <li><span class="numbers">1.</span><strong>Requirement:</strong>Show hello world in the logs.</li>
+                              <li><span class="numbers">2.</span><strong>Input:</strong>Pass the variable/string in the property window.</li>
+                              <h6>NOTE:</h6>
+                              <p>variables should be passed with back quote (``) like `apple`</p>
+                             </ol>
+                            </ol>
+                          </div>
 
+                          <div id="Snap"  class="page-section">
+                            <h5 class="purple">3.4.3.6 Snap</h5>
+                            <p>Used to take a screenshot of a whole page or can be customized to get a specific image by passing the XPath of the required HTML of the window.</p>
+                            <ol>
+                              <h5>Properties:</h5>
+                              <p><strong>Image file Path:</strong>Provide the path with image name and extension in the property window and the image will be saved by the given name in the specified location.</p>
+                              <h5>Custom</h5>
+                              <li><span class="numbers">1.</span><strong>XPath:</strong>Copy and paste the required image HTML element path in the XPath properties window or pass the variable.</li>
+                              <li><span class="numbers">2.</span><strong>Image File Path:</strong>Provide the path with image name and extension in the property window and the image will be saved by the given name in the specified location.</li>
+                              <h6>NOTE:</h6>
+                              <p>By default, images are saved in .png format with a default name (snap1 snap2, etc.). To save the image with a given name, then the user needs to mention it with the format also i.e., .png or else each time bot overwrites the existing image and saves it in the same field. Example: image.png</p>
+                              <h6>Example</h6>
+                              <li><span class="numbers">1.</span><strong>Requirement:</strong>Capture the whole page of google.com.</li>
+                              <h6>Page</h6>
+                              <li><span class="numbers">2.</span><strong>Input:</strong>Click on the page and pass the image name in the properties window as the captured image will be placed under the given file name.</li>
+                              <h6>Custom</h6>
+                              <li><span class="numbers">2.</span><strong>Input:</strong>Click on the page and paste the XPath of the variable to be captured and pass the image name as string/variable in the properties window.</li>
+                            </ol>
+                          </div>
 
+                          <div id="DOM"  class="page-section">
+                            <h5 class="purple">3.4.3.4 DOM</h5>
+                            <p>When a web page is loaded, the browser creates a Document Object Model (DOM) of the page.</p>
+                            <p>To access HTML elements with JavaScript, find the elements first.</p>
+                            <p>There are a couple of ways to do this:</p>
+                            <p>Changing HTML Elements</p>
+                            <div class="table-responsive">
+                              <table class="table">
+                                  <tr>
+                                      <th class="Designer" width="25%">Method</th>
+                                      <th class="Designer">Description</th>
+                                  </tr>
+                                  <tr>
+                                      <td class="bot" width="25%">document.getElementById (id)</td>
+                                      <td class="bot">document.getElementsByTagName (name)</td>
+                                      <td class="bot">document.getElementsByClassName (name)</td>
+                                  </tr>
+                                   <tr>
+                                     <td class="bot" width="25%">Find an element by element id</td>
+                                     <td class="bot">Find elements by tag name</td>
+                                     <td class="bot">Find elements by class name</td>
+                                   </tr>
+                               </table>
+                            </div>
 
-
-
-
-
-
-
-
+                          </div>
 
 
 
