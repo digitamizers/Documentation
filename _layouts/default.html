@@ -718,9 +718,18 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="" class="heading"><span class="numbers">4.</span> Enterprise Manager console </a>
+                                <a href="EnterpriseManagerconsole " class="heading"><span class="numbers">4.</span> Enterprise Manager console </a>
                                  <ul class="collapse list-unstyled collapse-3">
-                                    <li><a class="child 3" href="#emamnager"><span class="numbers">4.1.</span>Installing E-Manager Console (Windows Os)</a></li>
+                                    <li><a class="child 3" href="#emamnager"><span class="numbers">4.1</span> Register with eManager console</a></li>
+                                    <li><a class="child 3" href="#Login"><span class="numbers">4.2</span>Login</a></li>
+                                    <li><a class="child 3" href="#ProcessManagement"><span class="numbers">4.3</span> Process Management</a></li>
+                                    <li><a class="child 3" href="#WorkerManagement"><span class="numbers">4.4</span>Worker Management</a></li>
+                                    <li><a class="child 3" href="#Queues"><span class="numbers">4.5</span> Queues</a></li>
+                                    <li><a class="child 3" href="#SecretVault"><span class="numbers">4.6</span> Secret Vault</a></li>
+                                    <li><a class="child 3" href="#Schedules"><span class="numbers">4.7</span> Schedules</a></li>
+                                    <li><a class="child 3" href="#Organization"><span class="numbers">4.8</span> Organization</a></li>
+                                    <li><a class="child 3" href="#AccountSettings"><span class="numbers">4.9</span> Account Settings</a></li>
+                                    <li><a class="child 3" href="#Notifications"><span class="numbers">4.10</span> Notifications</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -2011,214 +2020,228 @@
 
 
 
-                          <div id="emamnager"  class="page-section">
+                          <div id="EnterpriseManagerconsole"  class="page-section">
                               <h3><span class="numbers">4.</span> Enterprise Manager console</h3>
-                              <h4 class="skyBlue">4.1. Installing E-Manager Console (Windows Os)</h4>
-                              <p>Installation documents will be provided by TechForce in zip files. <br> databaseScripts, producer, receiver are zip files.</p>
-                              <ol>
-                                <li><span class="numbers">1.</span> In PRODUCER machine, unzip ‘databaseScript’ zip file.</li>
-                                <li><span class="numbers">2.</span> Open DBScripts file from above unzipped.</li>
-                                <li><span class="numbers">3.</span> Copy Scripts from either ‘MSSQL’ or ‘MYSQL’ as per the requirement/DB and Execute/RUN these scripts in respective DB. (Paste in Query Editor & Execute/RUN it). </li>
-                               <li><span class="numbers">4.</span> Copy data in files TF_USER_LOGIN & TF_USER_TOKEN (unzipped from ‘databaseScript’) and paste in respective tables in DB.</li>
-                               <li><span class="numbers">5.</span> Now, UNZIP ‘producer’ file, in PRODUCER machine.</li>
-                              </ol>
-                              <h6>4.1.1. Installing E-Manager Console in Producer Machine</h6>
-                              <p>To install E-Manager Console successfully in local machine, the following software should be installed first.</p>
-                              <ul class="diamondList">
-                                <li>Erlang</li>
-                                <li>Rabbit MQ</li>
-                                <li>Hashi corp vault</li>
-                                <li>Node JS</li>
-                                <li>Yarn</li>
-                              </ul>
-                              <h5>4.1.1.1.  Erlang</h5>
-                              <ol>
-                                <li><span class="numbers">1.</span> To install Erlang go to the URL <a href="https://www.erlang.org/downloads">https://www.erlang.org/downloads</a> (or the same file is unzipped from ‘producer’ file provided by TechForce)</li>
-                                <li><span class="numbers">2.</span> Click on <strong>“OTP 21.2 Windows 64-bit Binary File” </strong>which will download the installer. Navigate to the downloaded path and install Erlang in the machine.
-                                  <img src="{{ '/assets/images/doc-img13.png' | relative_url }}" alt="image">
-                                </li>
-                              </ol>
-                              <h5>4.1.1.2.  Rabbit MQ</h5>
-                              <ol>
-                                <li><span class="numbers">1.</span> To install Rabbit MQ go to the URL <a href="https://www.rabbitmq.com/download.html">https://www.rabbitmq.com/download.html</a> (or the same file is unzipped from ‘producer’ file provided by TechForce) </li>
-                                <li><span class="numbers">2.</span> After opening the URL click on <strong>“Windows Installer”</strong>, which will start downloading Rabbit MQ.
-                                  <img src="{{ '/assets/images/doc-img14.png' | relative_url }}" alt="image">
-                                </li>
-                                <li><span class="numbers">3.</span> Now open the downloaded folder and double click on Rabbit MQ installer. In the pop-up a screen that shows <strong>“Do u want to allow this app from an unknown publisher”</strong> click <strong>“YES”</strong>.
-                                </li>
-                                <li><span class="numbers">4.</span> Click <strong>“NEXT”</strong> at “choose components” step.
-                                </li>
-                                <li><span class="numbers">5.</span> At “Choose Installation Location” browse a specified location to install Rabbit MQ or Click   <strong>“INSTALL”</strong>.</li>
-                                <li><span class="numbers">6.</span> Open an elevated command line <strong>(Run as Administrator)</strong></li>
-                                <li><span class="numbers">7.</span> Navigate to the sbin directory of the RabbitMQ Server installation directory. Copy the path and paste it in the <strong>“PATH”</strong> variable in “SYSTEM VARIABLES” under <strong>“ENVIRONMENT VARIABLES”</strong>.</li>
-                                <li><span class="numbers">8.</span> Open the command prompt from “<strong class="blue">C:\Program Files (x86)\RabbitMQServer\rabbitmq_server-3.3.4\ sbin</strong>”path and run the below command to start/run Rabbit MQ plugin.</li>
-                              </ol>
-                              <p><strong>Run the following command to enable the plugin rabbitmq-plugins.bat enable rabbitmq_management</strong></p>
-                              <ul class="romanListing">
-                                <li><span class="numbers">I.</span> Navigate to C:\Users\<currentLoggedInUser>\AppData\Roaming\RabbitMQ</li>
-                                <li><span class="numbers">II.</span> Create a new file rabbitmq.config, and paste the following data:<br>
-                                    &nbsp; &nbsp;&nbsp;[{rabbit,<br>
-                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;[{heartbeat, 0}]<br>
-                                   &nbsp; &nbsp;&nbsp;}].
-                                </li>
-                                <li>
-                                  <span class="numbers">III.</span> Open Advanced.config from the same folder. Remove the data and paste the following data and save it.<br>
-                                   &nbsp; &nbsp;&nbsp;[{rabbit,<br>
-                                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;[{heartbeat, 0}]<br>
-                                   &nbsp; &nbsp;&nbsp;}].
-                                </li>
-                                <li>
-                                  <span class="numbers">IV.</span> Open an elevated command prompt (run as administrator type) and paste the following commands:
-                                  <ul class="diamondList">
-                                    <li>rabbitmq-service.bat stop</li>
-                                    <li>abbitmq-service.bat remove</li>
-                                    <li>rabbitmq-service.bat install</li>
-                                  </ul>
-                                </li>
-                                <li>
-                                  <span class="numbers">V.</span> Start the rabbitMQ service using the following command:
-                                  <ul class="diamondList">
-                                    <li>rabbitmq-service.bat start</li>
-                                  </ul>
-                                </li>
-                              </ul>
-                              <h5>4.1.1.3.  HashiCorp Vault</h5>
-                              <ol>
-                                <li><span class="numbers">1.</span> To download HashiCorp Vault, go to the URL  <a href="https://www.vaultproject.io/downloads.html">https://www.vaultproject.io/downloads.html</a> (or the same file is unzipped from <strong>‘producer’</strong> file provided by TechForce) </li>
-                                <li><span class="numbers">2.</span> Above URL will download a .zip file. Extract and navigate to the extracted folder and copy the folder path and set that at <strong>“PATH”</strong> in <strong>“ENVIRONMENT VARIABLES”</strong>. Below is the folder path.
-                                  <img src="{{ '/assets/images/doc-img15.png' | relative_url }}" alt="image">
-                                  To Navigate to environment variables, try the below option.
-                                </li>
-                                <li><span class="numbers">3.</span> Right-click on “<strong>My computer/This PC</strong>”, click “<strong>Properties</strong>”, Click “Advanced system settings”, Click “<strong>Environment Variables</strong>”.</li>
-                                <li><span class="numbers">4.</span> Now paste previously copied “<strong>HashiCorp Vault</strong>” path in “<strong>PATH</strong>” variable under “System variables”.</li>
-                              </ol>
-                              <h5>4.1.1.4.  HashiCorp Vault</h5>
-                              <ol>
-                                <li><span class="numbers">1.</span> Create a folder anywhere to store the secret data</li>
-                                <li><span class="numbers">2.</span> Copy the folder path</li>
-                                <li><span class="numbers">3.</span> Create a file config.hcl</li>
-                                <li><span class="numbers">4.</span> Paste the below content in the config.hcl file<br>
-                                  &nbsp;&nbsp;&nbsp;disable_cache = true<br>
-                                  &nbsp;&nbsp;&nbsp;disable_mlock = true<br>
-                                   &nbsp;&nbsp;&nbsp;ui = true<br>
-                                   &nbsp;&nbsp;&nbsp;listener “tcp” {<br>
-                                     &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;address = “127.0.0.1:8200”<br>
-                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tls_disable = 1<br>
-                                  &nbsp;&nbsp;&nbsp;}<br>
-                                   &nbsp;&nbsp;&nbsp;storage “file” {<br>
-                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">path = &nbsp;&nbsp;&nbsp;“E:\\Vault\\FileSystem”</span><br>
-                                  &nbsp;&nbsp;&nbsp;}
-                                </li>
-                                <li><span class="numbers">5.</span> Replace the yellow highlighted part with the path of folder created in step one</li>
-                                <li><span class="numbers">6.</span> Set two system environment variables
-                                  <ul class="diamondList">
-                                    <li>VAULT_ADDR = <span class="darkBlue">http://127.0.0.1:8200</span></li>
-                                    <li>VAULT_API_ADDR = <span class="darkBlue">http://127.0.0.1:8200</span></li>
-                                  </ul>
-                                </li>
-                              </ol>
-                              <h5>4.1.1.5.   Starting the vault server</h5>
-                              <p>With the configuration in place, starting the server is simple, as shown below. Modify the -config flag to point to the proper path where the configuration was saved above.</p>
-                              <img src="{{ '/assets/images/doc-img16.png' | relative_url }}" alt="image">
-                              <h6>4.1.1.6. Initializing the vault</h6>
-                              <p>Initialization is the process configuring the Vault.<br> During initialization, the encryption keys are generated, unseal keys are created, and the initial root token is setup. To initialize Vault, use vault operator init in a new command prompt </p>
-                              <img src="{{ '/assets/images/doc-img17.png' | relative_url }}" alt="image">
-                              <p>Initialization outputs two incredibly important pieces of information - the <strong>unseal keys</strong> and the <strong>initial root token</strong>. This is the only time ever that all of this data is known by Vault, and also the only time that the unseal keys should ever be so close together. Save the above 5 unseal keys and initial root token in a file for future use. Unseal Vault: Every initialized Vault server starts in the sealed state. From the configuration, Vault <br>can access the physical storage, but it can’t read any of it because it doesn’t know how to decrypt it. The process of teaching Vault how to decrypt the data is known as unsealing the Vault. Unsealing has to happen every time the Vault starts. It can be done via the API and via the command line. To unseal the Vault, it is a must to have the threshold number of unseal keys. In the output above, notice that the “key threshold” is 3. This means that to unseal the Vault, 3 keys are required out of the 5 keys that were generated.<br> Begin unsealing the Vault: </p>
-                              <img src="{{ '/assets/images/doc-img18.png' | relative_url }}"alt="image">
-                              <p>After pasting a valid key and confirming, the Vault is still sealed, but progress is made. Vault knows it has 1 key out of 3. Due to the nature of the algorithm, Vault doesn’t know if it has the correct key until the threshold is reached.</p>
-                              <p>Also, notice that the unseal process is stateful. One can go to another computer, use vault operator unseal, and as long as it is pointing to the same server, that other computer can continue the unsealing process. This is extremely important to the design of the unseal process: multiple people with multiple keys are required to unseal the Vault. The Vault can be unsealed from multiple computers and the keys should never be together. A single malicious operator does not have enough keys to be malicious.</p>
-                              <p>Continue with vault operator unseal to complete unsealing the Vault. To unseal the vault, use three different keys. Repeating the same key will not work. If the keys are used correctly, the following output will display:</p>
-                              <img src="{{ '/assets/images/doc-img19.png' | relative_url }}" alt="image">
-                              <p>When the value for Sealed changes to false, the Vault is unsealed:</p>
-                              <img src="{{ '/assets/images/doc-img20.png' | relative_url }}" alt="image">
-                              <p>Finally, authenticate as the initial root token (it was included in the output with the unseal keys):</p>
-                              <img src="{{ '/assets/images/doc-img21.png' | relative_url }}" alt="image">
-                              <p>Navigate to <strong>ENVIRONMENT VARIABLES</strong>. Following are the steps to navigate to environment variables:</p>
-                              <ol>
-                                <li><span class="numbers">1.</span> Right-click on “<strong>My computer/This PC</strong>” </li>
-                                <li><span class="numbers">2.</span> Click “<strong>Properties</strong>”, and click “<strong>Advanced system settings</strong>” </li>
-                                <li><span class="numbers">3.</span> Click “<strong>Environment Variables</strong>”</li>
-                                <li><span class="numbers">4.</span> Create a new variable as “VAULT_DEV_ROOT_TOKEN_ID” and value as the initial root token value.</li>
-                              </ol>
-                              <h5>4.1.1.7.   Node js</h5>
-                              <ol>
-                                <li><span class="numbers">1.</span> To download Node.js, go to the URL:  <a href="https://nodejs.org/en/download">https://nodejs.org/en/download</a> <br>(or can be unzipped from ‘producer’ file provided by TechForce)</li>
-                                <li><span class="numbers">2.</span> After completion of downloading, install Node. js.</li>
-                                <li><span class="numbers">3.</span> Now download <strong>“YARN”</strong> to the machine. </li>
-                                <li><span class="numbers">4.</span> To download YARN type below mentioned command in command prompt. “<strong>npm install -g yarn</strong>”</li>
-                              </ol>
-                              <h5>4.1.1.8.   Open firewall port 5672</h5>
-                              <p>Manually permit a program to access the Internet by opening a firewall port if it is known what port it uses and the protocol to make it work.</p>
-                              <ol>
-                                <li><span class="numbers">1.</span> Navigate to Control Panel, System and Security and Windows Firewall.</li>
-                                <li><span class="numbers">2.</span> Select Advanced settings and highlight Inbound Rules in the left pane.</li>
-                                <li><span class="numbers">3.</span> Right-click Inbound Rules and select New Rule.</li>
-                                <li><span class="numbers">4.</span> Add the port that needs to be opened and click <strong>NEXT</strong>.</li>
-                                <li><span class="numbers">5.</span> Add the protocol (TCP or UDP) and the port number-5672into the next window and click <strong>NEXT</strong>.</li>
-                                <li><span class="numbers">6.</span> Select “<strong>Allow the connection</strong>” in the next window and click <strong>NEXT</strong>.</li>
-                                <li><span class="numbers">7.</span> Select the network type and click <strong>NEXT</strong>.</li>
-                                <li><span class="numbers">8.</span> Name the rule something meaningful and click <strong>FINISH</strong>.</li>
-                              </ol>
-                              <h6>4.1.2. Start the servers</h6>
-                              <ol>
-                                <li><span class="numbers">1.</span> Set a system variable <strong>REACT_APP_IPADDRESS</strong>, local iP (public IP for VM) as its value.</li>
-                                <li><span class="numbers">2.</span> Open three different command prompts. Navigate to the E-Manager Console_API, RPA_authentication, and RPAWebapp (unzipped content from producer.zip file) paths from the three terminals.</li>
-                                <li><span class="numbers">3.</span> Type the following commands in each terminal
-                                  <ul class="diamondList">
-                                    <li>npm install</li>
-                                    <li>npm start</li>
-                                  </ul>
-                                </li>
-                              </ol>
-                              <h6>4.1.3. Configure Database</h6>
-                              <ol>
-                                <li><span class="numbers">1.</span> Open browser</li>
-                                <li><span class="numbers">2.</span> Open <strong>http://localhost:4050  or http://<localIP>:4050 or http://<publicIP>:4050</publicIP> (for VM)</li>
-                                <li><span class="numbers">3.</span> Get redirected to a DB credentials Page. </li>
-                                <li><span class="numbers">4.</span> Select the Database (Dialect) - MySQL or MS SQL</li>
-                                <li><span class="numbers">5.</span> Fill all the fields and submit</li>
-                                <li><span class="numbers">6.</span> Get redirected login Page.</li>
-                                <li><span class="numbers">7.</span> Login to the account using the credentials given below
-                                <ul class="diamondList">
-                                    <li>Username: techforce</li>
-                                    <li>Password: Welcome</li>
-                                  </ul>
-                                </li>
-                              </ol>
                           </div>
-                          <div id="loadBalance"  class="page-section">
-                            <h3><span class="numbers">5.</span> Receiver Installation</h3>
-                            <div id="hybrid"  class="page-section">
-                              <h4 class="green">5.1. Receiver Installation Steps</h4>
-                             <p>Following are the steps for Receiver installation: </p>
-                            <ol>
-                              <li><span class="numbers">1.</span>Install Node.js and Python 3.6 or above</li>
-                              <li><span class="numbers">2.</span> Unzip the receiver.zip file.</li>
-                              <li><span class="numbers">3.</span>  Copy the path of Techforce/src/flows (unzipped receiver file) and set it to a system variable TECHFORCE_HOME</li>
-                              <li><span class="numbers">4.</span>  Copy the path of Techforce-windows/src (unzipped receiver file) and add it to the PATH variable under system variables</li>
-                              <li>
-                                <span class="numbers">5.</span>  Open a command prompt, navigate to E-Manager Console_receiver (unzipped receiver file) and run the below commands
-                                <ul class="diamondList">
-                                  <li>npm install</li>
-                                  <li>node index.js</li>
-                                </ul>
-                              </li>
-                              <li>
-                                <span class="numbers">6.</span>  Open another command prompt, navigate to E-Manager Console_python_api (unzipped receiver file) and run the below commands
-                                <ul class="diamondList">
-                                  <li>pip install –r requirements.txt</li>
-                                  <li>python manage.py runserver 0.0.0.0:8000</li>
-                                </ul>
-                              </li>
-                            </ol>
+
+                            <div id="Register"  class="page-section">
+                              <h4 class="skyBlue">4.1 Register with eManager console</h4>
+                              <h5>Worker creation:</h5>
+                              <p>This is the worker screen before a worker is created in the worker management.</p>
+                              <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image">
+                              <p>To create a worker, Open the Techforce.ai studio, which will create an icon in the task tray when opened, Right click on the studio icon click on settings and register and the below screen displays.</p>
+                              <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                              <p>Enter the details and click on submit a success message will be shown. This creates the worker. After creating the worker the details of the worker like name, host and so on can be seen and the worker RDP details will be sent via an email.</p>
+                              <p>The below shown is the screen of the worker created, also the details of the created worker can be seen</p>
+                              <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                              <h5>Delete Worker</h5>
+                              <p>The created worker can also be deleted. Just click on the delete icon for available the worker details which is to be deleted.</p>
+                              <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                              <p>The below shown screen will be seen after clicking on the delete icon. Click on Yes and the worker machine will be deleted.</p>
+                              <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                           </div>
+
+                           <div id="Login"  class="page-section">
+                             <h4 class="skyBlue">4.2 Login</h4>
+                             <p>1. To Register into eManager-Console, go to the below link,<a href="https://emc.techforce.ai/try/signup?subscriptionId=0, ">https://emc.techforce.ai/try/signup?subscriptionId=0, </a>the following Sign Up page will be displayed.</p>
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image">
+                             <p>2.	Enter the details and click on the Register button, and a mail will be sent to the registered email id for verification purpose.</p>
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                             <p>3.	Click on the link and will be redirected to the eManager-console login page.</p>
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                             <p>4.	Now Open the Techforce.ai studio with administrator permissions, </p>
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+
+                             <p>5.	Windows will ask for permissions, click on Yes.</p>
+                            <p>6.	click on the system tray icon on the taskbar, </p>
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                             <p>7.	we can find the techforce.ai studio icon, right click on the icon, select settings, select register</p>
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                             <p>8.	The below shown window will be opened, provide the details and submit, so that a worker will be created for the account.</p>
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                             <p>9.	 Open the Login page and enter the credentials and click on the submit button and the following screen will be displayed.</p>
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                             <p>10.	 Click on the Worker to see the registered worker details</p>
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                             <p>The worker is added an the eManager-Console is ready to Upload, Schedule and execute the action flows.</p>
+                           </div>
+
+                           <div id="ProcessManagement"  class="page-section">
+                             <h4 class="skyBlue">4.3 Process Management</h4>
+                             <h5>Adding the Business Process</h5>
+                             <p>1. After login into the EM Console account, gets redirected to the Business Process screen. Here upload the RPA script Zip file into the Business Process using the available “Upload” button on the top right of the screen. After uploading, execute the flow.</p>
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image">
+                             <h5>Executing a Business Process:</h5>
+                             <p>2.In the business process page, upload the RPA flow and execute the flow by clicking on the PLAY button from the UI. After clicking on the play button, the below image will appear.</p>
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                             <p>3. Select the Execution target Type like Reserved. If the execution type is selected as reserved, then specify the Worker.</p>
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+
+                             <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                             <p>Note: In on-premise the processes are called “Business Process”.</p>
+                          </div>
+
+                          <div id="WorkerManagement"  class="page-section">
+                            <h4 class="skyBlue">4.4 Worker Management</h4>
+
+                            <p>1.The main functionality of a worker is to execute the flows/business processes that are uploaded in the business process page. So, after adding the worker while executing the business process, select the worker that was created in worker screen. Below is the image for creating a worker.</p>
+                            <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image">
+
+                            <p>2.After creating the worker the details of the worker like name, host and so on can be seen and the worker RDP details will be sent via an email.</p>
+                            <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                             <h5>Worker Categories</h5>
+                            <p>Worker category is the type of worker that is going to be registered. Currently, only “Reserved” type can be created as a worker.</p>
+                            <h5>Reserved</h5>
+                            <p>The Reserved category defines that, if a worker is created as “Reserved” then flows/business processes can be executed only on that seleccted machine.</p>
                          </div>
 
-                            <!-- <h4 class="skyBlue">5.1.  Load Balancer Requirements</h4>
+                         <div id="Queues"  class="page-section">
+                           <h4 class="skyBlue">4.5 Queues</h4>
+                           <p>Queues is the functionality where the status of currently executing bots/workers status and scheduled workers execution status can be seen.</p>
+                            <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                            <p>Select the worker to check the action flows to be executed in the worker environment.</p>
+                            <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                            <p>After selecting the worker the action flows to be executed can be seen as below.</p>
+                            <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                            <p>Note: On-premise the Worker List is called as “Queues”</p>
+                        </div>
 
-                           <div id="deployment"  class="page-section">
-                            <h4 >5.2.  Deployment Options (Single Thread or Multithread)</h4>
-                          </div> -->
-                       </div>
+                        <div id="SecretVault"  class="page-section">
+                          <h4 class="skyBlue">4.6 Secret Vault</h4>
+                          <p>The main functionality of the Secret Vault is to create the values that are not to be shared or shown to others.</p>
+                          <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                          <p>To create a secret vault click on the create button. A secret vault can be created with different types like Integer, Boolean, Text, and Credentials</p>
+                          <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                          <h5>Text:</h5>
+                          <p>To create a new text secret after clicking on the create button, give a name to the secret to be saved as per the name. If the Type selected is “Text”. In the value field pass the text value, then the value will be passed as text to the RPA flow.</p>
+                          <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                          <h5>Boolean:</h5>
+                          <p>To create a new Boolean secret after clicking on the create button, give a name to the secret to be saved as per the name. If the Type selected is Boolean. In the value field select the value as either true or false from the available buttons, the value will be passed as Boolean to the RPA flow.</p>
+                          <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                          <h5> Integer:</h5>
+                          <p>To create a new integer secret after clicking on the create button, give a name to the secret to be saved as per the name. If the Type selected is INTEGER, In the value field pass the integer value then the value will be passed as integer to the RPA flow.</p>
+                          <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                          <h5> Credentials:</h5>
+                          <p>To create a new credential secret after clicking on the create button, give a name to the secret to be saved as per the name. If the Type selected is Credentials, In the Username field pass the username value and, in the password, field pass the password of the username which will be entered in secure format and will never be shown to any other user. These saved credentials can be passed into the RPA action flows.</p>
+                          <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                        </div>
+
+                        <div id="Schedules"  class="page-section">
+                          <h4 class="skyBlue">4.7 Schedules</h4>
+                          <p>The main functionality of scheduling is, to schedule/execute RPA flows whenever required. After uploading a business process/RPA flow, schedule those flows. To schedule a flow first a “Schedule” should be created.</p>
+                          <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                          <p>To create a “Schedule”, navigate to “Schedules” page, and click on “Create” button to start adding a new schedule. </p>
+                          <h5> Name</h5>
+                          <p>Give a name to the schedule</p>
+                          <h5>Bot</h5>
+                          <p> Choose the “Business Process" that needs to be scheduled.</p>
+                          <h5>Reserved Worker </h5>
+                          <p>Reserved worker means if a business process is scheduled on a specific machine, then it will be executed only on that machine.</p>
+                          <h5>Workers</h5>
+                          <p>Select the worker in which the execution should be done</p>
+                          <h5>Execution Type</h5>
+                          <p>Select the execution type either to execute in chrome or headless mode.</p>
+                          <h5>Timezone</h5>
+                          <p>Select the time zone in which it should run.</p>
+                          <h5>Trigger</h5>
+                          <p>Here specify the time interval to execute the flows/business processes.</p>
+                          <h5>Minutes</h5>
+                          <p>If the trigger type is selected as minutes, then the business process will execute at specified intervals measured in minutes. For example, if a business process is scheduled to execute for every 15 minutes then the flow will continuously execute after every 15 minutes until that scheduled flow is stopped/destroyed.</p>
+                          <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                          <h5>Hourly</h5>
+                          <p>If the trigger type is selected as Hours, then the business process will run at specified intervals measured in minutes., For example, if a business process is scheduled to execute for every 3 hours and 30 minutes, then the flow will continuously execute after every 3 hours and 30 minutes until that scheduled flow is stopped/destroyed.</p>
+                            <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                            <h5>Daily</h5>
+                            <p>If the trigger type is selected as Daily, then the business process will execute every day at the specified time For example, if a business process is scheduled to execute every day at 05:30 a.m. then the flow will continuously execute every day at 05:30 a.m. until that scheduled flow is stopped/destroyed.</p>
+                              <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                              <h5>Weekly</h5>
+                              <p>If the trigger type is selected as Weekly, then select the weekday i.e. Mon, Tue, and so on. Then the business process will execute every Week at the time specified. For example, if a business process is scheduled to execute on every Monday at morning 05:30 a.m. then the flow will continuously execute every Monday at 05:30 a.m. until the scheduled flow is stopped/destroyed.</p>
+                                <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                                <h5>Monthly</h5>
+                                <p>If the trigger type is selected as monthly, then select the month i.e. Jan, Feb, and so on. Then the business process will execute every Month at the time specified. For example, if the business process is scheduled to execute on every Month at morning 05:30 a.m., then the flow will continuously execute every Month at 05:30 a.m. until the scheduled flow is stopped/destroyed.</p>
+                                  <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                                  <h5>Advanced:</h5>
+                                  <p> In Advanced option, one can write a cron expression</p>
+                                    <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                                    <h5>Stop Schedule </h5>
+                                    <p>To stop the schedule at particular time, enable the button and enter the stop time, when to stop the schedule.</p>
+                                    <img src="{{ '/assets/images/doc-img22.png' | relative_url }}"alt="image" class="topImg">
+                        </div>
+
+
+
+
+
+
+                          <div id="Worker"  class="page-section">
+                            <h3><span class="numbers">5.</span> Worker</h3>
+
+                              <h4 class="green">5.1. Runtime Installation</h4>
+
+                         </div>
+
+                         <div id="SoftwareRequirements"  class="page-section">
+                           <h4 class="skyBlue"><span class="numbers">5.1.1</span> Software Requirements</h4>
+                           <h5>Worker</h5>
+                           <h4>OS Compatibility:</h4>
+                           <ol>
+                           <li><span class="numbers">1.</span><strong>On Premise:</strong>Windows 10 / Windows Server 2016. </li>
+                           <li><span class="numbers">2.</span><strong>GCP:</strong>Windows Server 2016 Data Center / Windows Server 2016 Datacenter Core.</li>
+                           <li><span class="numbers">3.</span><strong>MS Azure:</strong>Windows 10 Pro version 1809, 1803 / Windows Server 2016 Data Center.</li>
+                           <li><span class="numbers">4.</span><strong>AWS:</strong>Microsoft Windows Server 2016 Base.</li>
+                           </ol>
+                           <div class="table-responsive">
+                             <table class="table">
+                                 <tr>
+                                     <th class="Designer" width="25%">On-Premise</th>
+                                     <th class="Designer">GCP</th>
+                                     <th class="Designer">MS Azure</th>
+                                     <th class="Designer">AWS</th>
+                                 </tr>
+                                 <tr>
+                                     <td class="bot" width="25%">Windows 10 / Windows Server 2016 </td>
+                                      <td class="bot" width="25%"> Windows Server 2016 Data Center / Windows Server 2016 Data center Core </td>
+                                      <td class="bot" width="25%">Windows 10 Pro Ver 1809, 1803 / Windows Server 2016 Data Center.</td>
+                                      <td class="bot" width="25%">Microsoft Windows Server 2016 Base </td>
+                                 </tr>
+                              </table>
+                           </div>
+                         </div>
+
+                         <div id="Hardware"  class="page-section">
+                             <h4 class="purple"><span class="numbers">5.1.2</span> Hardware Requirements</h4>
+                           <ol>
+                           <li><span class="numbers">1.</span><strong>Processor:</strong>Intel Core i5 2.6GHz </li>
+                           <li><span class="numbers">2.</span><strong>RAM:</strong>8GB</li>
+                           <li><span class="numbers">3.</span><strong>Storage:</strong>10GB</li>
+                           <li><span class="numbers">4.</span><strong>Others:</strong>Microsoft .Net Framework 4.6(Windows 8.1 and Windows Server 2012 R2: 4.6.1).</li>
+                           </ol>
+                         </div>
+
+                         <div id="InstallationInstructions"  class="page-section">
+                             <h4 class="purple"><span class="numbers">5.1.3</span>Installation Instructions</h4>
+                             <p>Refer 3.1.3</p>
+                         </div>
+
+                         <div id="InstallingTechforceOCR"  class="page-section">
+                             <h4 class="purple"><span class="numbers">5.1.4</span>Installing Techforce OCR</h4>
+                             <p>Refer 3.1.4</p>
+                         </div>
+
+                         <div id="Un-installInstructions"  class="page-section">
+                             <h4 class="purple"><span class="numbers">5.1.5</span>Un-install Instructions</h4>
+                             <p>Refer 3.1.5</p>
+                         </div>
+
+                         <div id="Registeringworker"  class="page-section">
+                             <h4 class="purple"><span class="numbers">5.2</span>Registering worker with EM console</h4>
+                             <p>Refer 3.1.5</p>
+                         </div>
+
+
+
+
+
                           <div id="enterpriseModel"  class="page-section">
                             <h3><span class="numbers">6.</span> Architecture Overview <br>& Deployment Models</h3>
                             <h4 class="skyBlue">6.1.  Enterprise Model</h4>
