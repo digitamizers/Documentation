@@ -621,7 +621,11 @@
                                           <li style="margin-left:20px;"><a class="child 2" href="#Assign"><span class="numbers">3.4.4.11</span> <span style="margin-left:25px;">Asssign</span></a></li>
                                           <li style="margin-left:20px;"><a class="child 2" href="#Ask"><span class="numbers">3.4.4.12</span> <span style="margin-left:25px;">Ask</span></a></li>
                                           <li style="margin-left:20px;"><a class="child 2" href="#ActiveWindow"><span class="numbers">3.4.4.13</span> <span style="margin-left:25px;">Active Window</span></a></li>
-                                          <li style="margin-left:20px;"><a class="child 2" href="#SubFlow"><span class="numbers">3.4.4.14</span> <span style="margin-left:25px;">Sub Flow</span></a></li>
+                                          <li style="margin-left:20px;"><a class="child 2" href="#Module"><span class="numbers">3.4.4.14</span> <span style="margin-left:25px;">Module</span></a>
+                                           <ul>
+                                            <li style="margin-left:20px;"><a class="child 2" href="#AddExternalModule"><span class="numbers">3.4.4.14.1</span> <span style="margin-left:25px;">Add External Module</span></a>
+                                           </ul>
+                                          </li>
 
                                           <li style="margin-left:20px;"><a class="child 2" href="#Mouse"><span class="numbers">3.4.4.15</span> <span style="margin-left:25px;">Mouse Actions</span></a>
                                           <ul>
@@ -1442,6 +1446,17 @@
                         </ol>
                         </div>
 
+                        <div id="Module"  class="page-section">
+                          <h5 class="purple">3.4.4.14 Module:</h5>
+                        </div>
+                        <div id="AddExternalModule"  class="page-section">
+                          <h5 class="purple">3.4.4.14.1 Add External Module:</h5>
+                          <p>The Add External Module action is used to add a sub flow to the main flow.</p>
+                          <ol>
+                          <li><span class="numbers">1.</span><strong>Add External Flow:</strong>Browse the path of the sub flow to be added.</li>
+                        </ol>
+                        </div>
+
                         <div id="Mouse"  class="page-section">
                           <h5 class="purple">3.4.4.15 Mouse</h5>
                         </div>
@@ -1941,9 +1956,13 @@
                 <p><span class="numbers">7.</span><strong>To Lower Case: </strong>The to lower case method is used to convert all the characters of the main string into Lower case letters.</p>
               </div>
 
-              <div id="DateFormat:"  class="page-section">
+              <div id="DateFormat"  class="page-section">
                 <h5 class="purple">3.4.5.1.2 Date Format: </h5>
                 <p>The Date format action is used to provide a customized date and time according to required formats.</p>
+                <h6>Properties</h6>
+                <p><span class="numbers">1.</span><strong>Select Variable: </strong> The Result Date format will be stored into the variable provided. Select that variable from the drop-down.</p>
+                <p><span class="numbers">2.</span><strong>Select: </strong> The required date can be selected from the available drop down list, “Yesterday”, “Today”, “Tomorrow”, “Week start date”, “Month start date”, “Quarter start date” and “Year Start date”.</p>
+                <p><span class="numbers">3.</span><strong>Date Format: </strong> The date and time format can be in which the result is to be displayed is passed.</p>
               </div>
 
               <div id="Technologies"  class="page-section">
