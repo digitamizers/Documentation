@@ -860,7 +860,7 @@
                              <li><span class="numbers">1.</span>After downloading the RPA studio, move the downloaded studio.exe file to the desired folder where it needs to be installed.</li>
                              <li><span class="numbers">2.</span>Right-click on the installer and select “Run as administrator” so that RPA studio will have “Admin” privileges</li>
                              <p>The following image is an example of how to run as administrator.</p>
-                             <img src="{{ '/assets/images/doc-img1.png' | relative_url }}" alt="image" style="margin-left:20px;margin-top:10px;margin-bottom:10px;">
+                             <img src="{{ '/assets/images/doc-img1.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:20px;margin-top:10px;margin-bottom:10px;">
                              <li><span class="numbers">3.</span>Windows will ask for permission stating “Do you want to allow the unknown publisher to install the application”. Click YES, and the installation process will start.</li>
                              <li><span class="numbers">4.</span>Accept the license agreement of Techforce.ai to proceed for the further installation process.</li>
                              <img src="{{ '/assets/images/doc-img2.png' | relative_url }}" alt="image" style="margin-left:20px;margin-top:10px;margin-bottom:10px;">
@@ -1411,11 +1411,11 @@
                           <li><span class="numbers">1.</span><strong>URL:</strong>URL to hit the corresponding API.</li>
                           <li><span class="numbers">2.</span><strong>Get:</strong>One of the methods to hit API. This will get a response from the corresponding API. Here only headers can be added.</li>
                           <li><span class="numbers">3.</span><strong>URL:</strong>URL to hit the corresponding API.</li>
-                            <li><span class="numbers">3.</span><strong>GET:</strong>One of the methods to hit API. This will get a response from the corresponding API. Here only headers can be added.</li>
-                          <li><span class="numbers">3.</span><strong>POST:</strong>One of the methods to hit API. This will send the json object and get a response from the corresponding API. Here add body(payload) along with the header.</li>
-                          <li><span class="numbers">3.</span><strong>PUT:</strong>This request will create a new resource or replaces a representation of the target resource with request payload..</li>
+                            <li><span class="numbers">4.</span><strong>GET:</strong>One of the methods to hit API. This will get a response from the corresponding API. Here only headers can be added.</li>
+                          <li><span class="numbers">5.</span><strong>POST:</strong>One of the methods to hit API. This will send the json object and get a response from the corresponding API. Here add body(payload) along with the header.</li>
+                          <li><span class="numbers">6.</span><strong>PUT:</strong>This request will create a new resource or replaces a representation of the target resource with request payload..</li>
 
-                          <li><span class="numbers">3.</span><strong>DELETE:</strong>This request use to delete the specified resource.</li>
+                          <li><span class="numbers">7.</span><strong>DELETE:</strong>This request use to delete the specified resource.</li>
                         </ol>
                         </div>
 
@@ -1514,6 +1514,7 @@
                           <h5 class="purple">3.4.4.16 Conditional Actions</h5>
                         </div>
                         <div id="If"  class="page-section">
+                          <ol>
                           <h5 class="purple">3.4.4.16 If, IfElse, ElseIf</h5>
                           <p><span class="numbers">1.</span>Provides the ability to route workflow execution to different step groups depending on conditions provided.</p>
                           <p><span class="numbers">2.</span>Provides the ability to route workflow execution to different step groups depending on conditions provided.</p>
@@ -1531,6 +1532,7 @@
 
                           <h6>Count</h6>
                           <p>Checks the count of the XPath based on the condition. If the condition is met, a block of code will execute. Otherwise, Else block will execute.</p>
+                        </ol>
                         </div>
 
                         <div id="ExceptionHandling"  class="page-section">
