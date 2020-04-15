@@ -640,7 +640,7 @@
 
                                           <li style="margin-left:20px;"><a class="child 2" href="#ExceptionHandling"><span class="numbers">3.4.4.17</span> <span style="margin-left:25px;">Exception Handling</span></a>
                                              <ul>
-                                               <li style="margin-left:20px;"><a class="child 2" href="#TryCatch"><span class="numbers">3.4.4.17.1</span> <span style="margin-left:25px;">Try Catch:</span></a></li>
+                                               <li style="margin-left:20px;"><a class="child 2" href="#TryCatch"><span class="numbers">3.4.4.17.1</span> <span style="margin-left:35px;">Try Catch:</span></a></li>
                                              </ul>
                                           </li>
 
@@ -663,7 +663,7 @@
                                           <li style="margin-left:20px;"><a class="child 2" href="#GetCellFormula"><span class="numbers">3.4.4.18.15</span> <span style="margin-left:40px;">Get Cell Formula</span></a></li>
                                           <li style="margin-left:20px;"><a class="child 2" href="#FilterColumn"><span class="numbers">3.4.4.18.16</span> <span style="margin-left:40px;">Filter Column</span></a></li>
                                           <li style="margin-left:20px;"><a class="child 2" href="#Convert"><span class="numbers">3.4.4.18.17</span> <span style="margin-left:40px;">Convert to XLSX</span></a></li>
-                                          <li style="margin-left:20px;"><a class="child 2" href="#Insert"><span class="numbers">3.4.4.18.18</span> <span style="margin-left:40px;">Insert Column</span></a></li>
+                                          <li style="margin-left:20px;"><a class="child 2" href="#InsertColumn"><span class="numbers">3.4.4.18.18</span> <span style="margin-left:40px;">Insert Column</span></a></li>
                                           </ul></li>
                                           <li style="margin-left:20px;"><a class="child 2" href="#Loops"><span class="numbers">3.4.4.19</span> <span style="margin-left:25px;">Loops (For)</span></a></li>
                                           <li style="margin-left:20px;"><a class="child 2" href="#TechforceOCR"><span class="numbers">3.4.4.20</span> <span style="margin-left:25px;">Techforce OCR</span></a></li>
@@ -1703,6 +1703,15 @@
                         <p><span class="numbers">2.<strong> Destination File Name:</strong>File name is optional. If file name is not mentioned, then the Workbook is converted from xls to xlsx format with same in the same location. If File name is mentioned in that file, the new file was created in xlsx format with that filename. If in conversion already file is existed with same name in that location with xlsx format, then it will overwrite with same name. If passing the file name through variable need to mention that variable within tilt symbol (Eg: `varibleName’).</p>
                       </div>
 
+                      <div id="InsertColumn"  class="page-section">
+                        <h5 class="purple">3.4.4.18.18 Insert Column</h5>
+                        <h6>Properties</h6>
+                        <p><span class="numbers">1.<strong>Enter Path:</strong>need to give the full path of the excel spreadsheet. This option is shown only while taking the insert column action directly. if dragged into the open spreadsheet activity, it will not ask the path ,and no need to mention the path.</p>
+                        <p><span class="numbers">2.<strong> Enter SheetName:</strong> enter the name of the sheet containing the insert column that needs to be insert.</p>
+                          <p><span class="numbers">3.<strong>Number of columns:</strong>Need to give the number of columns to be added in th excel. </p>
+                        <p><span class="numbers">4.<strong>Positions: </strong>The position from where the column that are to be inserted, number should be given.</p>
+                      </div>
+
                       <div id="Loops"  class="page-section">
                         <h5 class="purple">3.4.4.19 Loops</h5>
                         <h6>For</h6>
@@ -1905,22 +1914,36 @@
                 <h5 class="purple">3.4.4.23.2 CSV Row </h5>
                 <p>This action is used to read the row values in a variable provided.</p>
                 <h6>Properties</h6>
-                <p><span class="numbers"><strong>CSV File Name: </strong>The full path of the CSV file.</p>
-                <p><span class="numbers"><strong>Variable: </strong>Provide any list variable to store the read data from the file.</p>
+                <p><span class="numbers">1.</span><strong>CSV File Name: </strong>The full path of the CSV file.</p>
+                <p><span class="numbers">2.</span><strong>Variable: </strong>Provide any list variable to store the read data from the file.</p>
               </div>
 
               <div id="Programming"  class="page-section">
                 <h5 class="purple">3.4.5 Programming </h5>
               </div>
 
+              <div id="Variables"  class="page-section">
+                <h5 class="purple">3.4.5.1 Variables</h5>
+              </div>
+
               <div id="StringFormat"  class="page-section">
-                <h5 class="purple">3.4.5.1.1 String Format </h5>
-                <h6>Matches</h6>
-                <p>The Matches action helps the user to write regular expressions whenever needed</p>
+                <h5 class="purple">3.4.5.1.1 String Format</h5>
+                <p>The string format action is used to manipulate the strings according to required format. The string format contains “Substring”, “Replace”, “Match”, “Split”, “Trim”, “ToUpperCase”, “ToLowerCase” methods. Either string values or reg exp can used in the methods.</p>
+
                 <h6>Properties</h6>
-                <p><span class="numbers"><strong>Select Variable: </strong>Assign the input data to a string variable in the variables. Select that variable from the drop-down..</p>
-                <p><span class="numbers"><strong>Regular expression Pattern: </strong>Give the regular expression to be performed in the field. Ex: [b-e]. This expression matches the characters in the input, which are in the range b to e. The user can give regular expression using a variable also, by assigning the expression to a variable in the variable section. The variable should be passed using the ``codes. Example: `variableName</p>
-                <p><span class="numbers"><strong>Result variable: </strong>The result of the Matches action will be stored in a list variable provided.</p>
+                <h6>Method:</h6>
+                <p><span class="numbers">1.</span><strong>SubString: </strong>The sub string method is used to retrieve the part of the main string as per the given index values.</p>
+                <p><span class="numbers">2.</span><strong>Replace: </strong> The replace method is used to replace the part of the main string as per the given values.</p>
+                <p><span class="numbers">3.</span><strong>Match: </strong>The match method is used to match the part of the main string as per the given pattern.</p>
+                <p><span class="numbers">4.</span><strong>Split: </strong> The split method is used to split the main string as per the given pattern.</p>
+                <p><span class="numbers">5.</span><strong>Trim: </strong> The trim method is used to remove the white spaces from the both ends of the main string.</p>
+                <p><span class="numbers">6.</span><strong>To Upper Case: </strong> The to upper case method is used to convert all the characters of the main string into Capital case letters.</p>
+                <p><span class="numbers">7.</span><strong>To Lower Case: </strong>The to lower case method is used to convert all the characters of the main string into Lower case letters.</p>
+              </div>
+
+              <div id="DateFormat:"  class="page-section">
+                <h5 class="purple">3.4.5.1.2 Date Format: </h5>
+                <p>The Date format action is used to provide a customized date and time according to required formats.</p>
               </div>
 
               <div id="Technologies"  class="page-section">
