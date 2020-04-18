@@ -1996,10 +1996,12 @@
                 <p><span class="numbers">1.</span><strong>SubString: </strong>The sub string method is used to retrieve the part of the main string as per the given index values.</p>
                 <p><span class="numbers">2.</span><strong>Replace: </strong> The replace method is used to replace the part of the main string as per the given values.</p>
                 <p><span class="numbers">3.</span><strong>Match: </strong>The match method is used to match the part of the main string as per the given pattern.</p>
-                <p><span class="numbers">4.</span><strong>Split: </strong> The split method is used to split the main string as per the given pattern.</p>
-                <p><span class="numbers">5.</span><strong>Trim: </strong> The trim method is used to remove the white spaces from the both ends of the main string.</p>
+                <p><span class="numbers">4.</span><strong>Split: </strong>The split method is used to split the main string as per the given pattern.</p>
+                <p><span class="numbers">5.</span><strong>Trim: </strong>The trim method is used to remove the white spaces from the both ends of the main string.</p>
                 <p><span class="numbers">6.</span><strong>To Upper Case: </strong> The to upper case method is used to convert all the characters of the main string into Capital case letters.</p>
                 <p><span class="numbers">7.</span><strong>To Lower Case: </strong>The to lower case method is used to convert all the characters of the main string into Lower case letters.</p>
+                <p><span class="numbers">8.</span><strong>Regular expression Pattern:</strong>Give the regular expression to be performed in the field. Ex: [b-e]. This expression matches the characters in the input, which are in the range b to e. The user can give regular expression using a variable also, by assigning the expression to a variable in the variable section. The variable should be passed using the ``codes. Example: `variableName`.</p>
+                <p><span class="numbers">9.</span><strong>Result variable: </strong>The result of the Matches action will be stored in a list variable provided</p>
               </div>
 
               <div id="DateFormat"  class="page-section">
@@ -2013,12 +2015,12 @@
 
               <div id="Technologies"  class="page-section">
                 <h5 class="purple">3.4.5.2 Technologies </h5>
-                <p>Techforce RPA supports three programming languages. The supported languages are JavaScript, Python, R, and AutoHotkey. The user can add simple programming code snippets using this action.</p>
+                <p>Techforce.ai RPA supports three programming languages. The supported languages are JavaScript, Python, R, and AutoHotkey. The user can add simple programming code snippets using this action.</p>
               </div>
 
               <div id="JavaScript"  class="page-section">
                 <h5 class="purple">3.4.5.2.1 JavaScript </h5>
-                <p>The user can add Java script code snippet using this action. It will support all ES5 methods and functions</p>
+                <p>The user can add a JavaScript code snippet using this action. It will support all ES5 methods and functions</p>
               </div>
 
               <div id="Python"  class="page-section">
@@ -2040,90 +2042,121 @@
                 <h4 class="purple">3.4.6 Mail Integration</h5>
                 <p>The Mail Integration Activity contains all the mail activities used for creating automation projects. These activities enable robots to:</p>
                 <p>Configuring bot with corresponding Outlook account.</p>
-                <p>Sending email from Outlook account and other mail providers.</p>
-                <p>Receiving email from corresponding Outlook and other mail providers.</p>
+                <p>Sending emails from Outlook account and other mail providers.</p>
+                <p>Receiving emails from corresponding Outlook and other mail providers.</p>
                 <p>Saving an attachment with the email.</p>
               </div>
 
               <div id="Outlook"  class="page-section">
                 <h5>3.4.6.1 Outlook2016</h5>
-                <p>The outlook2016 actions are used to read and send the mails from the Outlook application Read mail</p>
-                <h6>Read Mail</h6>
-                 <p>Reads emails from configured outlook account.</p>
+                <p>The outlook2016 actions are used to read and send emails from the Outlook application Read mail</p>
+                <h6>Get Outlook Mail</h6>
+                 <p>Reads emails from the configured outlook account.</p>
                  <h6>Properties</h6><h6>Inbox</h6>
-                 <p><span class="numbers"><strong>From Mail: </strong>Gmail account to filter emails.</p>
-                <p><span class="numbers"><strong>Unread: </strong>Filters only unread emails from Inbox.</p>
-                <p><span class="numbers"><strong>Top: </strong>Filters Particular no of emails which is present on the top.</p>
-               <p><span class="numbers"><strong>Select Variable: </strong>Stores the emails collected from the corresponding email account.</p>
-               <h6>Sent Items</h6>
-               <p><span class="numbers"><strong>Top: </strong>Filter a particular number of emails, which are present on the top.</p>
-               <p><span class="numbers"><strong>Select Variable: </strong>Stores the emails collected from the corresponding email account.</p>
+                 <p><span class="numbers">1.</span><strong>Folder: </strong>Check the Folders to get the Inbox, Sent Items, Customs and Delete items options.</p>
+                <p><span class="numbers">2.</span><strong>Inbox:</strong>To read the mail data of the specified email from the inbox.</p>
+                <p><span class="numbers">3.</span><strong>Sent Items:</strong>To read the mail data from the specified number of sent mails.</p>
+                <p><span class="numbers">4.</span><strong>Customs:</strong>To read the mail data from any specified folder.</p>
+                <p><span class="numbers">5.</span><strong>Delete Items:</strong>To read the mail data from the specified number of deleted mail items.</p>
+                <p><span class="numbers">6.</span>1.</span><strong>From Mail:</strong>Need to enter the specified email id from which the user wants to read data.</p>
+                <p><span class="numbers">7.</span><strong>Unread:</strong>Filters only unread emails.</p>
+                <p><span class="numbers">8.</span><strong>Top: </strong>Filters Particular number of emails that are present on the top.</p>
+               <p><span class="numbers">9.</span><strong>Select Variable: </strong>Stores the emails collected from the corresponding email account.</p>
+
                <h6>Note</h6>
-               <p>Here array variable are used to store emails</p>
+               <p>Here array variable is used to store emails.</p>
                <p>To access the subject of the mail, use variableName[index].Subject</p>
-               <p>To access the body of the mail, use variableName[index].Body. To access the from the address of the mail, use variableName[index].From. To access the to address of the mail, use variableName[index].Received.</p>
+               <p>To access the body of the mail, use variableName[index].Body. To access the From address of the mail, use variableName[index].From. To access the To address of the mail, use variableName[index].Received.</p>
                <h6>Note</h6>
                <p>We can send variable instead of direct text in to, subject, body </p>
+
+               <h6>Send Outlook Mail:</h6>
+               <p>Sends emails from the configured outlook account to the specified mail ids.</p>
+               <p><span class="numbers">1.</span><strong>To: </strong>The receivers mail id. </p>
+              <p><span class="numbers">2.</span><strong>CC:</strong>Mail id if need to add any. </p>
+              <p><span class="numbers">3.</span><strong>BCC	:</strong>Mail id if need to add any.</p>
+              <p><span class="numbers">4.</span><strong>Subject:</strong>The subject of the mail to be sent.</p>
+              <p><span class="numbers">5.</span><strong>Body:</strong>The body of the mail to be sent.</p>
+              <p><span class="numbers">6.</span><strong>Attachments:</strong>Path of the attachment that is to be sent in the mail. </p>
+
+              <h6>Note</h6>
+              <p>You can send variable instead of direct text into To, CC, Bcc, subject, body and Attachments.</p>
              </div>
              <div id="IMAP"  class="page-section">
                <h5>3.4.6.2 IMAP</5>
                <p>IMAP (Internet Message Access Protocol) is a standard email protocol that stores email messages on a mail server but allows the end-user to view and manipulate the messages as though they were stored locally on the end user's computing device(s). This allows users to organize messages into folders, have multiple client applications know which messages have been read, flag messages for urgency or follow-up and save draft messages on the server.</p>
-               <h6>Read Mail</h6>
-               <p>Reads email from the corresponding GMAIL account.</p>
-               <h6>Properties Login</h6>
-               <p><span class="numbers"><strong>Email: </strong>The mail ID, which needs to be accessed to read emails. The user can also use the variable.</p>
-                <p><span class="numbers"><strong>Password: </strong>Password of the corresponding mail, which needs to be read. The user can also use the variable.</p>
+               <h6>Get IMAP Mail:</h6>
+               <p>Reads email from the specified email providers.</p>
+               <p>Example: Gmail, Yahoo, Rediff, So on.</p>
+               <h6>Properties</h6><h6> Login</h6>
+               <p><span class="numbers">1.</span><strong>Email: </strong>The mail ID, which needs to be accessed to read emails. The user can also use the variable.</p>
+                <p><span class="numbers">2.</span><strong>Password: </strong>Password of the corresponding mail, which needs to be read. The user can also use the variable.</p>
                   <h6>Connection</h6>
-                  <p><span class="numbers"><strong>Host: </strong>The host for the IMAP connection.</p>
-                 <p><span class="numbers"><strong>Port: </strong>The port for the IMAP connection.</p>
+                  <p><span class="numbers">1.</span><strong>Host: </strong>The IMAP host IP of the mail provider.</p>
+                 <p><span class="numbers">2.</span><strong>Port: </strong>The IMAP port number of the mail provider.</p>
                    <h6>Options</h6>
-                   <p><span class="numbers"><strong>Un Read: </strong>Use to Read Only Unread messages from Inbox.</p>
+                   <p><span class="numbers">1.</span><strong>Un Read: </strong>Use to Read Only Unread messages from Inbox.</p>
 
                 <h6>Select Mail</h6>
-                <p><span class="numbers"><strong>Today: </strong>Reads only today’s (System Date) emails from the corresponding account.</p>
-                <p><span class="numbers"><strong>Yesterday: </strong>Reads only yesterday’s emails.</p>
-                <p><span class="numbers"><strong>Start of Week:  </strong>Reads emails from the start day of the week.</p>
-                <p><span class="numbers"><strong>Specific Date: </strong>Reads emails from a specific date.</p>
-                <p><span class="numbers"><strong>Select Variable: </strong>Stores emails, which are read from the corresponding Gmail account.</p>
+                <p><span class="numbers">1.</span><strong>Today: </strong>Reads only today’s (System Date) emails from the corresponding account.</p>
+                <p><span class="numbers">2.</span><strong>Yesterday: </strong>Reads only yesterday’s emails.</p>
+                <p><span class="numbers">3.</span><strong>Start of Week:  </strong>Reads emails from the start day of the week.</p>
+                <p><span class="numbers">4.</span><strong>Specific Date: </strong>Reads emails from a specific date.</p>
+                <p><span class="numbers">5.</span><strong>Select Variable: </strong>Stores emails, which are read from the corresponding Gmail account.</p>
                   <h6>Note</h6>
-                  <p>Here array variable are used to store emails. </p>
-                  <p>To access the subject of the mail, use variableName[index].Subject. To access the body of the mail, use variableName[index].Body. To access the from the address of the mail, use variableName[index].From. To access the to address of the mail, use variableName[index].Received.</p>
+                  <p>Here array variable is used to store emails. </p>
+                  <p>To access the subject of the mail, use variableName[index].Subject.</p>
+                  <p>To access the body of the mail, use variableName[index].Body.</p>
+                  <p>To access the From address of the mail, use variableName[index].From.</p>
+                  <p>To access the To address of the mail, use variableName[index].Received.</p>
                </div>
 
                <div id="POP3"  class="page-section">
                  <h5>3.4.6.3 POP3</h5>
                   <p>POP3 (Post Office Protocol 3) is the most recent version of a standard protocol for receiving e-mail. POP3 is a client/server protocol in which e-mail is received and held for the user by the Internet server. Periodically, the user (or user’s client e-mail receiver) checks the mail-box on the server and downloads any mail, probably using POP3.</p>
-                  <h6>Read Mail</h6>
-                  <p>Reads email from the corresponding GMAIL account.</p>
+                  <h6>Get POP3 mail:</h6>
+                  <p>Read emails from the specified email provider account.</p>
+                  <p>Example:Gmail, Yahoo, Rediff, So on.</p>
                   <h6>Properties Login</h6>
-                  <p><span class="numbers"><strong>Email: </strong>The mail ID required to access to read emails. The user can give one or more email ids. To separate email IDs, use a semi-colon. The user can also use a variable here.</p>
-                   <p><span class="numbers"><strong>Password: </strong>Password of the corresponding mail account, which needs to be read. The user can also use a variable here</p>
+                  <p><span class="numbers">1.</span><strong>Email: </strong>The mail ID required to access to read emails.</p>
+                   <p><span class="numbers">2.</span><strong>Password: </strong>Password of the corresponding mail account, which needs to be read. The user can also use a variable here.</p>
                      <h6>Connection</h6>
-                     <p><span class="numbers"><strong>Host: </strong>The host for the POP3 connection.</p>
-                    <p><span class="numbers"><strong>Port: </strong>The port for the POP3 connection.</p>
-                      <h6>Options</h6>
-                      <p><span class="numbers"><strong>Un Read: </strong>Use to Read Only Unread messages from Inbox.</p>
-
+                     <p><span class="numbers">1.</span><strong>Host: </strong>The POP3 host IP of the email provider.</p>
+                    <p><span class="numbers">2.</span><strong>Port: </strong>The POP3 port number of the email provider.</p>
                         <h6>Select Mail</h6>
-                        <p><span class="numbers"><strong>Top: </strong>Filter articular number of emails, which are present on the top.</p>
-                        <p><span class="numbers"><strong>Select Variable: </strong>Store emails, which are read from the corresponding Gmail account.</p>
-                        <p><span class="numbers"><strong>Note:  </strong>Here array variable is used to store emails. To access the subject of the mail, use variableName[index].Subject. To access the body of the mail, variableName[index].Body, To access the from the address of the mail, variableName[index].From, To access the to address of the mail, variableName[index].Received..</p>
-                        <p><span class="numbers"><strong>Note: </strong>Here array variable is used to store emails. To access the subject of the mail, use variableName[index].Subject. To access the body of the mail, use variableName[index].Body, To access the from the address of the mail, use variableName[index].From, To access the to address of the mail, use variableName[index].Received.</p>
+                        <p><span class="numbers">1.</span><strong>Top: </strong>Filter articular number of emails, which are present on the top.</p>
+                        <p><span class="numbers">2.</span><strong>Select Variable: </strong>Store emails, which are read from the corresponding email account.</p>
                       </div>
-
+                      <p>Note:</p>
+                      <p>Here array variable is used to store emails.</p>
+                      <p>To access the subject of the mail, use variableName[index].Subject.</p>
+                      <p>To access the body of the mail, variableName[index].Body,</p>
+                      <p>To access the from the address of the mail, variableName[index].From, </p>
+                      <p>To access the To address of the mail, variableName[index].Received.</p>
                       <div id="SMTP"  class="page-section">
-                        <h5>3.4.6.4 SMTP-Send mail</h5>
-                          <p>Send email from configured Outlook account.</p>
+                        <h5>3.4.6.4 SMTP</h5>
+                        <h6> Send SMTP Mail:</h6>
+                          <p>SMTP stand for simple mail transfer protocol.</p>
                           <h6>Properties Login</h6>
-                          <p><span class="numbers"><strong>To: </strong>The receiver’s mail id.</p>
-                           <p><span class="numbers"><strong>Subject: </strong>The subject of the mail r to be sent</p>
-                          <p><span class="numbers"><strong>Body: </strong>The body of the corresponding mail..</p>
-                          <p><span class="numbers"><strong>Attachments: </strong>The path of the corresponding attachment to upload on Gmail.</p>
+                          <p><span class="numbers">1.</span><strong>Email:</strong>The mail ID required to send mails.</p>
+                           <p><span class="numbers">2.</span><strong>Password:</strong>Password of the corresponding mail account,</p>
+                          <h6>Connection</h6>
+                          <p><span class="numbers">1.</span><strong>Host: </strong>The SMTP host IP of the email provider.</p>
+                          <p><span class="numbers">2.</span><strong>Port: </strong>The SMTP port number of the email provider.</p>
+                          <h6>Options</h6>
+                          <p><span class="numbers">1.</span><strong>Host: </strong>The receiver’s mail id.</p>
+                          <p><span class="numbers">2.</span><strong>Port: </strong>Mail id if any.</p>
+                          <p><span class="numbers">3.</span><strong>BCC: </strong>Mail id if need to add any.</p>
+                          <p><span class="numbers">4.</span><strong>Subject: </strong>The subject of the mail to be sent.</p>
+                          <p><span class="numbers">5.</span><strong>Body:</strong>The body of the mail to be sent.</p>
+                          <p><span class="numbers">6.</span><strong>Attachments:</strong>Path of the attachment that is to be sent in the mail.</p>
+                          <h6>Note</h6>
+                          <p>You can send variable instead of direct text into To, CC, Bcc, subject, body and Attachments.</p>
                      </div>
 
                             <div id="SaveAttachments"  class="page-section">
                               <h5>3.4.6.5 Save Attachments</h5>
-                            <p>Saves attachments in the local path, which is downloaded from corresponding mail account.</p>
+                            <p>Saves attachments in the local path, which are downloaded from the corresponding mail account.</p>
                             <h6>Properties Login</h6>
                             <p><span class="numbers"><strong>File Path:  </strong>The corresponding folder path to save the attachment.</p>
                              <p><span class="numbers"><strong>Content to Write: </strong>Variable, which is used to get an attachment from an email.</p>
@@ -2137,7 +2170,7 @@
 
                        <div id="Connection"  class="page-section">
                          <h5>3.4.7.1 Connection</h5>
-                         <p>The Connection action is used to connect to the MySQL or PostgreSQL.</p>
+                         <p>The Connection action is used to connect to MySQL or PostgreSQL.</p>
                        <h6>Properties</h6>
                        <p><span class="numbers"><strong>Please Select Database Type:</strong>Select either MySQL or PostgreSQL</p>
                         <p><span class="numbers"><strong>Host:</strong>Pass the host IP address.</p>
@@ -2153,8 +2186,8 @@
                        <p>The Execute Query action is used to execute the queries used in the databases.</p>
                        <h6>Properties</h6>
                        <p><span class="numbers"><strong>Execute Query:</strong>Enter the Query to be executed in the Text area.</p>
-                       <p>With columns check box is selected, it also retrieves the column names else only table data is retrieved.</p>
-                       <p>Select the created variable in the drop down to store the retrieved data.</p>
+                       <p>With columns checkbox is selected, it also retrieves the column names else only table data is retrieved.</p>
+                       <p>Select data table type variable to store the data.</p>
                      </div>
 
 
