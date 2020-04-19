@@ -948,37 +948,37 @@
                              <h5>Launch the studio</h5>
                              <li><span class="numbers">	<strong>Step 1:</strong> </span>  Create a new flow by clicking on the New Icon. A new flow will be displayed.</li>
                              <li><span class="numbers">	<strong>Step 2:</strong> </span> Click on the Open web page and drag it into the flow, where a new property window will pop up.</li>
-                             <img src="{{ '/assets/images/doc-img93.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                             <img src="{{ '/assets/images/doc-img93.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:15%;margin-top:10px;margin-bottom:10px;">
                                <p style="text-align:center;"><strong>Figure:  Open web page Action </strong></p>
                              <p> Select Google Chrome and pass the URL of the website in the <strong>“Page Address”: https://www.amazon.in/</strong></p>
                               <li><span class="numbers"><strong>	Step 3:</strong> </span> Now, drag and drop the <strong>“wait”</strong> action into the flow.</li>
-                             <img src="{{ '/assets/images/doc-img94.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                             <img src="{{ '/assets/images/doc-img94.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:15%;margin-top:10px;margin-bottom:10px;">
                                <p style="text-align:center;"><strong>Figure: Wait Action </strong></p>
                               <p>Pass “5 sec” in the Time in sec. Here 5 seconds wait time is given to load the webpage.</p>
                               <li><span class="numbers"><strong>	Step 4:</strong> </span>Drag and drop the <strong>“Enter Keystrokes”</strong> action into the flow.</li>
                               <p>Capture the XPath of the HTML that needs to be written in the webpage and pass that XPath in the XPath.</p>
-                             <img src="{{ '/assets/images/doc-img95.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                             <img src="{{ '/assets/images/doc-img95.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:15%;margin-top:10px;margin-bottom:10px;">
                                 <p style="text-align:center;"><strong>Figure: Enter Keystrokes Action </strong></p>
                               <p>Create a variable in the variable window and set iPhone as the value pass that variable into the Text.</p>
                               <li><span class="numbers"><strong>	Step 5: </strong></span> Drag and drop the <strong>click</strong> action  into the flow.</li>
-                             <img src="{{ '/assets/images/doc-img96.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                             <img src="{{ '/assets/images/doc-img96.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:15%;margin-top:10px;margin-bottom:10px;">
                                <p style="text-align:center;"><strong>Figure: Click Action </strong></p>
                               <p>Select the HTML selector and pass the XPath of the search button in the Selector</p>
                               <li><span class="numbers"><strong>	Step 6:</strong> </span> Drag and drop the wait stage and give 5 seconds like in <strong>“step 3”</strong>.</li>
-                             <img src="{{ '/assets/images/doc-img97.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                             <img src="{{ '/assets/images/doc-img97.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:15%;margin-top:10px;margin-bottom:10px;">
                                  <p style="text-align:center;"><strong>Figure: Wait Action</strong></p>
                                <li><span class="numbers"><strong>	Step 7: </strong></span>Drag and drop the read action into the flow.</li>
-                             <img src="{{ '/assets/images/doc-img98.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                             <img src="{{ '/assets/images/doc-img98.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:15%;margin-top:10px;margin-bottom:10px;">
                                  <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
                                <p>Pass the XPath of which you want to read into the HTML element and create a variable in the variable window and pass the variable name in the Read to variable.</p>
-                             <img src="{{ '/assets/images/doc-img99.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                             <img src="{{ '/assets/images/doc-img99.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:15%;margin-top:10px;margin-bottom:10px;">
                                <p style="text-align:center;"><strong>Figure: Read to Variable Action </strong></p>
                                <li><span class="numbers"> <strong>	Step 8: </strong></span> Drag and drop the echo action  into the flow.</li>
-                             <img src="{{ '/assets/images/doc-img100.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                             <img src="{{ '/assets/images/doc-img100.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:15%;margin-top:10px;margin-bottom:10px;">
                                <p style="text-align:center;"><strong>Figure: Echo Action </strong></p>
                               <p>Pass the variable name created to store the read value from the webpage in the Write your custom Variable.</p>
                               <p>Echo will show the results in the logs.</p>
-                             <img src="{{ '/assets/images/doc-img101.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                             <img src="{{ '/assets/images/doc-img101.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:15%;margin-top:10px;margin-bottom:10px;">
                                 <p style="text-align:center;"><strong>Figure: Logs Action</strong></p>
                               <li><span class="numbers"><strong>	Step 9: </strong></span> Now save the flow by clicking Save and run the flow by clicking the Play button in the menu bar.</li>
                           </div>
@@ -2009,7 +2009,6 @@
 
               <div id="Variables"  class="page-section">
                 <h5 class="purple">3.4.5.1 Variables</h5>
-
               </div>
 
               <div id="StringFormat"  class="page-section">
@@ -2184,7 +2183,9 @@
                             <div id="SaveAttachments"  class="page-section">
                               <h5>3.4.6.5 Save Attachments</h5>
                             <p>Saves attachments in the local path, which are downloaded from the corresponding mail account.</p>
-                            <p><strong>Properties Login</strong></p>
+                            <p><strong>Properties</strong></p>
+                            <p><span class="numbers"><strong>Outlook:</strong>Select to download the attachments from outlook account.</p>
+                            <p><span class="numbers"><strong>IMAP/POP3: </strong>Select to download the attachments from other email providers.</p>
                             <p><span class="numbers"><strong>File Path:  </strong>The corresponding folder path to save the attachment.</p>
                              <p><span class="numbers"><strong>Content to Write: </strong>Variable, which is used to get an attachment from an email.</p>
                             <p><span class="numbers"><strong>Note: </strong>If there is no attachment in an email, it will ignore automatically.</p>
@@ -2415,7 +2416,12 @@
                           <p style="text-align:center;"><strong>Figure: Worker RDP details </strong></p>
                         </div>
 
-
+                        <div id="Notifications"  class="page-section">
+                          <h3><span class="numbers">4.10</span> Notifications</h3>
+                          <p>Notifications feature displays all the notifications related to the account.</p>
+                          <img src="{{ '/assets/images/doc-img107.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                          <p style="text-align:center;"><strong>Figure: Worker RDP details </strong></p>
+                        </div>
 
                           <div id="Worker"  class="page-section">
                             <h3><span class="numbers">5.</span> Worker</h3>
