@@ -558,13 +558,13 @@
                                  <li class="subMenu">
                                       <a href="#Techforce"  class="heading"><span class="numbers">3.</span>Techforce.ai Studio Guide</a>
                                       <ul class="collapse list-unstyled collapse-2">
-                                          <li class="subMenu"><a class="child 2" href="#Installation"><span class="numbers"></span>Installation</a>
+                                          <li class="subMenu"><a class="heading" href="#Installation"><span class="numbers"></span>Installation</a>
                                               <ul class="collapse list-unstyled collapse-6">
-                                                 <li style="margin-left:20px;"><a class="child 2" href="#SoftwareRequirements"> <span style="margin-left:5px;">Software Requirements</span></a></li>
-                                                 <li style="margin-left:20px;"><a class="child 2" href="#HardwareRequirements"><span style="margin-left:5px;">Hardware Requirements</span></a></li>
-                                                 <li style="margin-left:20px;"><a class="child 2" href="#InstallationInstructions"> <span style="margin-left:5px;">Installation Instructions</span></a></li>
-                                                 <li style="margin-left:20px;"><a class="child 2" href="#InstallingTechforceOCR"> <span style="margin-left:5px;">Installing Techforce OCR</span></a></li>
-                                                 <li style="margin-left:20px;"><a class="child 2" href="#Un-installInstructions"> Un-install Instructions</a></li>
+                                                 <li style="margin-left:20px;"><a class="child 6" href="#SoftwareRequirements"> <span style="margin-left:5px;">Software Requirements</span></a></li>
+                                                 <li style="margin-left:20px;"><a class="child 6" href="#HardwareRequirements"><span style="margin-left:5px;">Hardware Requirements</span></a></li>
+                                                 <li style="margin-left:20px;"><a class="child 6" href="#InstallationInstructions"> <span style="margin-left:5px;">Installation Instructions</span></a></li>
+                                                 <li style="margin-left:20px;"><a class="child 6" href="#InstallingTechforceOCR"> <span style="margin-left:5px;">Installing Techforce OCR</span></a></li>
+                                                 <li style="margin-left:20px;"><a class="child 6" href="#Un-installInstructions"> Un-install Instructions</a></li>
                                               </ul>
                                           </li>
                                           <li><a class="child 2" href="#Building"><span class="numbers"></span> Building a basic bot</a></li>
@@ -2851,9 +2851,7 @@ var dropdown = document.getElementsByClassName("heading");
 $(".child").click(function(){
  var index = Number($(this).attr("class").split(/\s+/)[1]);
   $(this).parents().find('.heading').not(this).removeClass('active');
-  $(this).parents().find('.child').not(this).removeClass('active');
   $(".heading").removeClass('active');
-  $(".child").removeClass('active');
   $(".collapse").css("display", "none");
     var x = $(this).parents().find('.heading')
     $(x[index]).toggleClass('active');
