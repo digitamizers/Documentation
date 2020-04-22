@@ -763,7 +763,7 @@
                                       </ul>
                                   </li>
                                   <li>
-                                      <a href="#Worker" class="heading"><span class="numbers">5.</span> Worker </a>
+                                      <a href="#Worker" class="heading"><span class="numbers">5.</span>EWorker Machine</a>
                                       <ul class="collapse list-unstyled collapse-4">
                                           <li><a class="child  4" href="#RunTimeInstallation">RunTime Installation Steps</a>
                                                <ul>
@@ -2876,35 +2876,7 @@ $(".giveRate li").click(function(){
   $(this).toggleClass('given');
 })
 
-var dropdown2 = document.getElementsByClassName("subhead");
 
-$(".child").click(function(){
- var index = Number($(this).attr("class").split(/\s+/)[1]);
-  $(this).parents().find('.subhead').not(this).removeClass('active');
-  $(".subhead").removeClass('active');
-  $(".collapse").css("display", "none");
-    var x = $(this).parents().find('.subhead')
-    $(x[index]).toggleClass('active');
-    $(".collapse-"+ index).css("display", "block");
-
-});
-$(".subhead").click(function(){
-   $(this).toggleClass('active').siblings().removeClass('active');
-   var n = $(this).parent().children()[1]
-   if($(n).css("display") == "none"){
-    $(open_menu_item).slideToggle()
-        open_menu_item = n
-        $(n).slideToggle()
-
-   }else {
-        $(n).slideToggle()
-        open_menu_item = undefined
-   }
-});
-
-$(".giveRate li").click(function(){
-  $(this).toggleClass('given');
-})
     </script>
 </body>
 
