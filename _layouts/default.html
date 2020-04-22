@@ -2851,7 +2851,9 @@ var dropdown = document.getElementsByClassName("heading");
 $(".child").click(function(){
  var index = Number($(this).attr("class").split(/\s+/)[1]);
   $(this).parents().find('.heading').not(this).removeClass('active');
+  $(this).parents().find('.child').not(this).removeClass('active');
   $(".heading").removeClass('active');
+  $(".child").removeClass('active');
   $(".collapse").css("display", "none");
     var x = $(this).parents().find('.heading')
     $(x[index]).toggleClass('active');
