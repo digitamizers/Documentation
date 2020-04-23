@@ -558,13 +558,13 @@
                                  <li class="subMenu">
                                       <a href="#Techforce"  class="heading"><span class="numbers">3.</span>Techforce.ai Studio Guide</a>
                                       <ul class="collapse list-unstyled collapse-2">
-                                          <li><a class="subhead" href="#Installation">Installation</a>
-                                              <ul class="collapse list-unstyled collapse-6">
-                                                 <li style="margin-left:20px;"><a class="child 6" href="#SoftwareRequirements"> Software Requirements</span></a></li>
-                                                 <li style="margin-left:20px;"><a class="child 6" href="#HardwareRequirements">Hardware Requirements</span></a></li>
-                                                 <li style="margin-left:20px;"><a class="child 6" href="#InstallationInstructions"> Installation Instructions</span></a></li>
-                                                 <li style="margin-left:20px;"><a class="child 6" href="#InstallingTechforceOCR"> Installing Techforce OCR</span></a></li>
-                                                 <li style="margin-left:20px;"><a class="child 6" href="#Un-installInstructions"> Un-install Instructions</a></li>
+                                          <li id="Installation"><a class="child 2" href="#Installation">Installation</a>
+                                              <ul>
+                                                 <li style="margin-left:20px;"><a class="child 2" href="#SoftwareRequirements"> Software Requirements</span></a></li>
+                                                 <li style="margin-left:20px;"><a class="child 2" href="#HardwareRequirements">Hardware Requirements</span></a></li>
+                                                 <li style="margin-left:20px;"><a class="child 2" href="#InstallationInstructions"> Installation Instructions</span></a></li>
+                                                 <li style="margin-left:20px;"><a class="child 2" href="#InstallingTechforceOCR"> Installing Techforce OCR</span></a></li>
+                                                 <li style="margin-left:20px;"><a class="child 2" href="#Un-installInstructions"> Un-install Instructions</a></li>
                                               </ul>
                                           </li>
                                           <li><a class="child 2" href="#Building"><span class="numbers"></span> Building a basic bot</a></li>
@@ -2499,12 +2499,12 @@
                          </div>
 
                          <div id="InstallingTechforceOCR2"  class="page-section">
-                             <h4 class="purple"><span class="numbers">5.1.4</span> Installing Techforce OCR</h4>
+                             <h4 class="purple"><span class="numbers"></span> Installing Techforce OCR</h4>
                              <p>Refer 3.1.4</p>
                          </div>
 
                          <div id="Uninstall"  class="page-section">
-                             <h4 class="purple"><span class="numbers">5.1.5</span> Un-install Instructions</h4>
+                             <h4 class="purple"><span class="numbers"></span> Un-install Instructions</h4>
                              <p>Refer 3.1.5</p>
                          </div>
 
@@ -2876,8 +2876,11 @@ $(".giveRate li").click(function(){
   $(this).toggleClass('given');
 })
 
-
+    </script>
+    <script>
+    $('#Installation').click(function(){
+     $(this).children('ul').stop().slideToggle(700);
+ });
     </script>
 </body>
-
 </html>
