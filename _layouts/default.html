@@ -2880,8 +2880,22 @@ $(".giveRate li").click(function(){
     <script>
 
     $('#Installation').click(function(){
-     $(this).children('ul').stop().slideToggle(700);
- });
+         $(this).toggleClass('active').siblings().removeClass('active');
+         var n = $(this).parent().children()[1]
+         if($(n).css("display") == "none"){
+          $(open_menu_item).slideToggle()
+              open_menu_item = n
+              $(n).slideToggle()
+
+         }else {
+              $(n).slideToggle()
+              open_menu_item = undefined
+         }
+      });
+
+      $(".giveRate li").click(function(){
+        $(this).toggleClass('given');
+      });
 
  $('#MenuOptions').click(function(){
   $(this).children('ul').stop().slideToggle(700);
