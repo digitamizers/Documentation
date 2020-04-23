@@ -568,8 +568,8 @@
                                               </ul>
                                           </li>
                                           <li><a class="child 2" href="#Building"><span class="numbers"></span> Building a basic bot</a></li>
-                                          <li><a class="child 2" href="#Menu"><span class="numbers"></span> Menu Options</a>
-                                              <ul class="collapse list-unstyled collapse-2">
+                                          <li id="MenuOptions"><a class="child 2" href="#Menu"><span class="numbers"></span> Menu Options</a>
+                                              <ul>
                                                 <li style="margin-left:20px;"><a class="child 2" href="#New"><span class="numbers"></span> <span style="margin-left:5px;">New</span></a></li>
                                                 <li style="margin-left:20px;"><a class="child 2" href="#Open"><span class="numbers"></span> <span style="margin-left:5px;">Open</span></a></li>
                                                 <li style="margin-left:20px;"><a class="child 2" href="#Save"><span class="numbers"></span> <span style="margin-left:5px;">Save</span></a></li>
@@ -2878,9 +2878,14 @@ $(".giveRate li").click(function(){
 
     </script>
     <script>
+
     $('#Installation').click(function(){
      $(this).children('ul').stop().slideToggle(700);
  });
+
+ $('#MenuOptions').click(function(){
+  $(this).children('ul').stop().slideToggle(700);
+});
     </script>
 </body>
 </html>
