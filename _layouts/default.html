@@ -559,7 +559,7 @@
                                       <a href="#Techforce"  class="heading"><span class="numbers">3.</span>Techforce.ai Studio Guide</a>
                                       <ul class="collapse list-unstyled collapse-2">
                                           <li id="Installation"><a class="child 2" href="#Installation">Installation</a>
-                                              <ul>
+                                              <ul class="collapse list-unstyled collapse-2">
                                                  <li style="margin-left:20px;"><a class="child 2" href="#SoftwareRequirements"> Software Requirements</span></a></li>
                                                  <li style="margin-left:20px;"><a class="child 2" href="#HardwareRequirements">Hardware Requirements</span></a></li>
                                                  <li style="margin-left:20px;"><a class="child 2" href="#InstallationInstructions"> Installation Instructions</span></a></li>
@@ -2880,22 +2880,9 @@ $(".giveRate li").click(function(){
     <script>
 
     $('#Installation').click(function(){
-         $(this).toggleClass('active').siblings().removeClass('active');
-         var n = $(this).parent().children()[1]
-         if($(n).css("display") == "none"){
-          $(open_menu_item).slideToggle()
-              open_menu_item = n
-              $(n).slideToggle()
+      $(this).children('ul').stop().slideToggle(700);
+    });
 
-         }else {
-              $(n).slideToggle()
-              open_menu_item = undefined
-         }
-      });
-
-      $(".giveRate li").click(function(){
-        $(this).toggleClass('given');
-      });
 
  $('#MenuOptions').click(function(){
   $(this).children('ul').stop().slideToggle(700);
