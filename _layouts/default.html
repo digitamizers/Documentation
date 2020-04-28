@@ -2949,10 +2949,23 @@ $(".giveRate li").click(function(){
 
     </script>
     <script>
-
+     $(document).ready(function() {
     $('#Installation').click(function(){
-      $(this).children('ul').stop().slideToggle('active');
-    });
+      function(){
+
+                       $('ul',this).fadeIn();
+
+                 },
+
+                 function(){
+
+                          $('ul', this).fadeOut();
+
+                  }
+
+             );
+
+       });
 
 
  $('#MenuOptions').click(function(){
