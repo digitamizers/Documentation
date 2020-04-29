@@ -574,8 +574,8 @@
                                               </ul>
                                           </li>
                                           <li><a class="child 2" href="#Building"><span class="numbers"></span> Building a basic eWorker</a></li>
-                                          <li id="MenuOptions"><a class="child 2" href="#Menu"><span class="numbers"></span> Menu Options</a>
-                                              <ul>
+                                          <li id="MenuOptions"><a id="menuoptions-expand" class="child 2" href="#Menu"><span class="numbers"></span> Menu Options</a>
+                                              <ul id="menuoptions-ul">
                                                 <li style="margin-left:20px;"><a class="child 2" href="#New"><span class="numbers"></span> <span style="margin-left:5px;">New</span></a></li>
                                                 <li style="margin-left:20px;"><a class="child 2" href="#Open"><span class="numbers"></span> <span style="margin-left:5px;">Open</span></a></li>
                                                 <li style="margin-left:20px;"><a class="child 2" href="#Save"><span class="numbers"></span> <span style="margin-left:5px;">Save</span></a></li>
@@ -587,11 +587,11 @@
                                                 <li style="margin-left:20px;"><a class="child 2" href="#Play"><span class="numbers"></span> <span style="margin-left:5px;">Play</span></a></li>
                                               </ul>
                                           </li>
-                                            <li id="ActionLibrary"><a class="child 2" href="#Action"><span class="numbers"></span> Action Library</a>
-                                              <ul>
+                                            <li id="ActionLibrary"><a id="actionlibrary-expand" class="child 2" href="#Action"><span class="numbers"></span> Action Library</a>
+                                              <ul id="actionlibrary-ul">
                                                 <li style="margin-left:10px;"><a class="child 2" href="#Stage"><span class="numbers"></span> <span style="margin-left:5px;">Stage</span></a></li>
-                                                        <li style="margin-left:10px;"><a class="child 2" href="#DesktopAutomation"><span class="numbers"></span> <span style="margin-left:5px;">Desktop Automation</span></a>
-                                                        <ul>
+                                                        <li id="DesktopAutomation" style="margin-left:10px;"><a id="desktopautomation-expand" class="child 2" href="#DesktopAutomation"><span class="numbers"></span> <span style="margin-left:5px;">Desktop Automation</span></a>
+                                                        <ul id="desktopautomation-ul">
                                                         <li style="margin-left:20px;"><a class="child 2" href="#Keyboard"><span class="numbers"></span> <span style="margin-left:15px;">Keyboard Shortcuts</span></a></li>
                                                         <li style="margin-left:20px;"><a class="child 2" href="#Drag"><span class="numbers"></span> <span style="margin-left:15px;">Drag and Drop</span></a></li>
                                                         <li style="margin-left:20px;"><a class="child 2" href="#OpenApp"><span class="numbers"></span> <span style="margin-left:15px;">Open App</span></a></li>
@@ -2953,25 +2953,22 @@ $(".giveRate li").click(function(){
 <script>
 $('#installation-expand').click(function(){
  $("#installation-ul").stop().slideToggle(700);
-
 });
 
- $('#MenuOptions').click(function(){
-  $(this).children('ul').stop().slideToggle(700);
-
+ $('#menuoptions-expand').click(function(){
+$("#menuoptions-ul").stop().slideToggle(700);
 });
 
-$('#ActionLibrary').click(function(){
- $(this).children('ul').stop().slideToggle(700);
-
+$('#actionlibrary-expand').click(function(){
+$("actionlibrary-ul").stop().slideToggle(700);
 });
-</script>
 
+$('#actionlibrary-expand').click(function(){
+$("actionlibrary-ul").stop().slideToggle(700);
+});
 
-<script>
 
 
 </script>
-
 </body>
 </html>
