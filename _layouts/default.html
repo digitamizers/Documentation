@@ -564,13 +564,13 @@
                                  <li class="subMenu">
                                       <a href="#TechForce"  class="heading"><span class="numbers"></span>TechForce.ai Studio Guide</a>
                                       <ul class="collapse list-unstyled collapse-2">
-                                          <li><a class="child 2" href="#Installation">Installation</a>
-                                              <ul id="Installation">
-                                                 <li style="margin-left:20px;"><a class="child 2" href="#SoftwareRequirements"> Software Requirements</span></a></li>
-                                                 <li style="margin-left:20px;"><a class="child 2" href="#HardwareRequirements">Hardware Requirements</span></a></li>
-                                                 <li style="margin-left:20px;"><a class="child 2" href="#InstallationInstructions"> Installation Instructions</span></a></li>
-                                                 <li style="margin-left:20px;"><a class="child 2" href="#InstallingTechForceOCR"> InstallingTechForce.ai OCR</span></a></li>
-                                                 <li style="margin-left:20px;"><a class="child 2" href="#Un-installInstructions"> Un-install Instructions</a></li>
+                                          <li id="Installation"><a id="installation-expand" class="child 2" href="#Installation">Installation</a>
+                                              <ul id="installation-ul">
+                                                 <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#SoftwareRequirements"> Software Requirements</span></a></li>
+                                                 <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#HardwareRequirements">Hardware Requirements</span></a></li>
+                                                 <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#InstallationInstructions"> Installation Instructions</span></a></li>
+                                                 <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#InstallingTechForceOCR"> InstallingTechForce.ai OCR</span></a></li>
+                                                 <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#Un-installInstructions"> Un-install Instructions</a></li>
                                               </ul>
                                           </li>
                                           <li><a class="child 2" href="#Building"><span class="numbers"></span> Building a basic eWorker</a></li>
@@ -2951,8 +2951,9 @@ $(".giveRate li").click(function(){
     </script>
 
 <script>
-$('#Installation').click(function(){
- $(this).children('li').stop().slideToggle(700);
+$('#installation-expand').click(function(){
+ $("#installation-ul").stop().slideToggle(700);
+
 });
 
  $('#MenuOptions').click(function(){
