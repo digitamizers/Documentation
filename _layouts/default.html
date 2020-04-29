@@ -232,6 +232,7 @@
 
 #Installation ul{display:none;}
 #MenuOptions ul{display: none;}
+#ActionLibrary ul{display:none;}
 
   .doc-data strong.blue{color: #008be2;}
   .doc-data .orange{color: #ffc015}
@@ -563,8 +564,8 @@
                                  <li class="subMenu">
                                       <a href="#TechForce"  class="heading"><span class="numbers"></span>TechForce.ai Studio Guide</a>
                                       <ul class="collapse list-unstyled collapse-2">
-                                          <li id="installation"><a class="child 2" href="#Installation">Installation</a>
-                                              <ul id="childmenu">
+                                          <li id="Installation"><a class="child 2" href="#Installation">Installation</a>
+                                              <ul>
                                                  <li style="margin-left:20px;"><a class="child 2" href="#SoftwareRequirements"> Software Requirements</span></a></li>
                                                  <li style="margin-left:20px;"><a class="child 2" href="#HardwareRequirements">Hardware Requirements</span></a></li>
                                                  <li style="margin-left:20px;"><a class="child 2" href="#InstallationInstructions"> Installation Instructions</span></a></li>
@@ -2950,9 +2951,18 @@ $(".giveRate li").click(function(){
     </script>
 
 <script>
+$('#Installation').click(function(){
+ $(this).children('ul').stop().slideToggle(700);
+});
+
  $('#MenuOptions').click(function(){
-  $(this).children('ul').stop(true).slideToggle('fast');
-   $(this).toggleClass("dropdown-active");
+  $(this).children('ul').stop().slideToggle(700);
+
+});
+
+$('#ActionLibrary').click(function(){
+ $(this).children('ul').stop().slideToggle(700);
+
 });
 </script>
 
