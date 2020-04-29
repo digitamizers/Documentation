@@ -2931,7 +2931,7 @@ $(".child").click(function(){
 });
 $(".heading").click(function(){
    $(this).toggleClass('active').siblings().removeClass('active');
-   var n = $(this).parent().children('ul')[]
+   var n = $(this).parent().children()[1]
    if($(n).css("display") == "none"){
     $(open_menu_item).slideToggle()
         open_menu_item = n
