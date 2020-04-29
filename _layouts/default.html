@@ -564,8 +564,8 @@
                                  <li class="subMenu">
                                       <a href="#TechForce"  class="heading"><span class="numbers"></span>TechForce.ai Studio Guide</a>
                                       <ul class="collapse list-unstyled collapse-2">
-                                          <li id="Installation"><a class="child 2" href="#Installation">Installation</a>
-                                              <ul>
+                                          <li><a class="child 2" href="#Installation">Installation</a>
+                                              <ul id="Installation">
                                                  <li style="margin-left:20px;"><a class="child 2" href="#SoftwareRequirements"> Software Requirements</span></a></li>
                                                  <li style="margin-left:20px;"><a class="child 2" href="#HardwareRequirements">Hardware Requirements</span></a></li>
                                                  <li style="margin-left:20px;"><a class="child 2" href="#InstallationInstructions"> Installation Instructions</span></a></li>
@@ -2952,7 +2952,7 @@ $(".giveRate li").click(function(){
 
 <script>
 $('#Installation').click(function(){
- $(this).children('ul').stop().slideToggle(700);
+ $(this).children('li').stop().slideToggle(700);
 });
 
  $('#MenuOptions').click(function(){
