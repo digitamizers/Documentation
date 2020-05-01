@@ -2570,7 +2570,7 @@
 
                          <div id="Instructions"  class="page-section">
                              <h4 class="purple"><span class="numbers"></span> Installation Instructions</h4>
-                             <a onclick='scroll("InstallationInstructions");'>Refer Installation Instructions from Studio Guide</a>
+                             <a href="javascript: scrollToForm();">Refer Installation Instructions from Studio Guide</a>
                          </div>
 
                          <div id="InstallingTechForceOCR2"  class="page-section">
@@ -3027,6 +3027,13 @@ $('#databaseactions-expand').click(function(){
 $("#databaseactions-ul").stop().slideToggle(700);
 });
 
+</script>
+
+
+<script>
+function scrollToForm() {
+  document.querySelector('#InstallationInstructions').scrollIntoView({behavior: 'smooth'});
+}
 </script>
 </body>
 </html>
