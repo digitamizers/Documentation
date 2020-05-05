@@ -571,7 +571,7 @@
                                  <li class="subMenu">
                                       <a href="#TechForce"  class="heading"><span class="numbers"></span>TechForce.ai Studio Guide</a>
                                       <ul class="collapse list-unstyled collapse-2">
-                                          <li id="Installation" ><a id="installation-expand" class="child 2" href="#Installation">Installation</a>
+                                          <li id="Installation" ><a id="installation-expand" class="child 2" href="#Installations">Installation</a>
                                               <ul id="installation-ul">
                                                  <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#SoftwareRequirements"> Software Requirements</span></a></li>
                                                  <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#HardwareRequirements">Hardware Requirements</span></a></li>
@@ -791,7 +791,7 @@
                                                     <li><a class="child  4" href="#Uninstall">Uninstall Instructions</a></li>
                                                </ul>
                                           </li>
-                                          <li><a class="child  4" href="#Registeringworker">Registering worker with EM console</a></li>
+                                          <li><a class="child  4" href="#Registeringworker">Registering eWorker Machine with EM console</a></li>
                                           <li><a class="child  4" href="#TriggeringBots">Triggering Bots</a></li>
 
                                       </ul>
@@ -2492,8 +2492,8 @@
                           <p>Select the eWorker machine in which the execution should be done.</p>
                           <h5><span class="numbers">4.</span> eWorkers Machine</h5>
                           <p>Select the eWorker Machine in which the execution should be done.</p>
-                          <h5><span class="numbers">5.</span> Execution Type</h5>
-                          <p>Select the execution type either to execute in Chrome or headless mode.</p>
+                          <h5><span class="numbers">5.</span> Browser option</h5>
+                          <p>Select the Browser option to execute in Chrome, Mozilla Firefox, Microsoft Edge or headless mode.</p>
                           <h5><span class="numbers">6.</span> Timezone</h5>
                           <p>Select the time zone in which it should run.</p>
                           <h5><span class="numbers">7.</span> Trigger</h5>
@@ -2504,28 +2504,28 @@
                           <p style="text-align:center;"><strong>Figure: Trigger type Minutes</strong></p>
                           <h5><span class="numbers">9.</span> Hourly</h5>
                           <p>If the trigger type is selected as Hours, then the Action flow will run at specified intervals measured in hours., For example, if a Action flow is scheduled to execute every 3 hours and 30 minutes, then the flow will continuously execute after every 3 hours and 30 minutes until that scheduled flow is stopped/destroyed.</p>
-                            <img src="{{ '/assets/images/doc-img75.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
-                             <p style="text-align:center;"><strong>Figure: Trigger type Hourly</strong></p>
-                            <h5><span class="numbers">10.</span> Daily</h5>
-                            <p>If the trigger type is selected as Daily, then the Action flow will execute every day at the specified time. For example, if an Action flow is scheduled to execute every day at 05:30 a.m. then the flow will continuously execute every day at 05:30 a.m. until that scheduled flow is stopped/destroyed.</p>
-                              <img src="{{ '/assets/images/doc-img76.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
-                               <p style="text-align:center;"><strong>Figure: Trigger type Daily </strong></p>
-                              <h5><span class="numbers">11.</span> Weekly</h5>
-                              <p>If the trigger type is selected as Weekly, then select the weekday i.e. Mon, Tue, and so on. Then the Action flow will execute every week at the time specified. For example, if an Action Flow is scheduled to execute every Monday at 05:30 a.m. then the flow will continuously execute every Monday at 05:30 a.m. until the scheduled flow is stopped/destroyed.</p>
-                                <img src="{{ '/assets/images/doc-img77.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
-                                 <p style="text-align:center;"><strong>Figure: Trigger type weekly </strong></p>
-                                <h5><span class="numbers">12.</span> Monthly</h5>
-                                <p>If the trigger type is selected as monthly, then select the month i.e. Jan, Feb, and so on. Then the Action flow will execute every Month at the time specified. For example, if the Action flow is scheduled to execute every month on a specific day/date at 05:30 a.m., then the flow will continuously execute every month at 05:30 a.m. until the scheduled flow is stopped/destroyed.</p>
-                                  <img src="{{ '/assets/images/doc-img78.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
-                                    <p style="text-align:center;"><strong>Figure: Trigger type Monthly </strong></p>
-                                  <h5><span class="numbers">13.</span> Advanced:</h5>
-                                  <p>In the Advanced option, one can write a Cron expression.</p>
-                                    <img src="{{ '/assets/images/doc-img79.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
-                                     <p style="text-align:center;"><strong>Figure: Trigger type advanced </strong></p>
-                                    <h5><span class="numbers">14.</span> Stop Schedule </h5>
-                                    <p>To stop the schedule at a particular time, enable the button and enter the time, when to stop the schedule.</p>
-                                    <img src="{{ '/assets/images/doc-img80.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
-                                   <p style="text-align:center;"><strong>Figure: Stop Schedule </strong></p>
+                          <img src="{{ '/assets/images/doc-img75.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                          <p style="text-align:center;"><strong>Figure: Trigger type Hourly</strong></p>
+                          <h5><span class="numbers">10.</span> Daily</h5>
+                          <p>If the trigger type is selected as Daily, then the Action flow will execute every day at the specified time. For example, if an Action flow is scheduled to execute every day at 05:30 a.m. then the flow will continuously execute every day at 05:30 a.m. until that scheduled flow is stopped/destroyed.</p>
+                          <img src="{{ '/assets/images/doc-img76.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                          <p style="text-align:center;"><strong>Figure: Trigger type Daily </strong></p>
+                          <h5><span class="numbers">11.</span> Weekly</h5>
+                          <p>If the trigger type is selected as Weekly, then select the weekday i.e. Mon, Tue, and so on. Then the Action flow will execute every week at the time specified. For example, if an Action Flow is scheduled to execute every Monday at 05:30 a.m. then the flow will continuously execute every Monday at 05:30 a.m. until the scheduled flow is stopped/destroyed.</p>
+                          <img src="{{ '/assets/images/doc-img77.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                          <p style="text-align:center;"><strong>Figure: Trigger type weekly </strong></p>
+                          <h5><span class="numbers">12.</span> Monthly</h5>
+                          <p>If the trigger type is selected as monthly, then select the month i.e. Jan, Feb, and so on. Then the Action flow will execute every Month at the time specified. For example, if the Action flow is scheduled to execute every month on a specific day/date at 05:30 a.m., then the flow will continuously execute every month at 05:30 a.m. until the scheduled flow is stopped/destroyed.</p>
+                          <img src="{{ '/assets/images/doc-img78.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                          <p style="text-align:center;"><strong>Figure: Trigger type Monthly </strong></p>
+                          <h5><span class="numbers">13.</span> Advanced:</h5>
+                          <p>In the Advanced option, one can write a Cron expression.</p>
+                          <img src="{{ '/assets/images/doc-img79.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                          <p style="text-align:center;"><strong>Figure: Trigger type advanced </strong></p>
+                          <h5><span class="numbers">14.</span> Stop Schedule </h5>
+                          <p>To stop the schedule at a particular time, enable the button and enter the time, when to stop the schedule.</p>
+                          <img src="{{ '/assets/images/doc-img80.png' | relative_url }}"alt="image" class="topImg" style="width:400px;border:1px solid green; margin-left:25%;margin-top:10px;margin-bottom:10px;">
+                          <p style="text-align:center;"><strong>Figure: Stop Schedule </strong></p>
                         </div>
 
 
@@ -2538,9 +2538,14 @@
 
                         <div id="ProfileSettings"  class="page-section">
                           <h3><span class="numbers"></span> <span style="margin-left:20px;">Profile Settings</span></h3>
+                          <h5>Profile</h5>
                           <p>Profile details are created when a user logs in for the first time. Those details can be updated in Account Management.</p>
                           <img src="{{ '/assets/images/doc-img103.png' | relative_url }}"alt="image" class="topImg" style="border:1px solid green; margin-left:0%;margin-top:10px;margin-bottom:10px;">
                           <p style="text-align:center;"><strong>Figure: Profile Details</strong></p>
+                          <h5>Billing</h5>
+                          <p>1. The billing section shows your current plan and options available for upgradtion.</p>
+                          <img src="{{ '/assets/images/doc-img118.png' | relative_url }}"alt="image" class="topImg" style="border:1px solid green; margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                          <p style="text-align:center;"><strong>Figure: Billing Details</strong></p>
                         </div>
 
                         <div id="Notifications"  class="page-section">
@@ -2612,8 +2617,8 @@
                          </div>
 
                          <div id="Registeringworker"  class="page-section">
-                             <h4 class="purple"><span class="numbers"></span> Registering eworker machine with EM console</h4>
-                          <a href="javascript: scrollToForm4();">Refer eworker machine creation from WorkerManagement</a>
+                             <h4 class="purple"><span class="numbers"></span> Registering eWorker Machine with EM console</h4>
+                          <a href="javascript: scrollToForm4();">Refer eWorker machine creation from WorkerManagement</a>
                           </div>
 
                          <div id="TriggeringBots"  class="page-section">
