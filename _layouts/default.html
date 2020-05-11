@@ -913,16 +913,16 @@
 
                               <h5>Techforce.ai RPA components:</h5>
                               <p><strong>Thechforce.ai RPA Studio:</strong>Techforce.ai RPA studio is an integrated development environment that helps business users and developers to create automation<strong> Action Flows </strong> by drag and drop <strong>actions</strong> from the <strong>action library</strong>. An Action is a piece of software program that performs a pre-defined task.  Action Library consists of many such actions. An Action Flow consists of a series of actions configured in a stage to automate a specific process.  It only requires very minimal coding skills to create and configure Action Flows.</p>
-                              <p>Techforce.ai RPA studio is packaged with a rich set of actions that allows you to seamlessly work with desktops, browsers, Microsoft applications such as Excel and outlook, databases, secure FTP servers, PDFs and many more. It also has inbuilt support for JavaScript, Python and AutoHotKey languages which allows you to write your own piece of code if you do not find any action that fulfils your requirement.</p>
+                              <p>Techforce.ai RPA studio is packaged with a rich set of actions that allows you to seamlessly work with desktops, browsers, Microsoft applications such as Excel and Outlook, Databases, Secure FTP servers, PDFs and many more. It also has inbuilt support for JavaScript, Python and AutoHotKey languages which allows you to write your own piece of code if you do not find any action that fulfils your requirement.</p>
                               <p>Techforce.ai RPA studio also has a recording feature that records all web-related actions, lets you modify the recorded action flow and replay it.</p>
                               <p>You can simply play the Action Flow from the studio to check how it executes.</p>
 
-                              <h5>Techforce.ai e-manager Console:</h5>
-                              <p>Techforce.ai e-manager console is a centralized administration console that enables you to publish, execute, schedule, monitor, and manage action flows for your organization. It is a central application that can manage and execute action flows on on-premise and cloud <strong>e-worker machines</strong>. An e-worker machine is a physical or virtual machine that consists of Techforce.ai RPA runtime to execute Action Flows. You can register an e-worker machine with e-manager Console by using the Techforce.ai icon under the system tray menu.</p>
-                              <p>Techforce.ai e-manager Console is responsible for queuing the requests, executing the action flows as per the sequence, logging audit trial, sending notifications, and real-time reporting. It also supports version control of the Action Flows, user & role management, profile management, billing management, and personal data management.</p>
+                              <h5>Techforce.ai E-Manager Console:</h5>
+                              <p>Techforce.ai e-manager console is a centralized administration console that enables you to publish, execute, schedule, monitor, and manage action flows for your organization. It is a central application that can manage and execute action flows on on-premise and cloud <strong>e-worker machines</strong>. An e-worker machine is a physical or virtual machine that consists of Techforce.ai RPA runtime to execute Action Flows. You can register an e-worker machine with e-manager console by using the Techforce.ai icon under the system tray menu.</p>
+                              <p>Techforce.ai e-manager console is responsible for queuing the requests, executing the action flows as per the sequence, logging audit trial, sending notifications, and real-time reporting. It also supports version control of the Action Flows, user & role management, profile management, billing management, and personal data management.</p>
 
                               <h5>Techforce.ai Runtime:</h5>
-                              <p>Techforce.ai Runtime is the actual engine that parses the actions in Action Flow to software instructions and executes these instructions as per the properties configured in the action. It receives commands from either e-manager Console or Studio and completes the execution as per the instructions.</p>
+                              <p>Techforce.ai Runtime is the actual engine that parses the actions in Action Flow to software instructions and executes these instructions as per the properties configured in the action. It receives commands from either e-manager console or studio and completes the execution as per the instructions.</p>
                               <img src="{{ '/assets/images/doc-img117.jpg' | relative_url }}" alt="image" style="text-align:center;border:1px solid green;margin-top:10px;margin-bottom:10px;">
                             </div>
 
@@ -965,9 +965,9 @@
                              <li><span class="numbers">3.</span> <strong>Storage: </strong>10GB</li>
                              <li><span class="numbers">4.</span> <strong>Others: </strong>Microsoft .Net Framework 4.6(Windows 8.1 and Windows Server 2012 R2: 4.6.1).</li>
                              </ol>
-                             <h5>Download TechForce.ai RPA Studio:</h5>
-                             <p>1. To download the studio, the user must register with the e-manager Console.</p>
-                             <p>2. To get access to the e-manager Console, go to <a  target="_blank" href="https://emcaws.techforce.ai/try/signup?subscriptionId=0">https://emcaws.techforce.ai/try/signup?subscriptionId=0 </a> and submit the details.</p>
+                             <h5>Download TechForce.Ai RPA Studio:</h5>
+                             <p>1. To download the studio, the user must register with the e-manager console.</p>
+                             <p>2. To get access to the e-manager console, go to <a  target="_blank" href="https://emcaws.techforce.ai/try/signup?subscriptionId=0">https://emcaws.techforce.ai/try/signup?subscriptionId=0 </a> and submit the details.</p>
                              <img src="{{ '/assets/images/doc-img112.png' | relative_url }}" alt="image" style="width:400px;text-align:center;border:1px solid green;margin-left:20%;margin-top:10px;margin-bottom:10px;">
                              <p>3. Upon successful registration, you will be redirected to the login page.</p>
                              <img src="{{ '/assets/images/doc-img113.png' | relative_url }}" alt="image" style="width:400px;text-align:center;border:1px solid green;margin-left:20%;margin-top:10px;margin-bottom:10px;">
@@ -1480,7 +1480,7 @@
                             <p>The General Activities pack contains all the basic activities used for creating automation projects. These activities enable the robots to:</p>
                             <ol>
                              <li><span class="numbers">1.</span> Getting the input to robots.</li>
-                             <li><span class="numbers">2.</span> Getting credentials to communicate with the e-manager Console.</li>
+                             <li><span class="numbers">2.</span> Getting credentials to communicate with the e-manager console.</li>
                              <li><span class="numbers">3.</span> Read data from the web.</li>
                              <li><span class="numbers">4.</span> Assigning the values to variables.</li>
                            </ol>
@@ -1538,18 +1538,18 @@
 
                         <div id="GetSecret"  class="page-section">
                           <h5 class="purple"> Get Secret</h5>
-                          <p>Gets a specified secret value from the secret vault of the e-manager Console by using the Asset Name and returns a secret value, which can be Text, Boolean, or Integer.</p>
+                          <p>Gets a specified secret value from the secret vault of the e-manager console by using the Asset Name and returns a secret value, which can be Text, Boolean, or Integer.</p>
                           <h6>Properties Configuration</h6>
                           <ol>
-                            <li><span class="numbers">1.</span><strong> UserName:</strong> User Name of the e-manager Console account.</li>
-                            <li><span class="numbers">2.</span><strong> Password:</strong> Password of the e-manager Console account.</li>
-                            <li><span class="numbers">3.</span><strong> Timeout:</strong> The e-manager Console URL.</li>
+                            <li><span class="numbers">1.</span><strong> UserName:</strong> User Name of the e-manager console account.</li>
+                            <li><span class="numbers">2.</span><strong> Password:</strong> Password of the e-manager console account.</li>
+                            <li><span class="numbers">3.</span><strong> Timeout:</strong> The e-manager console URL.</li>
                           </ol>
-                          <p>After configuration, the user can access the secret vault in e-manager Console by using the given asset name and can store the values in a variable.</p>
-                          <P><strong>Asset Name:</strong> The asset name, created in the e-manager Console to contain the secret value.</p>
+                          <p>After configuration, the user can access the secret vault in e-manager console by using the given asset name and can store the values in a variable.</p>
+                          <P><strong>Asset Name:</strong> The asset name, created in the e-manager console to contain the secret value.</p>
                           <p><strong>Variable to Capture Secret Text:</strong> Enter the variable name created in the variable panel to store the secret vault value.</p>
                           <h6>Note</h6>
-                          <p>Once the user was configured with the e-manager Console, it will not ask to configure again. Directly the activity shows asset name and variable field.</p>
+                          <p>Once the user was configured with the e-manager console, it will not ask to configure again. Directly the activity shows asset name and variable field.</p>
                         </div>
 
                         <div id="GetCredentials"  class="page-section">
@@ -1557,13 +1557,13 @@
                           <p>Gets a specified credential by using the provided Asset Name and returns a user name and a secure password.</p>
                           <h5>Properties Configuration</h5>
                           <ol>
-                          <li><span class="numbers">1.</span><strong> UserName:</strong> User Name of the e-manager Console account.</li>
-                          <li><span class="numbers">2.</span><strong> Password:</strong> Password of the e-manager Console account.</li>
-                          <li><span class="numbers">3.</span><strong> eManagr - Console URL:</strong> The e-manager Console URL which needs to be accessed.</li>
-                          <p>After configuration, the secret vault is accessible in e-manager Console by using the given asset name, user name, and password.</p>
-                          <li><span class="numbers">1.</span><strong> Asset Name:</strong> The name of the asset, which was created in the e-manager Console to contain a secret value.</li>
-                          <li><span class="numbers">2.</span><strong> User Name:</strong> Type the variable name here. The username, which is stored in the e-manager Console secret vault will come to this variable automatically.</li>
-                          <li><span class="numbers">3.</span><strong> Password:</strong> Type the variable name here. The password, which is stored in the e-manager Console secret vault will come to this variable automatically.</li>
+                          <li><span class="numbers">1.</span><strong> UserName:</strong> User Name of the e-manager console account.</li>
+                          <li><span class="numbers">2.</span><strong> Password:</strong> Password of the e-manager console account.</li>
+                          <li><span class="numbers">3.</span><strong> E-Manager-Console URL:</strong> The e-manager console URL which needs to be accessed.</li>
+                          <p>After configuration, the secret vault is accessible in e-manager console by using the given asset name, user name, and password.</p>
+                          <li><span class="numbers">1.</span><strong> Asset Name:</strong> The name of the asset, which was created in the e-manager console to contain a secret value.</li>
+                          <li><span class="numbers">2.</span><strong> User Name:</strong> Type the variable name here. The username, which is stored in the e-manager console secret vault will come to this variable automatically.</li>
+                          <li><span class="numbers">3.</span><strong> Password:</strong> Type the variable name here. The password, which is stored in the e-manager console secret vault will come to this variable automatically.</li>
                         </ol>
                         </div>
 
@@ -1646,7 +1646,7 @@
                         <div id="Click"  class="page-section">
                           <h5 class="purple">Click</h5>
                           <p>Click Action is used to click on a particular element or image.</p>
-                          <p>Specify the type of mouse click (single, double, up, down) used when simulating the click event and the mouse button (left, right, middle) used for the click action. By default, the left mouse button is selected.</p>
+                          <p>Specify the type of mouse click (single, double) used when simulating the click event and the mouse button (left, right) used for the click action. By default, the left mouse button is selected.</p>
                           <p><strong>Properties </strong></p>
                             <p>Click Action has three different types of selectors.</p>
                           <p><span class="numbers">1.</span><strong> HTML Selector:</strong> HTML selector is nothing but the element X-Path.</p>
@@ -1681,7 +1681,7 @@
                           <h5 class="purple"> Hover</h5>
                           <p>Places the mouse cursor at a particular place wherever selected.</p>
                            <p>Properties</p>
-                             <p>HOVER Action has three different types of Selectors:</p>
+                             <p>Hover Action has three different types of Selectors:</p>
                            <ol>
                             <li><span class="numbers">1.</span><strong> Html Selector:</strong> HTML selector is nothing but the element XPath.</li>
                             <li><span class="numbers">2.</span><strong> Image Selector:</strong> Image selector is nothing but the Image as an indicator.</li>
@@ -1789,7 +1789,7 @@
                         <h6>Properties</h6>
                         <p><span class="numbers">1.<strong> Full Path:</strong> Enter the full path of the Excel spreadsheet. This option is shown only when taking the Delete Row action directly. If dragged into the open spreadsheet activity, it will not ask the path, and no need to mention the path.</p>
                         <p><span class="numbers">2.<strong> Sheet Name: </strong>Enter the name of the sheet containing the Row that needs to be deleted. Only String variables and strings are supported (Example: Sheet1).</p>
-                        <p><span class="numbers">3. Enter the exact number of the row to be deleted. Only String variables and number values are supported.</p>
+                        <p><span class="numbers">3.<strong> Row Number: </strong>Enter the exact number of the row to be deleted. Only String variables and number values are supported.</p>
                       </div>
 
                       <div id="GetCell"  class="page-section">
@@ -2343,13 +2343,13 @@
 
 
                           <div id="Enterprise-managerconsole"  class="page-section">
-                              <h3><span class="numbers">4.</span> Enterprise Manager console</h3>
+                              <h3><span class="numbers">4.</span> Enterprise Manager Console</h3>
                           </div>
 
                             <div id="Registerwith"  class="page-section">
-                              <h4 class="skyBlue"> Register with e-manager console</h4>
+                              <h4 class="skyBlue"> Register with E-Manager Console</h4>
 
-                              <p>1. To get access to the e-manager Console, goto <a  target="_blank" href="https://emcaws.techforce.ai/try/signup?subscriptionId=0">https://emcaws.techforce.ai/try/signup?subscriptionId=0 </a> and submit the details.</p>
+                              <p>1. To get access to the e-manager console, goto <a  target="_blank" href="https://emcaws.techforce.ai/try/signup?subscriptionId=0">https://emcaws.techforce.ai/try/signup?subscriptionId=0 </a> and submit the details.</p>
                               <img src="{{ '/assets/images/doc-img112.png' | relative_url }}" alt="image" style="width:400px;text-align:center;border:1px solid green;margin-left:20%;margin-top:10px;margin-bottom:10px;">
                               <p style="text-align:center;"><strong>Figure: Details </strong></p>
                               <p><span class="numbers">2.</span> Upon successful registration, you will be redirected to the login page.</p>
@@ -2359,14 +2359,14 @@
                               <p><span class="numbers">3.</span> You will be prompted to verify your email on the first login. Go to your registered email and click on the verification link to complete the email verification process.</p>
                               <img src="{{ '/assets/images/doc-img47.png' | relative_url }}"alt="image" class="topImg" style="width:400px; border: 1px solid green;margin-left:25%;margin-top:10px;margin-bottom:10px;">
                               <p style="text-align:center;"><strong>Figure: Verification Process </strong></p>
-                              <p><span class="numbers">4.</span> Once you're done with the verification process you will be redirected to the e-manager -Console homepage page.</p>
+                              <p><span class="numbers">4.</span> Once you're done with the verification process you will be redirected to the e-manager console homepage page.</p>
 
 
                            </div>
 
                            <div id="Login"  class="page-section">
                              <h4 class="skyBlue"> Login</h4>
-                               <p>1. To Login into e-manager – Console</p>
+                               <p>1. To Login into e-manager console</p>
                                <img src="{{ '/assets/images/doc-img48.png' | relative_url }}"alt="image" class="topImg" style="width:400px; border: 1px solid green;margin-left:25%;margin-top:10px;margin-bottom:10px;">
                                <p style="text-align:center;"><strong>Figure: Login </strong></p>
                                <p>2. Enter the credentials and click on the login button, you can see Action flows, e-worker machines, Queues, Schedules, and Secret Vault in the left menu.</p>
@@ -2619,7 +2619,7 @@
 
                          <div id="TriggeringBots"  class="page-section">
                              <h4 class="purple"><span class="numbers"></span> Triggering Action Flows</h4>
-                             <p><span class="numbers">1.</span>	To trigger an action flow, log in to TechForce.ai e-manager Console and go to the Action Flows screen. </p>
+                             <p><span class="numbers">1.</span>	To trigger an action flow, log in to TechForce.ai e-manager console and go to the Action Flows screen. </p>
                              <p><span class="numbers">2.</span> The	Action Flows page lists the action flows that are published to the e-manager console.</p>
                              <p><span class="numbers">3.</span>	To publish an action flow to the e-manager console, first zip the action flow folder. Click on the UPLOAD button on the top right corner of the page, browse the zip file, and click the UPLOAD button. The action flow will be uploaded.</p>
                              <p><span class="numbers">4.</span> After uploading, execute the flow by clicking on the PLAY button.</p>
