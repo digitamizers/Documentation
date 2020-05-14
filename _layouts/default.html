@@ -904,26 +904,35 @@
 
                             <div id="TechforceRPA"  class="page-section">
                               <h3>TechForce.ai RPA</h3>
-                              <p>Techforce.ai Robotic Process Automation (TFAI RPA) is a software which automates mundane repetitive business processes. It helps business users to streamline enterprise operations and reduce costs. Also, Techforce.ai RPA enables developers to focus on the most important, value-added tasks by automating repetitive clerical tasks.</p>
+                              <p>Techforce.ai Robotic Process Automation (Techforce.ai RPA) is one of the five components of the Techforce.ai platform. Techforce.ai RPA helps you automate mundane repetitive business processes. It helps businesses to streamline enterprise operations and reduce costs. Also, Techforce.ai RPA enables business users to focus on the most important value-added tasks by automating repetitive clerical tasks.</p>
                               <h5>Benefits of Techforce.ai RPA:</h5>
                               <li>Low cost and easy to implement</li>
-                              <li>Increased Customer and stakeholder satisfaction </li>
+                              <li>Increased Customer satisfaction </li>
                               <li>Reduces human errors and thus optimizes staffing costs</li>
-                              <li>Enables compliance with standards and regulations</li>
+                              <li>Helps to comply with standards and regulations</li>
 
                               <h5>Techforce.ai RPA components:</h5>
-                              <p><strong>Thechforce.ai RPA Studio:</strong>Techforce.ai RPA studio is an integrated development environment that helps business users and developers to create automation<strong> Action Flows </strong> by drag and drop <strong>actions</strong> from the <strong>action library</strong>. An Action is a piece of software program that performs a pre-defined task.  Action Library consists of many such actions. An Action Flow consists of a series of actions configured in a stage to automate a specific process.  It only requires very minimal coding skills to create and configure Action Flows.</p>
-                              <p>Techforce.ai RPA studio is packaged with a rich set of actions that allows you to seamlessly work with desktops, browsers, Microsoft applications such as Excel and Outlook, Databases, Secure FTP servers, PDFs and many more. It also has inbuilt support for JavaScript, Python and AutoHotKey languages which allows you to write your own piece of code if you do not find any action that fulfils your requirement.</p>
-                              <p>Techforce.ai RPA studio also has a recording feature that records all web-related actions, lets you modify the recorded action flow and replay it.</p>
-                              <p>You can simply play the Action Flow from the studio to check how it executes.</p>
+                              <p>Techforce.ai RPA has three main components that will help you automate repetitive tasks. These components work together to provide both attended and unattended/scheduled automation. The following diagram depicts the logical flow architecture of the Techforce.ai RPA.</p>
+                              <img src="{{ '/assets/images/doc-img120.jpg' | relative_url }}" alt="image" style="text-align:center;border:1px solid green;margin-top:10px;margin-bottom:10px;">
+                              <p>Let us understand each of these main components.</p>
+
+                              <h5>Techforce.ai RPA Studio:</h5>
+                              <p><strong>Techforce.ai RPA Studio:</strong>is a low-code, integrated development environment that helps business users and developers to create automation<strong> Action Flows </strong> using the drag and drop <strong>Actions</strong> from the <strong>Action Library</strong>.
+                                <li>An <strong>Action</strong> is a piece of software program that performs a pre-defined task </li>
+                                <li>An <strong>Action</strong> Library consists of many such actions. </li>
+                                <li>An<strong> Action Flow</strong> consists of a series of actions configured in a stage to automate a specific process.</p>
+                              <p>It only requires very minimal coding skills to create and configure <strong>Action Flows</strong> due to the low-code nature of the studio.</p>
+                              <p>Techforce.ai RPA studio is packaged with a rich set of actions that allows you to create an automation flow for any use case. The Studio has actions that work with desktops, browsers, databases, secure FTP servers, PDFs, Microsoft applications such as Excel and Outlook, and many more. It also has inbuilt support for JavaScript, Python, and AutoHotKey languages so that you can write your own piece of code if you do not find any action that fulfils your requirement.</p>
+                              <p>Techforce.ai RPA studio also has a recording feature to record all web-related actions, modify the recorded action flow, and replay it.</p>
+                              <p>You can simply record and play the Action Flow from the Studio to check how it executes locally.</p>
+                              <p>When you create an Action Flow using Studio, a folder with the given name will be created on the disk. You can see two files inside the created folder - a JSON file with the list of actions and related instructions and an equivalent file (without any extension) with the actions and related instructions in a human-readable format.</p>
+                              <p>To manage your Action Flow in unattended/scheduled mode, you need to open the Action Flow in the Studio and publish it to the E-Manager Console by simply clicking on the publish option available in the top menu. When you click on the publish option, in the background, the folder that was created on the disk for the Action Flow will be zipped along with the two files inside it and gets uploaded to the E-Manager Console application.</p>
 
                               <h5>Techforce.ai E-Manager Console:</h5>
-                              <p>Techforce.ai e-manager console is a centralized administration console that enables you to publish, execute, schedule, monitor, and manage action flows for your organization. It is a central application that can manage and execute action flows on on-premise and cloud <strong>e-worker machines</strong>. An e-worker machine is a physical or virtual machine that consists of Techforce.ai RPA runtime to execute Action Flows. You can register an e-worker machine with e-manager console by using the Techforce.ai icon under the system tray menu.</p>
-                              <p>Techforce.ai e-manager console is responsible for queuing the requests, executing the action flows as per the sequence, logging audit trial, sending notifications, and real-time reporting. It also supports version control of the Action Flows, user & role management, profile management, billing management, and personal data management.</p>
-
-                              <h5>Techforce.ai Runtime:</h5>
-                              <p>Techforce.ai Runtime is the actual engine that parses the actions in Action Flow to software instructions and executes these instructions as per the properties configured in the action. It receives commands from either e-manager console or studio and completes the execution as per the instructions.</p>
-                              <img src="{{ '/assets/images/doc-img117.jpg' | relative_url }}" alt="image" style="text-align:center;border:1px solid green;margin-top:10px;margin-bottom:10px;">
+                              <p>Techforce.ai E-Manager console is a centralized administration console that enables you to publish, execute, schedule, monitor, and manage action flows for your organization. It is a central application that can manage and execute action flows on on-premises and cloud <strong>E-Worker Machines</strong>. An E-Worker Machine can be a physical or virtual machine that consists of Techforce.ai RPA runtime to execute Action Flows. You can register an E-Worker Machine with E-Manager Console by using the Techforce.ai icon under the system tray menu.</p>
+                              <p>Techforce.ai E-Manager Console manages queuing of the requests, executing the action flows as per the sequence, logging audit trial, sending notifications, and real-time reporting. It also supports version control of the Action Flows, user & role management, profile management, billing management, and personal data management.</p>
+                              <p><strong>Techforce.ai Runtime:</stong> Techforce.ai Runtime is the actual engine that parses the actions in Action Flow to software instructions and executes those instructions as per the properties configured in the action. It receives commands from either E-Manager Console or Studio and completes the execution as per the instructions.</p>
+                            
                             </div>
 
 
