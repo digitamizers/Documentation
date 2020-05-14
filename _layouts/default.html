@@ -2671,7 +2671,7 @@
                             <p><span class="numbers">1.</span> Sometimes the usual manual routine is not the optimal way for automation. Carefully explore the application’s behavior before committing to a certain approach.</p>
                             <p><span class="numbers">2.</span> UI automation goes at its best when Robots and applications run on the same machine because Techforce.ai can interact directly with the technology behind the application to get data behind the scenes.</p>
                             <h5>Input Methods</h5>
-                            <p><span class="numbers">1.</span> There are two methods Techforce.ai uses for triggering a Click or Enter Keystrokesstrong> in an application. These are displayed as properties that deal with UI automation.</p>
+                            <p><span class="numbers">1.</span> There are two methods Techforce.ai uses for triggering a Click or Enter Keystrokesstrong in an application. These are displayed as properties that deal with UI automation.</p>
                             <p><span class="numbers">2.</span> If HTML Selector is selected, Studio hooks into the web application and triggers the event handler of an indicated UI element using its Xpath. (button, edit box). This method is preferred for web-based UI Automation.</p>
                             <p><span class="numbers">3.</span> If the Location Selector is selected, Studio searches for the specified offset location to perform Click or Keyboard actions. This is the preferred selector if the UI of the screen is static.</p>
 
@@ -2699,50 +2699,50 @@
                             <li>	Implement a clean process</li>
                             <li>	Understand the Limitations</li>
                             <li>	Problems are common</li>
-                            <p>1.	Selecting a project to implement RPA </p>
+                            <h5>1.	Selecting a project to implement RPA </h5>
                             <p>Select a process that is less error-prone and rule-based. Automating a process that is changing every day is a waste of time because developers will spend a lot of time on maintenance. Stable processes are good candidates for automation.</p>
-                            <p>2.	Break up a Workflow</p>
+                            <h5>2.	Break up a Workflow</h5>
                             <p>Break the workflow into parts. This will allow us to implement and test the various parts separately and reuse them. Call various workflows into one flow using the Add External Flow action in the studio. </p>
-                            <p>3.	Readability of the script</p>
+                            <h5>3.	Readability of the script</h5>
                             <p>Ignoring the readability of the RPA script is a common mistake made by many new RPA developers. Readability, in this case, means how easy is it for someone else (other than the developer) to take the script and understand what the software robot is being programmed to do.</p>
-                            <p>4.	Naming Convention</p>
+                            <h5>4.	Naming Convention</h5>
                             <p>When creating very large automation, there is a high probability to forget what every variable does. Hence, it is important to have a good naming system in place.</p>
                             <p>To avoid that,Techforce.ai recommends writing Variables in camelCase,i.e., firstName, lastName to maintain the standard of the script.</p>
                             <p>All your workflow names should contain the verb describing what the workflow does, e.g. GetTransactionData, LoginToSAP.</p>
-                            <p>5.	Avoid Hardcoding</p>
+                            <h5>5.	Avoid Hardcoding</h5>
                             <p>It is always the best practice to use variables instead of hard coding values. Hard coding should be avoided, because these settings are prone to changes over time. For example, the file location where you download the daily report might change due to business requirements.</p>
                             <p>The idea is to minimize unnecessary changes to the script, especially if it has already been deployed to production, to avoid introducing additional bugs or errors.    Also, if these settings are used multiple times within the script, if you hard code, you need to know exactly where the changes are required (chances are that you do not).</p>
-                            <p>6.	How the script should be?</p>
+                            <h5>6.	How the script should be?</h5>
                             <p>Keep the script simple and efficient. As far as possible, try to reduce or eliminate unnecessary complexities in your script. This will help reduce the number of bugs or programming errors, so that you need to spend less time trying to debug or resolve them.</p>
-                            <p>7.	Using Exception handling</p>
+                            <h5>7.	Using Exception handling</h5>
                             <p>Put problematic workflows in try/catch blocks. Implementing flows within the Try / Catch blocks will allow you to restore the workflow.</p>
-                            <p>8.	Error logging</p>
+                            <h5>8.	Error logging</h5>
                             <p>The truth, unfortunately, is that the robots, no matter how carefully designed and developed, is unlikely to work all the time. Hence, in RPA, robots need to be able to handle errors and exceptions. Logging should be done so that further investigation if warranted, can be carried out.</p>
-                            <p>9.	Implement a clean process</p>
+                            <h5>9.	Implement a clean process</h5>
                             <p>It is the best practice to implement a clean process. i.e., try to soft close the applications you opened while running the script.</p>
                             <p>For example, If the script has an action to open the SAP application and do manipulations, add an action to close the SAP application after the completion of those manipulations.</p>
-                            <p>10. Understand the Limitations</p>
-                            <p>11. No matter which RPA platforms you use, there is no one perfect tool. There are always limitations to what all this commercially available RPA software can do, despite what your vendor may tell you.</p>
+                            <h5>10. Understand the Limitations</h5>
+                            <p> No matter which RPA platforms you use, there is no one perfect tool. There are always limitations to what all this commercially available RPA software can do, despite what your vendor may tell you.</p>
                             <h5>Some of these include:</h5>
-                            <p>12.  Image recognition should be used only as a last resort when all else fails. This is because image matching only works when the image is fully visible on the screen, i.e. it cannot be in the background. Also, image recognition is sensitive to screen resolution, which can be sometimes tricky to handle.</p>
-                            <p>Most RPA tools allow you to extract text from desktop or web applications, either natively or using an OCR engine. If you are using the latter, do be mindful that OCR is not a hundred percent accurate. In cases where accuracy is important, you might not want to rely solely on OCR.</p>
-                            <p>13. Problems are common</p>
-                            <p>14You are not alone facing the problems/issues. Developers are likely to encounter some seemingly “insurmountable” problems during the development stage. It is highly likely that someone else has encountered the same problem and found a solution for it.</p>
-                            <p>15. Check out for the solution in the Techforce.ai forum using the following URL:</p>
+                            <p> Image recognition should be used only as a last resort when all else fails. This is because image matching only works when the image is fully visible on the screen, i.e. it cannot be in the background. Also, image recognition is sensitive to screen resolution, which can be sometimes tricky to handle.</p>
+                            <p> Most RPA tools allow you to extract text from desktop or web applications, either natively or using an OCR engine. If you are using the latter, do be mindful that OCR is not a hundred percent accurate. In cases where accuracy is important, you might not want to rely solely on OCR.</p>
+                            <h5>11. Problems are common</h5>
+                            <p> You are not alone facing the problems/issues. Developers are likely to encounter some seemingly “insurmountable” problems during the development stage. It is highly likely that someone else has encountered the same problem and found a solution for it.</p>
+                            <p> Check out for the solution in the Techforce.ai forum using the following URL:</p>
                             <a target="_blank" href="forum.Techforce.ai">forum.Techforce.ai</a>
-                            <p>16. Couldn't find the solution yet?</p>
-                            <p>17. Don't worry. The expert team of Techforce.ai will guide you on how to solve the problem. Post your question in Forum. </p>
-                            <p>18.  Dos & Dont’s</p>
-                            <p>19. Avoid moving the mouse and also unnecessary keystrokes.</p>
-                            <p>20. Make sure to add enough wait time between the keyboard shortcuts and keystroke actions.</p>
-                            <p>21. Always use a maximized window for better portability.</p>
+                            <h5>12. Couldn't find the solution yet?</h5>
+                            <p> Don't worry. The expert team of Techforce.ai will guide you on how to solve the problem. Post your question in Forum. </p>
+                            <h5>13. Dos & Dont’s</h5>
+                            <p> Avoid moving the mouse and also unnecessary keystrokes.</p>
+                            <p> Make sure to add enough wait time between the keyboard shortcuts and keystroke actions.</p>
+                            <p> Always use a maximized window for better portability.</p>
                             <h5>Tips and Tricks of using Techforce.ai Studio</h5>
-                            <p><span class="numbers">1.</span>	Variables:</p>
-                            <p><span class="numbers">2.</span> In Techforce.ai RPA all variables are global variables. It means any variable can be used anywhere in the script.</p>
-                            <p><span class="numbers">3.</span> The variables declared in the main e-worker can be used in the sub e-worker but vice-versa is not possible.</p>
-                            <p><span class="numbers">4.</span> Use a forward slash (/) instead of a backward slash (\) while giving the path in the variables.</p>
-                            <p><span class="numbers">5.</span> For example, the usual notation in the windows system is C:\Users\Documents\xyz.xlsxs</p>
-                            <p><span class="numbers">6.</span> Use C:/Users/Documents/xyz.xlsx or C:\\Users\\Documents\\xyz.extensions while giving the path in the variable.</p>
+                            <h5><span class="numbers">1.</span>	Variables:</h5>
+                            <p> In Techforce.ai RPA all variables are global variables. It means any variable can be used anywhere in the script.</p>
+                            <p> The variables declared in the main e-worker can be used in the sub e-worker but vice-versa is not possible.</p>
+                            <p> Use a forward slash (/) instead of a backward slash (\) while giving the path in the variables.</p>
+                            <p> For example, the usual notation in the windows system is C:\Users\Documents\xyz.xlsxs</p>
+                            <p> Use C:/Users/Documents/xyz.xlsx or C:\\Users\\Documents\\xyz.extensions while giving the path in the variable.</p>
 
                             <h5>2. Loops and Conditions</h5>
                             <p><span class="numbers">1.</span> Use IF ELSE actions to implement business logic and Loops to iterate. Use Jump Statements and infinite loops if necessary.</p>
