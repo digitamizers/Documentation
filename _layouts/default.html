@@ -1623,7 +1623,7 @@
                           <h5>Properties Configuration</h5>
                           <ol>
                           <li><span class="numbers">1.</span><strong> URL:</strong> URL to hit the corresponding API.</li>
-                          <li><span class="numbers">2.</span><strong> Get:</strong> One of the methods to hit API. This will get a response from the corresponding API. Here only headers can be added.</li>
+                          <li><span class="numbers">2.</span><strong> GET:</strong> One of the methods to hit API. This will get a response from the corresponding API. Here only headers can be added.</li>
 
                           <li><span class="numbers">3.</span><strong> POST:</strong> One of the methods to hit API. This sends the JSON object and gets a response from the corresponding API. Here add body(payload) along with the header.</li>
                           <li><span class="numbers">4.</span><strong> PUT:</strong> This request creates a new resource or replaces a representation of the target resource with the requested payload.</li>
@@ -1768,7 +1768,7 @@
                         <div id="ExcelActions"  class="page-section">
                           <h5 class="purple"> Excel Actions</h5>
                           <h6>Note</h6>
-                          <p>If passing the Excel path by using a variable then the variable type should be a string. If it is backward slash use double backward slashes (Example: C:\\test\\excel123.xlsx), and if it is a forward slash, then use a single slash (Example: C:/test/excel123.xlsx) for every Excel Action. Then pass that variable within the tilde symbol (Example: `VaribleName1`).</p>
+                          <p>If passing the Excel path by using a variable then the variable type should be a string. If it is backward slash use double backward slashes (Example: C:\test\excel123.xlsx), and if it is a forward slash, then use a single slash (Example: C:/test/excel123.xlsx) for every Excel Action. Then pass that variable within the tilde symbol (Example: `VaribleName1`).</p>
                          </div>
 
                          <div id="OpenSpreadsheet"  class="page-section">
@@ -1986,9 +1986,9 @@
                         <p>Creates a file/folder in the specified location.</p>
                         <h6>Properties</h6>
                         <h6>File</h6>
-                        <p><span class="numbers"><strong> File Path: </strong>Give the full path of the file to be created with extension. The path can be given by assigning it to a variable using double slashes. For example, path = C:\\Desktop\\filename.Extension. The variable should be included within `` while passing to file path.</p>
+                        <p><span class="numbers"><strong> File Path: </strong>Give the full path of the file to be created with extension. The path can be given by assigning it to a variable using double slashes. For example, path = C:\Desktop\filename.Extension. The variable should be included within `` while passing to file path.</p>
                           <h6>Folder</h6>
-                          <p><span class="numbers"><strong> Folder Path: </strong>Give the full path of the folder to be created. The path can be given by assigning it to a variable using double slashes. For example: path = C:\\Desktop\\foldername. The variable should be included within `` while passing to file path.</p>
+                          <p><span class="numbers"><strong> Folder Path: </strong>Give the full path of the folder to be created. The path can be given by assigning it to a variable using double slashes. For example: path = C:\Desktop\foldername. The variable should be included within `` while passing to file path.</p>
                           <p><span class="numbers"><strong> Overwrite: </strong>The folder will be overwritten if there is any folder existing with the same name in the given path.</p>
                           <p><span class="numbers"><strong> Skip: </strong>The creation of the folder will be skipped if there is any folder existing with the same name in the given path.</p>
                       </div>
@@ -1997,7 +1997,7 @@
                         <h5 class="purple"> Write To File </h5>
                         <p>Appends/Overwrites the specified string or the data assigned to a variable to the specified file.</p>
                         <h6>Properties</h6>
-                        <p><span class="numbers"><strong> File Path: </strong>Give the full path of the file. The path can be given by assigning it to a variable using double slashes. For example: path = C:\\Desktop\\filename.Extension. The variable should be included within `` while passing to file path.</p>
+                        <p><span class="numbers"><strong> File Path: </strong>Give the full path of the file. The path can be given by assigning it to a variable using double slashes. For example: path = C:\Desktop\filename.Extension. The variable should be included within `` while passing to file path.</p>
                         <p><span class="numbers"><strong> Overwrite: </strong>The file data will be overwritten with the string/variable data if any data is existing in the file.</p>
                         <p><span class="numbers"><strong> Content to Write: </strong>Give the string/variable to be written to the file specified. If it is a string, it can be given directly. If it is a variable, it should be included in ``.</p>
                         <p><span class="numbers"><strong> Overwrite: </strong>The file data will be overwritten with the string/variable data if any data is existing in the file.</p>
@@ -2009,15 +2009,15 @@
                         <p>Copy/Move a file from one location to another location as specified.</p>
                         <h6>Properties</h6>
                         <h6>File</h6>
-                        <p><span class="numbers"><strong> Source Path: </strong>Give the full path of the file to be copied/moved including the extension. The path can be given by assigning it to a variable using double slashes. For example: path = C:\\Desktop\\filename.Extension. The variable should be included within `` while passing to file path.</p>
-                        <p><span class="numbers"><strong> Destination Path: </strong> Give the full path of the location where the file needs to be copied/moved including the extension. The path can be given by assigning it to a variable using double slashes. For example: path = C:\\Desktop\\filename.Extension. The variable should be included within `` while passing to file path.</p>
+                        <p><span class="numbers"><strong> Source Path: </strong>Give the full path of the file to be copied/moved including the extension. The path can be given by assigning it to a variable using double slashes. For example: path = C:\Desktop\filename.Extension. The variable should be included within `` while passing to file path.</p>
+                        <p><span class="numbers"><strong> Destination Path: </strong> Give the full path of the location where the file needs to be copied/moved including the extension. The path can be given by assigning it to a variable using double slashes. For example: path = C:\Desktop\filename.Extension. The variable should be included within `` while passing to file path.</p>
                         <p><span class="numbers"><strong> Copy: </strong>Makes a copy of the file specified from the source path to the destination path.</p>
                         <p><span class="numbers"><strong> Move: </strong>Moves the file specified in the source path to the destination path.</p>
                           <p><span class="numbers"><strong> Overwrite:  </strong>Overwrites the file while moving/copying the file specified if there is a file existing with the same name in the destination.</p>
                           <p><span class="numbers"><strong> Skip: </strong> Skips the copying/moving of the file specified, if there is a file existing with the same name in the destination.</p>
                           <h6>Folder</h6>
-                          <p><span class="numbers"><strong> Source Path: </strong>Give the full path of the folder to be copied/moved. The path can be given by assigning it to a variable using double slashes. For example: path = C:\\Desktop\\foldername. The variable should be included within `` while passing to file path.</p>
-                          <p><span class="numbers"><strong> Destination Path: </strong>Give the full path of the location where the folder needs to be copied/moved. The path can be given by assigning it to a variable using double slashes. For example: path = C:\\Desktop\\foldername. The variable should be included within `` while passing to file path.</p>
+                          <p><span class="numbers"><strong> Source Path: </strong>Give the full path of the folder to be copied/moved. The path can be given by assigning it to a variable using double slashes. For example: path = C:\Desktop\foldername. The variable should be included within `` while passing to file path.</p>
+                          <p><span class="numbers"><strong> Destination Path: </strong>Give the full path of the location where the folder needs to be copied/moved. The path can be given by assigning it to a variable using double slashes. For example: path = C:\Desktop\foldername. The variable should be included within `` while passing to file path.</p>
                           <p><span class="numbers"><strong> Copy: </strong>Makes a copy of the folder specified in the source path to the destination path.</p>
                           <p><span class="numbers"><strong> Move: </strong>Moves the folder specified in the source path to the destination path.</p>
                           <p><span class="numbers"><strong> Overwrite:  </strong>Overwrites the folder while moving/copying the folder specified if there is a folder existing with the same name in the destination.</p>
@@ -2043,7 +2043,7 @@
                        <h5 class="purple"> Delete File/Folder </h5>
                        <p>Deletes the file/folder specified.</p>
                        <h6>Properties File</h6>
-                       <p><span class="numbers"><strong> File Path: </strong>The full path of the file to be deleted including the extension. The path can be given by assigning it to a variable using double slashes. Example: path = C:\\Desktop\\filename.Extension. The variable should be included within `` while passing to file path.</p>
+                       <p><span class="numbers"><strong> File Path: </strong>The full path of the file to be deleted including the extension. The path can be given by assigning it to a variable using double slashes. Example: path = C:\Desktop\filename.Extension. The variable should be included within `` while passing to file path.</p>
                        <h6>Folder</h6>
                        <p><span class="numbers"><strong>Folder Path:  </strong>The full path of the folder to be deleted. The path should be given using the forward-slash (/). Example: C:/Desktop/FolderName. If it is given by variable, it should be included in ``. For example: `variable name`.</p>
                      </div>
@@ -2052,7 +2052,7 @@
                        <h5 class="purple"> Read File</h5>
                        <p>Reads all the content from the file specified and stores it into a variable specified.</p>
                        <h6>Properties File</h6>
-                       <p><span class="numbers"><strong> File Path: </strong>The full path of the file to be read including the extension. The path can be given by assigning it to a variable using double slashes. Example: path = C:\\Desktop\\filename.Extension. The variable should be included within `` while passing to file path.</p>
+                       <p><span class="numbers"><strong> File Path: </strong>The full path of the file to be read including the extension. The path can be given by assigning it to a variable using double slashes. Example: path = C:\Desktop\filename.Extension. The variable should be included within `` while passing to file path.</p>
                         <p><span class="numbers"><strong>Variable: </strong>Variable name to store the contents of the file specified.</p>
                     </div>
 
@@ -2218,7 +2218,7 @@
               <div id="MailIntegration"  class="page-section">
                 <h4 class="purple"> Mail Integration</h5>
                 <p>The Mail Integration Activity contains all the mail activities used for creating automation projects. These activities enable robots to:</p>
-                <p>Configuring e-worker with corresponding Outlook account.</p>
+                <p>Configuring action flow with corresponding Outlook account.</p>
                 <p>Sending emails from Outlook account and other mail providers.</p>
                 <p>Receiving emails from corresponding Outlook and other mail providers.</p>
                 <p>Saving an attachment with the email.</p>
@@ -2689,7 +2689,7 @@
                             <h5>Data</h5>
                             <p><span class="numbers">1.</span> Data comes in a single flavor when it comes to visibility and life cycle: variables. While in Techforce.ai the purpose of variables is not bound to a single workflow file it can also be passed from one workflow to another.</p>
                             <h5>Naming Conventions</h5>
-                            <p><span class="numbers">1.</span> Meaningful names should be assigned to workflow files and variables to accurately describe their usage throughout the project. e.g. PROCESSNAME_e-worker, PROCESSNAME_SUB_e-worker, PROCESSNAME_SUB_e-worker2.</p>
+                            <p><span class="numbers">1.</span> Meaningful names should be assigned to workflow files and variables to accurately describe their usage throughout the project. e.g. PROCESSNAME_FLOW, PROCESSNAME_SUB_FLOW, PROCESSNAME_SUB_FLOW2.</p>
                             <p><span class="numbers">2.</span> Variables should align with the naming convention.</p>
                             <p><span class="numbers">3.</span> Variables should be upper Camel Case, e.g. FirstName, LastName</p>
 
@@ -2756,19 +2756,19 @@
                             <p> You are not alone facing the problems/issues. Developers are likely to encounter some seemingly “insurmountable” problems during the development stage. It is highly likely that someone else has encountered the same problem and found a solution for it.</p>
                             <p> Check out for the solution in the Techforce.ai forum using the following URL:</p>
                             <a target="_blank" href="https://forum.techforce.ai/">forum.techforce.ai</a>
-                            <h5>12. Couldn't find the solution yet?</h5>
+                            <h5>Couldn't find the solution yet?</h5>
                             <p> Don't worry. The expert team of Techforce.ai will guide you on how to solve the problem. Post your question in Forum. </p>
-                            <h5>13. Dos & Dont’s</h5>
+                            <h5>12. Dos & Dont’s</h5>
                             <p> Avoid moving the mouse and also unnecessary keystrokes.</p>
                             <p> Make sure to add enough wait time between the keyboard shortcuts and keystroke actions.</p>
                             <p> Always use a maximized window for better portability.</p>
                             <h5>Tips and Tricks of using Techforce.ai Studio</h5>
                             <h5><span class="numbers">1.</span>	Variables:</h5>
                             <p> In Techforce.ai RPA all variables are global variables. It means any variable can be used anywhere in the script.</p>
-                            <p> The variables declared in the main e-worker can be used in the sub e-worker but vice-versa is not possible.</p>
+                            <p> The variables declared in main action flow can be used in sub action flow, but vice-versa is not possible.</p>
                             <p> Use a forward slash (/) instead of a backward slash (\) while giving the path in the variables.</p>
-                            <p> For example, the usual notation in the windows system is C:\Users\Documents\xyz.xlsxs</p>
-                            <p> Use C:/Users/Documents/xyz.xlsx or C:\\Users\\Documents\\xyz.extensions while giving the path in the variable.</p>
+                            <p> For example, the usual notation in the windows system is C:\Users\Documents\xyz.xlsx</p>
+                            <p> Use C:/Users/Documents/xyz.xlsx or C:\Users\Documents\xyz.extensions while giving the path in the variable.</p>
 
                             <h5>2. Loops and Conditions</h5>
                             <p> Use IF ELSE actions to implement business logic and Loops to iterate. Use Jump Statements and infinite loops if necessary.</p>
