@@ -608,6 +608,7 @@
                                                         <li style="margin-left:20px;"><a class="child 2" href="#Close"><span class="numbers"></span> <span style="margin-left:15px;">Close File</span></a></li>
                                                         <li style="margin-left:20px;"><a class="child 2" href="#Switch"><span class="numbers"></span> <span style="margin-left:15px;">Switch App</span></a></li>
                                                         <li style="margin-left:20px;"><a class="child 2" href="#Screenshot"><span class="numbers"></span> <span style="margin-left:15px;">Screenshot</span></a></li>
+                                                        <li style="margin-left:20px;"><a class="child 2" href="#DataScrape"><span class="numbers"></span> <span style="margin-left:15px;">DataScrape</span></a></li>
                                                         </ul></li>
 
                                                         <li id="WebA"style="margin-left:10px;"><a id="webautomation-expand" class="child 2" href="#WebAutomation"><span class="numbers"></span> <span style="margin-left:5px;">Web Automation</span></a>
@@ -917,10 +918,17 @@
 
                             <div id="Issues"  class="page-section">
                                   <h4 class="purple"><span class="numbers"></span>  Issues Resolved</h4>
-                                  <p><span class="numbers">1.</span>	Fixed issues that prevents-studio installation when the install path has spaces</p>
-                                  <p><span class="numbers">2.</span>	Resolved issues with desktop automation (dll file missing issues)</p>
-                                  <p><span class="numbers">3.</span>	Enhanced support to handle Popups and Frames</p>
-                                  <p><span class="numbers">4.</span>	Implicit wait feature that waits for webpage elements to load before act on</p>
+                                  <p><span class="numbers">1.</span> If-Else Comparison issue for Integer to String (Operator issue). </p>
+                                  <p><span class="numbers">2.</span> HTTP API (Multiple Headers)</p>
+                                  <p><span class="numbers">3.</span> For Loop</p>
+                                  <p><span class="numbers">4.</span> Break Statements</p>
+                                  <p><span class="numbers">5.</span> External flow triggering	</p>
+                                  <p><span class="numbers">6.</span> Get Credentials/Get Secret</p>
+                                  <p><span class="numbers">7.</span> Variable selection issue</p>
+                                  <p><span class="numbers">8.</span> Open App (when a wrong input is given, the bot stops, throwing an exception in the flow)</p>
+                                  <p><span class="numbers">9.</span> Cut option</p>
+                                  <p><span class="numbers">10.</span> Stage minimizing option</p>
+                                  <p><span class="numbers">11.</span>	Record option</p>
                             </div>
 
                             <div id="TechforceRPA"  class="page-section">
@@ -1263,7 +1271,7 @@
                             <p style="text-align:center;"><strong>Figure 18: Stage Action</strong></p>
 
                             <li><strong> Desktop Automation</strong></li>
-                            <p>Desktop Automation is used to automate desktop applications like Notepad, Excel, MS- Word, folders, files, images, and screen functionalities, using sub-actions like Keyboard Shortcuts, Drag and Drop, Open App, Close APP, Close File and Switch App.</p>
+                            <p>Desktop Automation is used to automate desktop applications like Notepad, Excel, MS-Word, folders, files, images, and screen functionalities, using sub-actions like Keyboard Shortcuts, Drag and Drop, Open App, Close APP, Close File, Switch App, Screenshot, and Data Scrape.</p>
                             <img src="{{ '/assets/images/doc-img33.png' | relative_url }}" alt="image" style="width:300px;border:1px solid green;margin-left:30%;margin-top:10px;margin-bottom:10px;">
                             <p style="text-align:center;"><strong>Figure 19: Desktop Automation</strong></p>
 
@@ -1273,8 +1281,8 @@
                             <p style="text-align:center;"><strong>Figure 20:  Web Automation</strong></p>
 
                             <li><strong> General</strong></li>
-                            <p>General Action is used to automate normal desktop-based and web-based operations using Sub-Actions.</p>
-                            <p>The Sub-Actions like Mouse Clicks, Conditions, Excel, Loops, Jump Statements, OCR, Exceptional Handling, Files and Folders, Secure FTP, CSV, Stop, Message Box, Clipboard, Assign, Ask, HTTP API, Wait, Read, Get Credentials, Get Secret, Echo, Enter Keystrokes, Read and Module are used in General Action.</p>
+                            <p>General Action is used to automate normal desktop-based and web-based operations using Subactions</p>
+                            <p>The Subactions like Mouse Clicks, Conditions, Excel, Loops, Jump Statements, OCR, Exceptional Handling, Files and Folders, Secure FTP, CSV, Stop, Message Box, Clipboard, Assign, Ask, HTTP API, Wait, Read, Get Credentials, Get Secret, Get Parameters, Echo, Enter Keystrokes, Read and Module are used in General Action.</p>
                             <img src="{{ '/assets/images/doc-img35.png' | relative_url }}" alt="image" style="width:300px;border:1px solid green;margin-left:30%;margin-top:10px;margin-bottom:10px;">
                             <img src="{{ '/assets/images/doc-img36.png' | relative_url }}" alt="image" style="width:200px;border:1px solid green;margin-left:30%;margin-top:10px;margin-bottom:10px;">
                             <p style="text-align:center;"><strong>Figure 21: General</strong></p>
@@ -1290,21 +1298,20 @@
                             <p style="text-align:center;"><strong>Figure 23: Mail Integration</strong></p>
 
                             <li><strong> Database</strong></li>
-                            <p>The Database is used to connect to the database like MYSQL and PostgreSQL. The data can be retrieved and stored in desktop applications. Similarly, the data can be sent to the database from the desktop applications. All the queries executed in the database can be executed using database actions.</p>
-
+                            <p>The Database is used to connect to the database like My SQL, PostgreSQL, Oracle, and MS SQL. The data can be retrieved and stored in desktop applications. Similarly, the data can be sent to the database from the desktop applications. All the queries executed in the database can be executed using database actions.</p>
                             <img src="{{ '/assets/images/doc-img39.png' | relative_url }}" alt="image" style="width:300px;border:1px solid green;margin-left:30%;margin-top:10px;margin-bottom:10px;">
                             <p style="text-align:center;"><strong>Figure 24: Database</strong></p>
                           </div>
 
                           <div id="Stage"  class="page-section">
                             <h4 class="purple"> Stage</h4>
-                            <p>The stage can be considered a group of multiple actions. The actions used in the flow must be included at least in one stage.</p>
+                            <p>The stage can be considered a group of multiple actions. The actions used in the flow must be included at least in one stage. The stage can be minimized or maximized by clicking on the UP arrow (to minimize) and down arrow (to maximize the stage).</p>
                           </div>
 
                           <div id="DesktopAutomation"  class="page-section">
                             <h4 class="purple"> Desktop Automation</h4>
                             <p>Desktop automation is used to automate desktop applications. In this type of automation, either images or locations are used for interacting with the elements. Dom objects of the web page and web-based actions cannot be accessed using desktop automation. Instead, images and locations can be used. While triggering the flow designed using desktop actions, the user should be careful that the UI of the page should be visible on the screen.</p>
-                            <p>Actions that come under desktop automation are Keyboard Shortcuts, Drag and Drop, Open App, Close App, Close File, and Switch App.</p>
+                            <p>Actions that come under desktop automation are Keyboard Shortcuts, Drag and Drop, Open App, Close App, Close File, Switch App, Screenshot, and DataScrape.</p>
                           </div>
 
                           <div id="Keyboard"  class="page-section">
@@ -1395,6 +1402,16 @@
                              <li><span class="numbers">1.</span><strong> Requirement:</strong> To take the screenshot of the current screen.</li>
                              <li><span class="numbers">2.</span><strong> Input:</strong> Just give the location path with name and extension to save the image.</li>
                             </ol>
+                          </div>
+
+                          <div id="DataScrape"  class="page-section">
+                            <h5 class="purple"> DataScrape</h5>
+                            <p>This action is used to extract the data from the selected image. The extracted data will be stored in a variable for further use. </p>
+                           <ol>
+                             <h5>Properties</h5>
+                             <p><strong>Select Image:</strong> Click on the Select Image button. It opens a new window to select the image. Select the image from the path. On the image, select the area to extract the data from, and press Enter.</p>
+                             <p><strong>Select Variable:</strong> Create a string variable in the variable Panel. Select the created string variable from the drop-down to store the result. </p>
+                           </ol>
                           </div>
 
                           <div id="WebAutomation"  class="page-section">
