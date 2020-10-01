@@ -1409,8 +1409,8 @@
                             <p>This action is used to extract the data from the selected image. The extracted data will be stored in a variable for further use. </p>
                            <ol>
                              <h5>Properties</h5>
-                             <p><strong>Select Image:</strong> Click on the Select Image button. It opens a new window to select the image. Select the image from the path. On the image, select the area to extract the data from, and press Enter.</p>
-                             <p><strong>Select Variable:</strong> Create a string variable in the variable Panel. Select the created string variable from the drop-down to store the result. </p>
+                             <li><span class="numbers">1.</span><strong> Select Image:</strong> Click on the Select Image button. It opens a new window to select the image. Select the image from the path. On the image, select the area to extract the data from, and press Enter.</p>
+                             <li><span class="numbers">2.</span><strong> Select Variable:</strong> Create a string variable in the variable Panel. Select the created string variable from the drop-down to store the result. </p>
                            </ol>
                           </div>
 
@@ -1438,22 +1438,22 @@
 
                           <div id="ReadTable"  class="page-section">
                             <h5 class="purple">Read Table</h5>
-                            <p>You can read the data from tables in web pages.</p>
+                            <p>This action is used to retrieve data from the table on web pages. The data retrieved can either be the complete table data or specified column data.</p>
                             <ol>
                               <h5>Properties</h5>
-                             <p><strong>Table XPath:</strong> Copy the XPath from the corresponding web element.</p>
-                             <p><strong>IFrame name:</strong> Enter the iframe name if the table is in the IFrame.</p>
-                             <p><strong>Column Name:</strong> Pass the table column name from which you want to retrieve the data.</p>
-                             <p><strong>Select variable:</strong> Create the variable as a list. Only list variables are supported.</p>
+                             <p><strong>Table XPath:</strong> This action is used to retrieve data from the table on web pages. The data retrieved can either be the complete table data or specified column data.</p>
+                             <p><strong>IFrame name:</strong> Enter the iframe name if the table is in the iframe.</p>
+                             <p><strong>Column Name:</strong> Pass the table column name from which you want to retrieve the data. To retrieve complete table data, leave the Column Name field empty.</p>
+                             <p><strong>Select variable:</strong> Create the variable as a DataTable type. Only DataTable variables are supported.</p>
                             </ol>
                           </div>
 
                           <div id="Frame"  class="page-section">
                             <h5 class="purple"> Frame</h5>
-                            <p>To automate web page HTML elements that are in Iframe, the iframe HTML element is often used to insert content from another source.</p>
+                            <p>To automate web page HTML elements that are inside the iframe, the user first needs to access the frame element.</p>
                             <ol>
                               <h5>Properties:</h5>
-                              <p><strong>Frame Name:</strong> Enter the name of the Iframe.</p>
+                              <p><strong>Frame Name:</strong> Enter the name or ID of the iFrame.</p>
                             </ol>
                           </div>
 
@@ -1468,16 +1468,10 @@
 
                           <div id="Show"  class="page-section">
                             <h5 class="purple"> Show</h5>
-                            <p>Show action is used to display the text value in the logs.</p>
+                            <p>Show action is used to retrieve the data from the web page and display it in the logs.</p>
                             <ol>
                               <h5>Properties:</h5>
-                              <p><strong>Element:</strong> Pass the string or else create a variable in the variables and pass the variable name in the backquote symbol (``). The results will be displayed by the flow in the system logs.</p>
-                              <h6>Example</h6>
-                              <li><span class="numbers">1.</span><strong> Requirement:</strong> Show hello world in the logs.</li>
-                              <li><span class="numbers">2.</span><strong> Input:</strong> Pass the variable/string in the property window.</li>
-                              <h6>NOTE:</h6>
-                              <p>Variables should be passed with a back quote (``) like `apple`</p>
-                             </ol>
+                              <p><strong>Element XPath:</strong> Provide the XPath of the element from which data is to be retrieved.</p>
                             </ol>
                           </div>
 
@@ -1552,7 +1546,7 @@
                              <li><span class="numbers">1.</span> Getting the input to robots.</li>
                              <li><span class="numbers">2.</span> Getting credentials to communicate with the e-manager console.</li>
                              <li><span class="numbers">3.</span> Read data from the web.</li>
-                             <li><span class="numbers">4.</span> Assigning the values to variables.</li>
+                             <li><span class="numbers">4.</span> Assign the values to variables.</li>
                            </ol>
                          </div>
                          <div id="EnterKeystrokes"  class="page-section">
@@ -1561,12 +1555,14 @@
                              <li><span class="numbers">1.</span> Send keystrokes to a UI Element. Enter by using XPath and by selecting Image.</li>
                              <h5>Properties of Web Element.</h5>
                              <li><span class="numbers">1.</span><strong> XPath:</strong> The XPath of the corresponding web element.</li>
-                             <li><span class="numbers">2.</span><strong> Text:</strong> The text to be written in the specified UI element.</li>
-                             <h5>To Image.</h5>
+                             <li><span class="numbers">2.</span><strong> String:</strong> If the string radio button is selected, pass the text to be written in the specified UI element. </li>
+                             <li><span class="numbers">3.</span><strong> Variable:</strong> If the variable radio button is selected, select the variable that contains the text to be written in the specified UI element.</li>
+                             <h5>To Image</h5>
                              <li><span class="numbers">1.</span><strong> Insert Screenshot:</strong> Capture the corresponding image, which needs to enter the text.</li>
-                             <li><span class="numbers">2.</span><strong> Text:</strong> The text to be written in the specified UI element.</li>
+                             <li><span class="numbers">2.</span><strong> String: </strong> If the string radio button is selected, pass the text to be written in the specified UI element. </li>
+                             <li><span class="numbers">3.</span><strong> Variable: </strong> If the variable radio button is selected, select the variable that contains the text to be written in the specified UI element.</li>
                              <h6>NOTE</h6>
-                             <p>If we give a variable name instead of direct text in the text field, the variable name as to be placed between the left quote (` `) command.</p>
+                             <p>If you give a variable name instead of direct text in the String field, the variable name needs to be placed in between the backquotes (` `).</p>
                             </ol>
                         </div>
 
@@ -1609,31 +1605,25 @@
                         <div id="GetSecret"  class="page-section">
                           <h5 class="purple"> Get Secret</h5>
                           <p>Gets a specified secret value from the secret vault of the e-manager console by using the Asset Name and returns a secret value, which can be Text, Boolean, or Integer.</p>
-                          <h6>Properties Configuration</h6>
-                          <ol>
-                            <li><span class="numbers">1.</span><strong> UserName:</strong> UserName of the e-manager console account.</li>
-                            <li><span class="numbers">2.</span><strong> Password:</strong> Password of the e-manager console account.</li>
-                            <li><span class="numbers">3.</span><strong> Timeout:</strong> The e-manager console URL.</li>
-                          </ol>
-                          <p>After configuration, the user can access the secret vault in e-manager console by using the given asset name and can store the values in a variable.</p>
-                          <P><strong>Asset Name:</strong> The asset name, created in the e-manager console to contain the secret value.</p>
+                          <h6>Properties</h6>
+                          <P><strong>Asset Name:</strong> Gets a specified secret value from the Secret Vault of the e-manager console by using the Asset Name and returns a secret value, which can be Text, Boolean, or Integer.</p>
                           <p><strong>Variable to Capture Secret Text:</strong> Enter the variable name created in the variable panel to store the secret vault value.</p>
                           <h6>Note</h6>
-                          <p>Once the user was configured with the e-manager console, it will not ask to configure again. Directly the activity shows asset name and variable field.</p>
+                          <p>Once the user has been configured with the e-manager console, it will not ask to configure again. Directly the activity shows the asset name and variable field.</p>
                         </div>
 
                         <div id="GetCredentials"  class="page-section">
                           <h5 class="purple"> Get Credentials</h5>
-                          <p>Gets a specified credential by using the provided Asset Name and returns a user name and a secure password.</p>
+                          <p>Gets a specified credential by using the Asset Name provided, and returns a user name and a secure password.</p>
                           <h5>Properties Configuration</h5>
                           <ol>
                           <li><span class="numbers">1.</span><strong> UserName:</strong> UserName of the e-manager console account.</li>
                           <li><span class="numbers">2.</span><strong> Password:</strong> Password of the e-manager console account.</li>
                           <li><span class="numbers">3.</span><strong> E-Manager-Console URL:</strong> The e-manager console URL which needs to be accessed.</li>
-                          <p>After configuration, the secret vault is accessible in e-manager console by using the given asset name, user name, and password.</p>
+                          <p>After configuration, the secret vault is accessible in the e-manager console by using the given asset name, username, and password.</p>
                           <li><span class="numbers">1.</span><strong> Asset Name:</strong> The name of the asset, which was created in the e-manager console to contain a secret value.</li>
-                          <li><span class="numbers">2.</span><strong> User Name:</strong> Type the variable name here. The username, which is stored in the e-manager console secret vault will come to this variable automatically.</li>
-                          <li><span class="numbers">3.</span><strong> Password:</strong> Type the variable name here. The password, which is stored in the e-manager console secret vault will come to this variable automatically.</li>
+                          <li><span class="numbers">2.</span><strong> Select Variable to Capture User Name:</strong> Select the variable from the dropdown list to store the username data. The username, which is stored in the e-manager console secret vault will come to this variable automatically.</li>
+                          <li><span class="numbers">3.</span><strong> Select Variable to Capture Password:</strong> Select the variable from the dropdown list to store the password data. The password, which is stored in the e-manager console secret vault will come to this variable automatically.</li>
                         </ol>
                         </div>
 
@@ -1675,8 +1665,11 @@
                           <p>Allocates any values to a variable. It can be used to increment the value of a variable in a loop. For example, it sums up the values of two or more variables and assigns the result to a different variable.</p>
                           <h5>Properties</h5>
                           <ol>
-                          <li><span class="numbers">1.</span><strong> Custom/Variable:</strong> The name of the variable to be assigned a value.</li>
-                          <li><span class="numbers">2.</span><strong> Custom/Variable (second field):</strong> The value to be assigned to the variable. It may be a string value or can pass the variable.</li>
+                          <li><span class="numbers">1.</span><strong> Value:</strong> The name of the variable to be assigned a value.</li>
+                          <li><span class="numbers">2.</span><strong> Expression (second field):</strong> The value to be assigned to the variable. It may be a string value or can pass the variable.</li>
+                          <li><span class="numbers">3.</span><strong> DateTime:</strong> In case if assigned, the expression related to date and time needs to check the DateTime checkbox.</li>
+                          <h6>NOTE</h6>
+                          <p>In both the fields, while passing the variable name, need to pass it in between backquotes (` variableName1`).</p>
                         </ol>
                         </div>
 
@@ -1772,15 +1765,15 @@
                         <div id="If"  class="page-section">
                           <ol>
                           <h5 class="purple"> If, IfElse, ElseIf</h5>
-                          <p><span class="numbers">1.</span> Provides the ability to route workflow execution to different step groups depending on conditions provided.</p>
+                          <p><span class="numbers">1.</span> Enables to route workflow execution to different step groups depending on the conditions provided.</p>
 
                           <h6>Properties</h6>
                           <h6> Custom</h6>
                           <p><span class="numbers">1.</span> It checks the condition. If the condition is met, a block of code will execute. Otherwise, Else block will execute.</p>
                           <li><span class="numbers">2.</span><strong> Variable:</strong> Variable name that needs to be compared with the value. The variable field also has a dropdown menu that contains URL(), Title(), and Text() to operate on a webpage.</li>
-                          <li><span class="numbers">3.</span><strong> Condition: </strong> Contains operators such as contains, not contains, equal to, not equal to, greater than, less than, etc.</li>
+                          <li><span class="numbers">3.</span><strong> Condition: </strong> Contains operators such as contains, not contains, equal to, not equal to, greater than, greater than or equal to, less than, less than or equal to, and Custom condition. In case if required to apply more than one condition using “AND”, “OR”, and “Not” operators can use the Custom condition option.</li>
 
-                          <li><span class="numbers">4.</span><strong> Value: </strong> Value data is compared with the result of data from the variable.</li>
+                          <li><span class="numbers">4.</span><strong> Value: </strong> Value field data is compared with the result of data from the variable field. To compare the string operands, pass both the operands in double quotes(“ “).</li>
                           <h6>Present</h6>
 
                           <li><span class="numbers">1.</span><strong> HTML Selector:</strong> Checks whether the given XPath exists on a webpage. If exists, a block of code will execute. Otherwise, Else block will execute.</li>
