@@ -1886,11 +1886,14 @@
                         <h5 class="purple"> Get Range</h5>
                         <p>Reads the value of an Excel range and stores it in a DataTable variable. If the range isn't specified, the whole spreadsheet is read. If a particular range is specified, it reads the values from that specific range only.</p>
                         <h6>Properties</h6>
-                        <p><span class="numbers">1.<strong> Full Path:</strong> Enter the full path of the Excel spreadsheet. This option is shown only when taking the Get Range action directly. If dragged into the open spreadsheet activity It will not ask the path, and no need to mention the path.</p>
+                        <p><span class="numbers">1.<strong> Full Path:</strong> Enter the full path of the Excel spreadsheet. This option is shown only when taking the Get Range action directly. If you drag it into the open spreadsheet activity, it will not ask the path, and hence no need to mention the path.</p>
                         <p><span class="numbers">2.<strong> Sheet Name:</strong> Enter the name of the sheet containing the Cell that needs to be read. Only String variables and strings are supported (Example: Sheet1).</p>
                         <p><span class="numbers">3.<strong> Range: </strong>Specify the range of cells to be read. If this value is not specified, the whole spreadsheet is read. Only String variables and strings are supported to mention that range (Example: B5: G15).</p>
-                        <p><span class="numbers">4.<strong> Select variable: </strong> Create the variable as DataTable Stores the information from the specified spreadsheet range values in a variable. Only DataTable variables are supported select.</p>
-
+                        <p><span class="numbers">4.<strong> Include Headers:</strong> If the Include Headers checkbox is checked, the headers' data will also be included in the result.</p>
+                        <p><span class="numbers">5.<strong> Text Format:<strong> If the Text Format checkbox is checked, the results will be displayed in the row format.</p>
+                        <p><strong>Note:<strong> Do not check the Text format checkbox in case if writing the range data into another Excel sheet.</p>
+                        <p><span class="numbers">6.<strong> Values:<strong> In case there are any formulas in the retrieving data, check the Values checkbox to retrieve the data and not the formulas.</p>
+                        <p><span class="numbers">7.<strong> Select variable: </strong> Create the variable as DataTable. It stores the information from the specified spreadsheet range values in a variable. Only DataTable variables are supported.</p>
                       </div>
 
                       <div id="WriteRange"  class="page-section">
@@ -1917,11 +1920,11 @@
 
                       <div id="DeleteRange"  class="page-section">
                         <h5 class="purple"> Delete Range</h5>
-                        <p>Deletes a specified range in an Excel workbook.</p>
+                        <p>Deletes a specified range of data in an Excel workbook.</p>
                         <h6>Properties</h6>
                         <p><span class="numbers">1.<strong> Full Path:</strong> Enter the full path of the Excel spreadsheet. This option is shown only when taking the Delete Range action directly. If dragged into the open spreadsheet activity, it will not ask the path, and no need to mention the path.</p>
                         <p><span class="numbers">2.<strong> Sheet Name:</strong> Enter the name of the sheet containing the range that needs to be deleted. Only String variables (Example: `VaribleName`) and strings are supported (Example: Sheet1).</p>
-                        <p><span class="numbers">3.<strong> Range: </strong>Specify the range of cells to be deleted. If this value is not specified, the whole spreadsheet is read. Only String variables and strings are supported to mention that range (Example: B5: G15).</p>
+                        <p><span class="numbers">3.<strong> Range: </strong>Specify the range of data to be deleted. If this value is not specified, the whole spreadsheet data is deleted. Only String variables and strings are supported to mention that range (Example: B5: G15).</p>
                       </div>
 
                       <div id="GetCellColor"  class="page-section">
@@ -2301,22 +2304,23 @@
                 <h6>Get Outlook Mail</h6>
                  <p>Reads emails from the configured outlook account.</p>
                  <h6>Properties</h6><h6>Inbox</h6>
-                 <p><span class="numbers">1.</span><strong> Folder: </strong>Check the Folders to get the Inbox, Sent Items, Custom, and Delete items options.</p>
+                 <p><span class="numbers">1.</span><strong> Folder: </strong>Checks the Folders to get the Inbox, Sent Items, Custom, and Delete items options.</p>
                 <p><span class="numbers">2.</span><strong>  Inbox:</strong> To read the mail data of the specified email from the inbox.</p>
                 <p><span class="numbers">3.</span><strong> Sent Items:</strong> To read the mail data from the specified number of sent emails.</p>
                 <p><span class="numbers">4.</span><strong> Customs:</strong> To read the mail data from any specified folder.</p>
                 <p><span class="numbers">5.</span><strong> Delete Items:</strong> To read the mail data from the specified number of deleted mail items.</p>
-                <p><span class="numbers">6.</span><strong> From Mail:</strong> Need to enter the specified email id from which the user wants to read data.</p>
-                <p><span class="numbers">7.</span><strong> Unread:</strong> Filters only unread emails.</p>
-                <p><span class="numbers">8.</span><strong> Top: </strong>Filters a particular number of emails that are present on the top.</p>
-               <p><span class="numbers">9.</span><strong> Select Variable: </strong>Stores the emails collected from the corresponding email account.</p>
+                <p><span class="numbers">6.</span><strong> Unread:</strong> Reads only unread emails if specified true. Reads emails if specified false and both read and unread emails if left empty.</p>
+                <p><span class="numbers">7.</span><strong> Mark as Read:</strong> If checked this checkbox, marks all the unread emails as read mails.</p>
+                <p><span class="numbers">8.</span><strong> Move to folder:</strong> Moves the read mails to the specified folder.</p>
+                <p><span class="numbers">9.</span><strong> Top: </strong>Filters a particular number of emails that are present on the top.</p>
+               <p><span class="numbers">10.</span><strong> Select Variable: </strong>Stores the emails collected from the corresponding email account.</p>
 
                <h6>Note</h6>
-               <p>Here array variable is used to store emails.</p>
-               <p><span class="numbers">1.</span> To access the subject of the mail, use variableName[index].Subject</p>
-               <p><span class="numbers">2.</span> To access the body of the mail, use variableName[index].Body.</p>
-               <p><span class="numbers">3.</span> To access the From address of the mail, use variableName[index].From.</p>
-               <p><span class="numbers">4.</span> To access the To address of the mail, use variableName[index].Received.</p>
+               <p>Here, the list type variable is used to store the email data.</p>
+               <p><span class="numbers">1.</span> To access the subject of the email, use variableName[index].Subject</p>
+               <p><span class="numbers">2.</span> To access the body of the email, use variableName[index].Body.</p>
+               <p><span class="numbers">3.</span> To access the From address of the email, use variableName[index].From.</p>
+               <p><span class="numbers">4.</span> To access the Date and Time of the email, use variableName[index].Received.</p>
                <h6>Note</h6>
                <p>We can send variable instead of direct text in to, subject, body </p>
 
