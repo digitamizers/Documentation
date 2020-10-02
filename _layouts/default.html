@@ -702,6 +702,8 @@
                                                     <li style="margin-left:20px;"><a class="child 2" href="#GetFolderContents"><span class="numbers"></span> <span style="margin-left:35px;">Get Folder Contents</span></a></li>
                                                     <li style="margin-left:20px;"><a class="child 2" href="#DeleteFile"><span class="numbers"></span> <span style="margin-left:35px;">Delete File/Folder</span></a></li>
                                                     <li style="margin-left:20px;"><a class="child 2" href="#ReadFile"><span class="numbers"></span> <span style="margin-left:35px;">Read File</span></a></li>
+                                                    <li style="margin-left:20px;"><a class="child 2" href="#Unzip"><span class="numbers"></span> <span style="margin-left:35px;">Unzip Files</span></a></li>
+                                                    <li style="margin-left:20px;"><a class="child 2" href="#ExportWord"><span class="numbers"></span> <span style="margin-left:35px;">Export Word to PDF</span></a></li>
                                                     </ul>
                                                     </li>
 
@@ -712,6 +714,8 @@
                                                       <li style="margin-left:20px;"><a class="child 2" href="#PutFile"><span class="numbers"></span> <span style="margin-left:35px;">Put File</span></a></li>
                                                       <li style="margin-left:20px;"><a class="child 2" href="#GetFiles"><span class="numbers"></span> <span style="margin-left:35px;">Get Files</span></a></li>
                                                       <li style="margin-left:20px;"><a class="child 2" href="#PutFiles"><span class="numbers"></span> <span style="margin-left:35px;">Put Files</span></a></li>
+                                                      <li style="margin-left:20px;"><a class="child 2" href="#CreateNewFolder"><span class="numbers"></span> <span style="margin-left:35px;">Create New Folder</span></a></li>
+                                                      <li style="margin-left:20px;"><a class="child 2" href="#DeleteFolder"><span class="numbers"></span> <span style="margin-left:35px;">Delete Folder</span></a></li>
                                                       <li style="margin-left:20px;"><a class="child 2" href="#Delete"><span class="numbers"></span> <span style="margin-left:35px;">Delete</span></a></li>
                                                       <li style="margin-left:20px;"><a class="child 2" href="#DeleteFiles"><span class="numbers"></span> <span style="margin-left:35px;">Delete Files</span></a></li>
                                                       <li style="margin-left:20px;"><a class="child 2" href="#MoveRemoteFile"><span class="numbers"></span> <span style="margin-left:35px;">Move Remote File</span></a></li>
@@ -2087,6 +2091,26 @@
                         <p><span class="numbers"><strong>Variable: </strong>Variable name to store the contents of the file specified.</p>
                     </div>
 
+                    <div id="Unzip"  class="page-section">
+                      <h5 class="purple"> Unzip Files </h5>
+                      <p>This action is used to unzip a zip file and extract it to the same location or other destination locations.</p>
+                      <h6>Properties</h6>
+                      <p><span class="numbers"><strong> Source File to extract:  </strong>Enter the path of the zip file.Extract to the same location (Source location): If you want to extract data to the same location, check the checkbox, and the extracted data will be stored in the source location folder.</p>
+                      <p><span class="numbers"><strong> Destination folder: </strong>Enter the path of the destination folder to store the extracted data. This option is available only if the above checkbox is not checked.</p>
+                      <p><span class="numbers"><strong> Overwrite: </strong>Overwrites the file while moving/copying a file  if there is a file existing with the same name in the destination folder.</p>
+                      <p><span class="numbers"><strong> Skip: </strong>Skips the copying/moving of the file specified if there is a file existing with the same name at the destination.</p>
+                    </div>
+
+                    <div id="ExportWord"  class="page-section">
+                      <h5 class="purple"> Export Word to PDF </h5>
+                      <p>This action is used to convert the selected Word file into a PDF file and store the file with the specified name.</p>
+                      <h6>Properties</h6>
+                      <p><span class="numbers"><strong> Select Document: </strong>Select the Word document, which is to be exported.</p>
+                      <p><span class="numbers"><strong> Save File as:  </strong>Specify the file path with name and extension where the file is to be saved.</p>
+                      <p><span class="numbers"><strong> Overwrite: </strong>Overwrites the file while moving/copying a file if there is a file existing with the same name in the destination folder.</p>
+                      <p><span class="numbers"><strong> Skip: </strong>Skips the copying/moving of the file specified, if there is a file existing with the same name at the destination.</p>
+                    </div>
+
                     <div id="SecureFTP"  class="page-section">
                       <h5 class="purple"> Secure FTP</h5>
                     </div>
@@ -2135,6 +2159,22 @@
                   <p><span class="numbers">1.</span><strong> Remote Path: </strong>Need to give the destination path of the server machine including folder name.</p>
                   <p><span class="numbers">2.</span><strong> Local Path: </strong>Need to give the Source path of the local machine.</p>
 
+              </div>
+
+              <div id="CreateNewFolder"  class="page-section">
+                <h5 class="purple"> Create New Folder  </h5>
+                <p>This action is used to create a new folder in the remote machine.</p>
+                <h6>Properties</h6>
+                <p><span class="numbers"><strong> Remote Folder Path: </strong>Enter the folder path in the remote machine where the new folder is to be created.</p>
+                <p><span class="numbers"><strong> Overwrite: </strong>Overwrites the file while moving/copying a file if there is a file existing with the same name at the destination.</p>
+                <p><span class="numbers"><strong> Skip: </strong>Skips the copying/moving of the file specified if there is a file existing with the same name at the destination.</p>
+              </div>
+
+              <div id="DeleteFolder"  class="page-section">
+                <h5 class="purple"> Delete Folder  </h5>
+                <p>Enter the path of the folder, which needs to be deleted in the remote machine.</p>
+                <h6>Properties</h6>
+                <p><span class="numbers"><strong> Remote Folder Path: </strong>Enter the path of the folder, which needs to be deleted in the remote machine.</p>
               </div>
 
               <div id="Delete"  class="page-section">
@@ -2228,12 +2268,12 @@
 
               <div id="JavaScript"  class="page-section">
                 <h5 class="purple"> JavaScript </h5>
-                <p>The user can add a JavaScript code snippet using this action. It will support all ES5 methods and functions</p>
+                <p>The user can add a JavaScript code snippet using this action. It will support all ES5 methods and functions. The result of the action is stored in a default variable “js_result”. If the result is of JSON type, you can use the “js_json” variable.</p>
               </div>
 
               <div id="Python"  class="page-section">
                 <h5 class="purple"> Python </h5>
-                <p>The user can add Python code snippet using this action.</p>
+                <p>The user can add a Python code snippet using this action. The result of the action is stored in the “py_result” variable.</p>
               </div>
 
               <!-- <div id="R"  class="page-section">
@@ -2243,7 +2283,7 @@
 
               <div id="AutoHotKey"  class="page-section">
                 <h5 class="purple"> AutoHotkey</h5>
-                <p>The user can add AutoHotkey code snippet using this action.</p>
+                <p>The user can add an AutoHotkey code snippet using this action. The result of the action is stored in the “vision_result” variable.</p>
               </div>
 
               <div id="MailIntegration"  class="page-section">
@@ -2379,7 +2419,9 @@
 
                      <div id="DatabaseActions"  class="page-section">
                        <h4 class="purple"> Database Actions</h4>
-                       <p>To automate the process of database actions related to MySQL and PostgreSQL.</p>
+                       <p>To automate the process of database actions related to My SQL, PostgreSQL, Oracle, and MS SQL.</p>
+                       <p><strong>Properties</strong></p>
+                       <p><span class="numbers"><strong>Select Database Type:</strong> Select either MySQL or PostgreSQL or Oracle or MS SQL based on the database type the user needs to work with.</p>
                      </div>
 
                        <div id="Connection"  class="page-section">
