@@ -1817,6 +1817,7 @@
                           <h5 class="purple"> Excel Actions</h5>
                           <h6>Note</h6>
                           <p>If passing the Excel path by using a variable then the variable type should be a string. If it is backward slash use double backward slashes (Example: C:\test\excel123.xlsx), and if it is a forward slash, then use a single slash (Example: C:/test/excel123.xlsx) for every Excel Action. Then pass that variable within the tilde symbol (Example: `VaribleName1`).</p>
+                          <p>When inserting a single quote data into Excel, Replace the single quote ' with \’.</p>
                          </div>
 
                          <div id="OpenSpreadsheet"  class="page-section">
@@ -2023,11 +2024,10 @@
                     </div>
 
                     <div id="RefreshExcelFile"  class="page-section">
-                      <h5 class="purple"> This action is used to refresh the Excel file.</h5>
-                      <p>This action is used to create an Excel file in the specified folder with the specified name and extension.</p>
+                      <h5 class="purple"> Refresh Excel File</h5>
+                      <p>This action is used to refresh the Excel file.</p>
                       <h6>Properties</h6>
                       <p><span class="numbers">1.<strong> FullPath:</strong> Enter the full path of the Excel spreadsheet. This option is shown only when taking the Get Range action directly. If you drag it into the open spreadsheet activity, it will not ask the path, and hence no need to mention the path.</p>
-                       <p><strong>Note</strong>When inserting a single quote data into Excel, Replace the single quote ' with \’.</p>
                    </div>
 
                       <div id="Loops"  class="page-section">
@@ -2363,8 +2363,7 @@
                <p><span class="numbers">1.</span> To access the subject of the email, use variableName[index].Subject</p>
                <p><span class="numbers">2.</span> To access the body of the email, use variableName[index].Body.</p>
                <p><span class="numbers">3.</span> To access the From address of the email, use variableName[index].From.</p>
-               <p><span class="numbers">4.</span> To access the Date and Time of the email, use variableName[index].Received.</p>
-               <h6>Note</h6>
+               <p><span class="numbers">4.</span> To access the received Date and Time of the email, use variableName[index].Received.</p>
                <p>We can send variable instead of direct text in to, subject, body </p>
 
                <h6>Send Outlook Mail:</h6>
@@ -2401,11 +2400,11 @@
                 <p><span class="numbers">4.</span><strong> Specific Date: </strong>Reads emails from a specific date.</p>
                 <p><span class="numbers">5.</span><strong> Select Variable: </strong>Stores emails, which are read from the corresponding Gmail account.</p>
                   <h6>Note</h6>
-                  <p>Here array variable is used to store emails. </p>
+                  <p>Here list type variable is used to store emails. </p>
                   <p>To access the subject of the mail, use variableName[index].Subject.</p>
                   <p>To access the body of the mail, use variableName[index].Body.</p>
                   <p>To access the From address of the mail, use variableName[index].From.</p>
-                  <p>To access the To address of the mail, use variableName[index].Received.</p>
+                  <p>To access the received date and time of the mail, use variableName[index].Received.</p>
                </div>
 
                <div id="POP3"  class="page-section">
@@ -2425,11 +2424,11 @@
                         <p><span class="numbers">2.</span><strong> Select Variable: </strong>Store emails, which are read from the corresponding email account.</p>
 
                       <p>Note:</p>
-                      <p>Here array variable is used to store emails.</p>
+                      <p>Here list type variable is used to store emails.</p>
                       <p>To access the subject of the mail, use variableName[index].Subject.</p>
                       <p>To access the body of the mail, variableName[index].Body,</p>
                       <p>To access the from the address of the mail, variableName[index].From, </p>
-                      <p>To access the To address of the mail, variableName[index].Received.</p>
+                      <p>To access the received date and time of the mail, variableName[index].Received.</p>
                     </div>
 
                       <div id="SMTP"  class="page-section">
