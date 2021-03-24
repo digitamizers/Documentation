@@ -1214,7 +1214,7 @@
                             <p style="text-align:center;"><strong>Figure: Click Action </strong></p>
 
 
-                            <h5>RDS (Remote Desktop Service) Setup required for unattended mode:</h5>
+                            <h4>RDS (Remote Desktop Service) Setup required for unattended mode:</h4>
                             <li><span class="numbers"><strong>	Step1: </strong> </span> Open Server Manager in the remote Machine and click on the “Add roles and features” link. This will open the Add Roles and Features Wizard. Install the following four RDS Services by following the screenshots.</li>
                             <li><span class="numbers"> </span> Remote Desktop Connections</li>
                             <li><span class="numbers"> </span> Remote Desktop Gateway</li>
@@ -1236,13 +1236,52 @@
                             <p style="text-align:center;"><strong>Figure: Wait Action</strong></p>
                             <img src="{{ '/assets/images/doc-img152.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
                             <p style="text-align:center;"><strong>Figure: Wait Action</strong></p>
+                            <p><strong>Note:</strong>Once the RDS services features are added, you need to restart the server and then only the new settings will apply.</p>
 
-                            <li><span class="numbers"><strong>	Step2: </strong></span>Drag and drop the read action into the flow.</li>
-                             <img src="{{ '/assets/images/doc-img98.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
-                                 <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
-                               <p>Pass the XPath of HTML element which you want to read into Element Xpath Text box and create a variable in the variable panel and pass the variable name in the Read to the variable text box.</p>
-                             <img src="{{ '/assets/images/doc-img99.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
-                               
+
+                            <h4>Unattended Mode Setup Installation & Activation of the Unattended User Session</h4>
+                            <li><span class="numbers"><strong>	Step1: </strong></span>After completing the prerequisites, start the Unattended mode installation. For the setup file, navigate to the Techforce.ai studio installation folder.</li>
+                            <p>Example path: <b>D:\IDE\Techforce.ai Studio\resources\static</b></p>
+                            <img src="{{ '/assets/images/doc-img153.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
+
+                            <li><span class="numbers"><strong>	Step2: </strong></span>Extract the Unattendent.zip file, which is available in the mentioned path and highlighted in the above screenshot.</li>
+                            <img src="{{ '/assets/images/doc-img154.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
+
+                            <li><span class="numbers"><strong>	Step3: </strong></span>Once extracted, Right-click and click on Run as administrator.</li>
+                            <img src="{{ '/assets/images/doc-img155.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
+                            <img src="{{ '/assets/images/doc-img156.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
+
+                            <li><span class="numbers"><strong>	Step4: </strong></span> Select the radio button as Everyone then click the Next button (Highlighted in the below image).</li>
+                            <img src="{{ '/assets/images/doc-img157.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
+
+                            <li><span class="numbers"><strong>	Step5: </strong></span>Click on the Next button and finish the installation.</li>
+                            <img src="{{ '/assets/images/doc-img158.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
+
+                            <li><span class="numbers"><strong>	Step6: </strong></span>Once Installation is completed successfully, the Unattended Configuration Manager.exe file will generate in the following  path. <b>C:\Program Files (x86)\Default Company Name\Setup1</b></li>
+                            <img src="{{ '/assets/images/doc-img159.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
+
+                            <li><span class="numbers"><strong>	Step7: </strong></span> Right-click on Configuration Manager.exe and Run as Administrator by connecting from another Local Admin user of the RDP VM, and activate Unattended session to the actual user where the techforce.ai studio installed provide those credentials.</li>
+                            <li><span class="numbers"><strong>	Step8: </strong></span>Provide all the mandatory field values like Username (Unattended Bot executed VM username), Password (Unattended Bot executed VM username), Scale (Scale value should always be 100). (Server/Machine name will be fetched automatically if not provide).</li>
+                            <img src="{{ '/assets/images/doc-img160.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
+
+                            <li><span class="numbers"><strong>	Step9: </strong></span>Once the mandatory fields are entered,  click on the Stop Service button and then click on the Apply button. Wait for few seconds until the Start Service button is highlighted.</li>
+                            <img src="{{ '/assets/images/doc-img161.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
+
+                            <li><span class="numbers"><strong>	Step10: </strong></span>Once the Start Service button is highlighted, click on the Start Service button and open the Task Manager. The Unattended session will be activated in Users. When the status of the Unattended user (example: botuser) is blank,  it means that is activated.</li>
+                            <img src="{{ '/assets/images/doc-img162.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
+
+                            <p><b>Note:</b>If the user is not activated the first time, the Machine may require a restart, but not mandatory for all the Servers. (Unattended mode is only possible for the Windows Server VM -2016 and later versions).</p>
+
                           </div>
 
 
