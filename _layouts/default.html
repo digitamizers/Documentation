@@ -1149,10 +1149,10 @@
                            <li><span class="numbers">	</span> Close any opened Remote Desktop sessions.</li>
                            <li><span class="numbers">	</span> Press <b>Win + R,</b> type “regedit”, and press Enter. The <b>Registry Editor</b> window will be displayed.</li>
                            <li><span class="numbers"> </span> Navigate to the following Registry keys:</li>
-                           <li style="margin-left:15px;"><span class="numbers"> </span> For the current user:</li>
+                           <p><span class="numbers">1.</span> For the current user:</p>
                            <li style="margin-left:25px;"><span class="numbers"> </span> HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client (32 bit)</li>
                            <li style="margin-left:25px;"><span class="numbers"> </span> HKEY_CURRENT_USER\Software\Wow6432Node\Microsoft\Terminal Server Client (64 bit)</li>
-                           <li style="margin-left:15px;"><span class="numbers"> </span> For all user:</li>
+                           <p><span class="numbers">2.</span> For all user:</p>
                            <li style="margin-left:25px;"><span class="numbers"> </span> HKEY_LOCAL_MACHINE\Software\Microsoft\Terminal Server Client (32 bit)</li>
                            <li style="margin-left:25px;"><span class="numbers"> </span> HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Terminal Server Client (64 bit)</li>
                            <li><span class="numbers"> </span> Create a new DWORD value with the RemoteDesktop_SuppressWhenMinimized name.</li>
@@ -1172,6 +1172,79 @@
                              <li><span class="numbers"> </span> Sign off all users from the Robot machines before executing a job. UI actions can now be automated even when the RDP window gets minimized.</li>
                              <li><span class="numbers"> </span> After done above settings restart your system.</li>
                          </div>
+
+                         <div id="UnattendedModeSetup"  class="page-section">
+                             <h4 class="amethyst"> Unattended Setup Installation Process</h4>
+                             <h5>Group Policy Settings required for Unattended mode configuration.</h5>
+
+                             <li><span class="numbers">	<strong>Step1: </strong> </span> Press Win + S, type “Local Group Policy Editor” or “Edit Group Policy” and press Enter. The Local Group Policy Editor window will be displayed.</li>
+                             <img src="{{ '/assets/images/doc-img135.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                             <p style="text-align:center;"><strong>Figure:  Open Web Page Action </strong></p>
+
+                             <li><span class="numbers">	<strong>Step2: </strong> </span>Navigate to the following Path:</li>
+                             <p>Local Computer Policy  Computer Configuration  Administrative Templates  Windows Components  Remote Desktop Services  Remote Desktop Session Host  Connections</p>
+                             <img src="{{ '/assets/images/doc-img136.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                             <p style="text-align:center;"><strong>Figure:  Open Web Page Action </strong></p>
+                             <img src="{{ '/assets/images/doc-img137.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                             <p style="text-align:center;"><strong>Figure:  Open Web Page Action </strong></p>
+
+
+                             <li><span class="numbers"><strong>	Step3: </strong> </span> Double Click on the Limit number of connections and edit the policy settings. Then select the Radio Button as Enabled and Increase the RD Maximum Connections Allowed Value to 10 (Preferred RD Maximum Connections Allowed Value should be between 10 and 40). Click on Apply and click on the OK button.</li>
+                             <img src="{{ '/assets/images/doc-img138.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                             <p style="text-align:center;"><strong>Figure: Wait Action </strong></p>
+                             <img src="{{ '/assets/images/doc-img139.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                             <p style="text-align:center;"><strong>Figure: Wait Action </strong></p>
+                             <img src="{{ '/assets/images/doc-img140.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                             <p style="text-align:center;"><strong>Figure: Wait Action </strong></p>
+
+
+                             <li><span class="numbers"><strong>	Step4: </strong> </span> Double Click on the Restrict Remote Desktop Services Users To Assign to a Single Remote Desktop Services User Sessions and edit the policy settings. Then select the Disabled Radio button and click on Apply. Then click on the OK button.</li>
+                             <img src="{{ '/assets/images/doc-img141.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                             <p style="text-align:center;"><strong>Figure: Enter Keystrokes Action </strong></p>
+                             <img src="{{ '/assets/images/doc-img142.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                             <p style="text-align:center;"><strong>Figure: Enter Keystrokes Action </strong></p>
+                             <img src="{{ '/assets/images/doc-img143.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                             <p style="text-align:center;"><strong>Figure: Enter Keystrokes Action </strong></p>
+
+
+
+                            <li><span class="numbers"><strong> Step5: </strong></span> Open Command prompt in Administrative Mode and execute the below mentioned following command to apply the changes of group policy settings. </li>
+                            <p>Command: <strong>gpupdate /force</strong></p>
+                            <img src="{{ '/assets/images/doc-img144.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Click Action </strong></p>
+
+
+                            <h5>RDS (Remote Desktop Service) Setup required for unattended mode:</h5>
+                            <li><span class="numbers"><strong>	Step1: </strong> </span> Open Server Manager in the remote Machine and click on the “Add roles and features” link. This will open the Add Roles and Features Wizard. Install the following four RDS Services by following the screenshots.</li>
+                            <li><span class="numbers"> </span> Remote Desktop Connections</li>
+                            <li><span class="numbers"> </span> Remote Desktop Gateway</li>
+                            <li><span class="numbers"> </span> Remote Desktop Licensing</li>
+                            <li><span class="numbers"> </span> Remote Desktop Session Host</li>
+                            <img src="{{ '/assets/images/doc-img145.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Wait Action</strong></p>
+                            <img src="{{ '/assets/images/doc-img146.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Wait Action</strong></p>
+                            <img src="{{ '/assets/images/doc-img147.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Wait Action</strong></p>
+                            <img src="{{ '/assets/images/doc-img148.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Wait Action</strong></p>
+                            <img src="{{ '/assets/images/doc-img149.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Wait Action</strong></p>
+                            <img src="{{ '/assets/images/doc-img150.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Wait Action</strong></p>
+                            <img src="{{ '/assets/images/doc-img151.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Wait Action</strong></p>
+                            <img src="{{ '/assets/images/doc-img152.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure: Wait Action</strong></p>
+
+                            <li><span class="numbers"><strong>	Step2: </strong></span>Drag and drop the read action into the flow.</li>
+                             <img src="{{ '/assets/images/doc-img98.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                                 <p style="text-align:center;"><strong>Figure: Read Action</strong></p>
+                               <p>Pass the XPath of HTML element which you want to read into Element Xpath Text box and create a variable in the variable panel and pass the variable name in the Read to the variable text box.</p>
+                             <img src="{{ '/assets/images/doc-img99.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                               
+                          </div>
+
 
                          <div id="Building"  class="page-section">
                              <h4 class="amethyst"> Building a basic Action Flow</h4>
