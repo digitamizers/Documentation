@@ -580,7 +580,9 @@
                                                  <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#HardwareRequirements">Hardware Requirements</span></a></li>
                                                  <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#InstallationInstructions"> Installation Instructions</span></a></li>
                                                  <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#InstallingTechForceOCR"> InstallingTechforce.ai OCR</span></a></li>
-                                                 <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#Un-installInstructions"> Un-install Instructions</a></li>
+                                                 <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#Un-installInstructions"> Un-Install Instructions</a></li>
+                                                 <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#MinimisedModeSettings"> Minimised Mode Settings</a></li>
+                                                 <li class="installation-li" style="margin-left:20px;"><a class="child 2" href="#UnattendedModeSetup"> Unattended Mode Setup</a></li>
                                               </ul>
                                           </li>
                                           <li><a class="child 2" href="#Building"><span class="numbers"></span> Building a basic Action Flow</a></li>
@@ -1138,6 +1140,37 @@
                             <img src="{{ '/assets/images/doc-img16.png' | relative_url }}" alt="image" style="width:600px;border:1px solid green;margin-left:15%;margin-top:10px;margin-bottom:10px;">
                              <p style="text-align:center;"><strong>Figure:  Uninstall Instructions-5 </strong></p>
                            <p>Now, go back to the folder path and delete the files. Now, all the files will be deleted.</p>
+                         </div>
+
+                         <div id="MinimisedModeSettings"  class="page-section">
+                           <h4 class="amethyst"> Executing Tasks in a Minimized RDP Window</h4>
+                           <h5>The settings are modified in the Windows Registry Editor (Administrator rights are required). </h5>
+
+                           <li><span class="numbers">	</span> Close any opened Remote Desktop sessions.</li>
+                           <li><span class="numbers">	</span> Press <b>Win + R,</b> type “regedit”, and press Enter. The <b>Registry Editor</b> window will be displayed.</li>
+                           <li><span class="numbers"> </span> Navigate to the following Registry keys:</li>
+                           <li style="margin-left:15px;"><span class="numbers"> </span> For the current user:</li>
+                           <li style="margin-left:25px;"><span class="numbers"> </span> HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client (32 bit)</li>
+                           <li style="margin-left:25px;"><span class="numbers"> </span> HKEY_CURRENT_USER\Software\Wow6432Node\Microsoft\Terminal Server Client (64 bit)</li>
+                           <li style="margin-left:15px;"><span class="numbers"> </span> For all user:</li>
+                           <li style="margin-left:25px;"><span class="numbers"> </span> HKEY_LOCAL_MACHINE\Software\Microsoft\Terminal Server Client (32 bit)</li>
+                           <li style="margin-left:25px;"><span class="numbers"> </span> HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Terminal Server Client (64 bit)</li>
+                           <li><span class="numbers"> </span> Create a new DWORD value with the RemoteDesktop_SuppressWhenMinimized name.</li>
+                           <li style="margin-left:15px;"><span class="numbers"> </span> Right-click inside the right panel of the Registry Editor window.</li>
+                           <li style="margin-left:15px;"><span class="numbers"> </span> Select New > Select DWORD (32-bit) Value. A new registry is added to the right panel.</li>
+                           <li style="margin-left:15px;"><span class="numbers"> </span> Change the default name to RemoteDesktop_SuppressWhenMinimized.</li>
+
+                           <img src="{{ '/assets/images/doc-img133.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                             <p style="text-align:center;"><strong>Figure:  Open Web Page Action </strong></p>
+                             <li style="margin-left:15px;"><span class="numbers"> </span> Double-click RemoteDesktop_SuppressWhenMinimized. The Edit DWORD (32-bit) Value window will be displayed.</li>
+                             <li style="margin-left:15px;"><span class="numbers"> </span> Write 2 in the Value data field.</li>
+                             <li style="margin-left:15px;"><span class="numbers"> </span> Press OK to save changes.</li>
+
+                           <img src="{{ '/assets/images/doc-img134.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                             <p style="text-align:center;"><strong>Figure: Wait Action </strong></p>
+                             <li><span class="numbers"> </span> Close the Registry Editor window.</li>
+                             <li><span class="numbers"> </span> Sign off all users from the Robot machines before executing a job. UI actions can now be automated even when the RDP window gets minimized.</li>
+                             <li><span class="numbers"> </span> After done above settings restart your system.</li>
                          </div>
 
                          <div id="Building"  class="page-section">
