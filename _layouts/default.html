@@ -700,6 +700,7 @@
                                                       </ul>
                                                       </li>
 
+                                                   <li style="margin-left:10px;"><a class="child 2" href="#GoogleAPIs"><span class="numbers"></span> <span style="margin-left:25px;">Google APIs</span></a></li>
                                                    <li style="margin-left:10px;"><a class="child 2" href="#Loops"><span class="numbers"></span> <span style="margin-left:25px;">Loops (For)</span></a></li>
                                                    <li style="margin-left:10px;"><a class="child 2" href="#TechForceOCR"><span class="numbers"></span> <span style="margin-left:25px;">Techforce.ai OCR</span></a></li>
 
@@ -2212,6 +2213,55 @@
                       <h6>Properties</h6>
                       <p><span class="numbers">1.<strong> FullPath:</strong> Enter the full path of the Excel spreadsheet. This option is shown only when taking the Get Range action directly. If you drag it into the open spreadsheet activity, it will not ask the path, and hence no need to mention the path.</p>
                    </div>
+
+                   <div id="GoogleAPIs"  class="page-section">
+                     <h5 class="purple"> Google APIs</h5>
+                     <p><strong>Google APIs,</strong> helps us communicate with <strong>Google</strong> Services and their integration to other services.</p>
+
+                     <p><span class="numbers"><strong>API Configuration: </strong>Configures the APIs to use the services</p>
+                     <h6>Properties</h6>
+                     <p><span class="numbers">Select Authentication type from below:</p>
+                     <li><span class="numbers"><strong>API Key: </strong>Pass the unique API key associated with the API you want to integrate into the flow.</l1>
+                     <li><span class="numbers"><strong>OAuth Client ID: </strong>Add the Credentials.json file for authentication of the Google account you use.</l1>
+                     <li><span class="numbers"><strong>Service Account Key: </strong>Add the Credentials.json file for authentication of the Google account you use.</l1>
+                     <p><span class="numbers"><strong>Note: </strong>To download the credentials.json file:</p>
+                     <li><span class="numbers">Go to <a href='https://developers.google.com/sheets/api/quickstart/dotnet'>https://developers.google.com/sheets/api/quickstart/dotnet</a> page.</l1>
+                     <li><span class="numbers">Click on Enable Google sheets API button.</l1>
+                     <li><span class="numbers">Rename the project name and click on the Next button</l1>
+                     <li><span class="numbers">From the available options, select your suitable option. For example, Desktop app, and then click on create button.</l1>
+                     <li><span class="numbers">Click on Download client configuration to download the credentials.json file.</l1>
+                     <li><span class="numbers">Save the client id and client secret data for further use.</l1>
+                     <p><span class="numbers">This is a one-time process.</p>
+
+                     <h6 class="purple"> Create Spreadsheet:</h6>
+                     <p><span class="numbers">Create a Google spreadsheet.</p>
+                     <h6>Properties</h6>
+                     <p><span class="numbers"><strong>Spreadsheet Title: </strong>Specify the spreadsheet name in the available text field to create a spreadsheet with the specified name.</p>
+
+                     <h6 class="purple"> Get Spreadsheet data:</h6>
+                     <p><span class="numbers">Get data from the specified Google spreadsheet.</p>
+                     <h6>Properties</h6>
+                     <p><span class="numbers"><strong>Google Spreadsheet URL: </strong>Specify the URL of the Google spreadsheet from which you need to retrieve the data.</p>
+                     <p><span class="numbers"><strong>Sheet name: </strong>Specify the sheet name.</p>
+                     <p><span class="numbers"><strong>Range: </strong>Specify the range of cells.</p>
+                     <p><span class="numbers"><strong>Select variable: </strong>The variable name into which the data is to be stored. The variable should be of a List type.</p>
+
+                       <h6 class="purple">Write Spreadsheet Data: </h6>
+                       <p><span class="numbers">Write data into the specified Google spreadsheet.</p>
+                       <h6>Properties</h6>
+                       <p><span class="numbers"><strong>Google Spreadsheet URL: </strong>Specify the URL of the Google spreadsheet into which you need to write the data.</p>
+                       <p><span class="numbers"><strong>Sheet name: </strong>Specify the sheet name.</p>
+                       <p><span class="numbers"><strong>Range: </strong>Specify the range of cells.</p>
+                       <p><span class="numbers"><strong>Select variable: </strong>The variable name from which the data is to be retrieved. The variable should be of a List type.</p>
+
+                         <h6 class="purple"> Send Message to Google Chatbot:</h6>
+                         <p><span class="numbers">To send message to the specified chat room.</p>
+                         <h6>Properties</h6>
+                         <p><span class="numbers"><strong>Space Name: </strong>Specify the space name into which the data is to be shared.</p>
+                         <p><span class="numbers"><strong>Message: </strong>The message that is to be shared in the chat room.</p>
+
+                  </div>
+
 
                       <div id="Loops"  class="page-section">
                         <h5 class="purple"> Loops</h5>
