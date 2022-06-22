@@ -1240,7 +1240,6 @@
                             <p style="text-align:center;"><strong>Figure 18</strong></p>
                             <p><strong>Note:</strong>Once the RDS services features are added, you need to restart the server and then only the new settings will apply.</p>
 
-
                             <h4>Unattended Mode Setup Installation & Activation of the Unattended User Session</h4>
                             <li><span class="numbers"><strong>	Step1: </strong></span>After completing the prerequisites, start the Unattended mode installation. For the setup file, navigate to the Techforce.ai studio installation folder.</li>
                             <p>Example path: <b>D:\IDE\Techforce.ai Studio\resources\static</b></p>
@@ -1281,8 +1280,47 @@
                             <li><span class="numbers"><strong>	Step10: </strong></span>Once the Start Service button is highlighted, click on the Start Service button and open the Task Manager. The Unattended session will be activated in Users. When the status of the Unattended user (example: botuser) is blank,  it means that is activated.</li>
                             <img src="{{ '/assets/images/doc-img162.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
                             <p style="text-align:center;"><strong>Figure 28</strong></p>
-
                             <p><b>Note:</b>If the user is not activated the first time, the Machine may require a restart, but not mandatory for all the Servers. (Unattended mode is only possible for the Windows Server VM -2016 and later versions).</p>
+
+                            <h4>Unattended Mode With FIPS </h4>
+                            <li><span class="numbers"><strong>	Step1: </strong></span> How to Disable Auto Lock on Windows Server via Group policy.</li>
+                            <li><span class="numbers"><strong>	Step2: </strong></span> Log on to a domain controller</li>
+                            <li><span class="numbers"><strong>	Step3: </strong></span> Open group policy console by typing GPMC.MSC in RUN or command prompt</li>
+                            <img src="{{ '/assets/images/doc-img171.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure 1</strong></p>
+                            <li><span class="numbers"><strong>	Step4: </strong></span> Now the policy has been created.</li>
+                            <img src="{{ '/assets/images/doc-img172.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure 2</strong></p>
+
+                            <li><span class="numbers"><strong>	Step5: </strong></span> Select the policy, right-click and edit the policy</li>
+                            <img src="{{ '/assets/images/doc-img173.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure 3</strong></p>
+
+                            <li><span class="numbers"><strong>	Step6: </strong></span> Navigate to:</b></li>
+                            <li><span class="numbers"> </span> Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options > Interactive Logon : Machine inactivity limit</li>
+                            <img src="{{ '/assets/images/doc-img174.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure 4</strong></p>
+
+                            <li><span class="numbers"><strong>	Step7: </strong></span> Double click the Interactive logon: Machine inactive limit</li>
+                            <li><span class="numbers"><strong>	Step8: </strong></span> The policy explains below:</li>
+                            <li><span class="numbers"><strong> Interactive logon: </strong></span> Machine inactivity limit.<br>Windows notices inactivity of a logon session, and if the amount of inactive time exceeds the inactivity limit, then the screen saver will run, locking the session.</li>
+                            <li><span class="numbers"><strong>	Default: </strong></span> not enforced.</li>
+                            <li><span class="numbers"><strong>	Step9: </strong></span> Now set the value as shown below</li>
+                            <img src="{{ '/assets/images/doc-img175.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure 5</strong></p>
+
+                            <li><span class="numbers"><strong>	Step10: </strong></span> Now update the policy on end computer by typing “GPUPDATE /FORCE” in command prompt.</li>
+                            <li><span class="numbers"><strong>	Step11: </strong></span> If you are applying the policy on large number, the policy will be auto updated within 90-120 minutes.</li>
+                            <li><span class="numbers"><strong>	Step12: </strong></span> The group policy can be updated at OU level also as shown below</li>
+                            <img src="{{ '/assets/images/doc-img176.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                            <p style="text-align:center;"><strong>Figure 6</strong></p>
+
+                           <li><span class="numbers"><strong>	Step13: </strong></span> In next screen you will get below windows. Click Yes</li>
+                           <img src="{{ '/assets/images/doc-img177.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                           <p style="text-align:center;"><strong>Figure 7</strong></p>
+                           <li><span class="numbers"><strong>	Step14: </strong></span> Below is the result</li>
+                           <img src="{{ '/assets/images/doc-img178.png' | relative_url }}" alt="image" style="border:1px solid green;margin-left:0%;margin-top:10px;margin-bottom:10px;">
+                           <p style="text-align:center;"><strong>Figure 8</strong></p>
 
                           </div>
 
